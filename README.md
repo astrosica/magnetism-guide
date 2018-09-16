@@ -1,1 +1,1 @@
-# magnetism-guide
+# Magnetism Study Guide
