@@ -216,7 +216,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
     {\rm DM} = \int\limits_0^\ell n_e\mathrm{d}\ell ~ [{\rm pc\,cm^{-3}}]
 \end{align*}
 
-{\noindent}\textbf{Dust polarization:} 
+{\noindent}\textbf{Dust polarization:} The polarization angle of dust emission is conventionally taken to be $90^\circ$ from the orientation of the local Galactic magnetic field.
 
 {\noindent}\textbf{Dynamo theory:} The mechanism by which a magnetic field is produced in which a rotating, convecting, and electrically conducting fluid can generate and maintain a magnetic field over astronomical timescales. 
 
@@ -493,10 +493,42 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
     n_\theta = \left[\pi\frac{\sqrt{2}}{2}(D_W-1)\right] ~ [{\rm dimensionless}].
 \end{align*}
 
-{\noindent}By iterating (``rolling'') over the entire image space we produce the RHT output, $R(\theta,x,y)$. A visualization of the linear structures identified by the RHT, the backprojection $R(x,y)$, is obtained by integrating $R(\theta,x,y)$ over $\theta$:
+{\noindent}By iterating (``rolling'') over the entire image space we produce the RHT output, $R(\theta,x,y)$. A visualization of the linear structures identified by the RHT, the \textbf{backprojection $R(x,y)$}, is obtained by integrating $R(\theta,x,y)$ over $\theta$:
 
 \begin{align*}
     R(x,y) = \int R(\theta,x,y)\mathrm{d}\theta ~ [{\rm dimensionless}].
+\end{align*}
+
+{\noindent}One advantage of the RHT is that the input parameters of the transform can be chosen to highlight specific linear features of interest. One defines, for a given run of the RHT, a smoothing kernel diameter ($D_K$), a window diameter ($D_W$), and an intensity threshold ($Z$). The rolling nature of the RHT ensures that linear structure at least as long as $D_W$ will be identified. Thus $D_W$, along with the $Z$, sets a lower limit for the spatial length of the linear features. Thresholding below 100\% ($Z<1$) reflects the fact that structures can be physically coherent even if they are not visibly connected. $R(\theta,x,y)$ is intensity as a function of angle on a domain $\theta\in[0,\pi)$, as a $0^\circ$ orientation is equivalent to a $180^\circ$ orientation. $R(\theta,x,y)$ can be sampled in a circular region around each star in the field as
+
+\begin{align*}
+    R_*(x,y) = \int\int_\mathrm{disk} R(\theta,x,y)\mathrm{d}x\mathrm{d}y ~ [{\rm dimensionless}].
+\end{align*}
+
+{\noindent}To estimate the direction of a given region of the backrprojection $R_*(\theta,x,y)$, the expectation value is given by
+
+\begin{align*}
+    \langle\theta\rangle' = \frac{1}{2}\arctan \left[\frac{\int\sin(2\theta)R_*(\theta)\mathrm{d}\theta}{\int\cos(2\theta)R_*(\theta)\mathrm{d}\theta}\right] ~ [{\rm rad}]
+\end{align*}
+
+{\noindent}where the equivalent value is found on the interval $\theta\in[0,\pi)$ via
+
+\begin{align*}
+    \langle\theta\rangle = \pi - {\rm mod}(\langle\theta\rangle'+\pi,\pi) ~ [{\rm rad}].
+\end{align*}
+
+{\noindent}Linear polarization data can be fully described by either
+a polarization angle $\chi$ and polarized intensity $P$ or by the Stokes parameters $Q$ and $U$, where $\chi=(1/2)\arctan(U/Q)$ and $P=\sqrt{Q^2+U^2}$. From the RHT output, similar `Stokes vectors' can be defined via
+
+\begin{align*}
+    Q_\mathrm{RHT} = \int\cos(2\theta)R(\theta)\mathrm{d}\theta ~ [{\rm Jy}] \\
+    U_\mathrm{RHT} = \int\sin(2\theta)R(\theta)\mathrm{d}\theta ~ [{\rm Jy}].
+\end{align*}
+
+{\noindent}This allows for an estimate of the orientation of the magnetic field to be derived solely from HI data via
+
+\begin{align*}
+    \theta_\mathrm{RHT} = \frac{1}{2}\arctan\left(\frac{U_\mathrm{RHT}}{Q_\mathrm{RHT}}\right) ~ [{\rm rad}].
 \end{align*}
 
 {\noindent}\textbf{Rotation measure (RM):} Characterizes the amount of \textit{Faraday rotation} that polarized light experiences while passing through thermal electrons. Most compact polarized sources like pulsars and extremely compact extragalactic sources show a single value of Faraday rotation which is the RM. This is commonly defined as the slope of the polarization angle $\chi$ versus $\lambda^2$ plot:
@@ -618,7 +650,7 @@ It is a complex valued function; the real part corresponds to the response of th
 
 {\noindent}\textbf{Stokes U ($U$):} A measure of the linear polarization of radio emission. The images of Stokes U (and \textit{Stokes Q}) as well as the \textit{linear polarized intensity} $P\equiv\sqrt{(Q^2+U^2)}$ are often filled with complex structures that bear little resemblance to the \textit{Stokes I} image of total intensity. The intensity variations seen in $U$ (as well as $Q$ and $P$) are the result of small-scale angular structure in the \textit{Faraday rotation} induced by ionized gas, and are thus an indirect representation of turbulent fluctuations in the free-electron density and magnetic field throughout the \textit{interstellar medium}.
 
-{\noindent}\textbf{Stokes V ($V$):} A measure of circular polarization of radio emission. Stokes V is related to the line-of-sight magnetic field in the following manner:
+{\noindent}\textbf{Stokes V ($V$):} A measure of circular polarization of radio emission. If $V>0$, then the electromagnetic wave is right-handed circularly polarized (RCP), while if $V<0$, then the electromagnetic wave is left-handed circularly polarized (LCP). Stokes V is related to the line-of-sight magnetic field in the following manner:
 
 \begin{align*}
     V(\nu) \propto B_\parallel \times \frac{\mathrm{d}I}{\mathrm{d}\nu} ~ [{\rm Jy}],
@@ -836,6 +868,10 @@ It is a complex valued function; the real part corresponds to the response of th
 
 {\noindent}\textbf{Energy spectrum}: $E(k)~[{\rm Jy\,m^{-1}}]$
 
+{\noindent}\textbf{Expectation value of $\theta$ on any domain (RHT)}: $\langle\theta\rangle' ~ [{\rm rad}]$
+
+{\noindent}\textbf{Expectation value of $\theta$ on $\theta\in[0,\pi)$ (RHT)}: $\langle\theta\rangle ~ [{\rm rad}]$
+
 {\noindent}\textbf{Faraday depth}: $\phi~[{\rm rad\,m^{-2}}]$
 
 {\noindent}\textbf{Faraday dispersion function (no spectral dependence)}: $F(\phi)~[{\rm rad\,m^{-2}}]$
@@ -878,6 +914,8 @@ It is a complex valued function; the real part corresponds to the response of th
 
 {\noindent}\textbf{Polarization angle}: $\chi~[{\rm rad}]$
 
+{\noindent}\textbf{Polarization angle (RHT)}: $\chi_\mathrm{RHT} ~ [{\rm rad}]$
+
 {\noindent}\textbf{Polarization angle at $\lambda=0$}: $\chi_0~[{\rm rad}]$
 
 {\noindent}\textbf{Polarization fraction}: $p(\lambda^2)~[{\rm dimensionless}]$
@@ -908,6 +946,8 @@ It is a complex valued function; the real part corresponds to the response of th
 
 {\noindent}\textbf{RHT backprojection}: $R(x,y) ~ [{\rm dimensionless}]$
 
+{\noindent}\textbf{RHT backprojection sampling disk around star}: $R_*(x,y) ~ [{\rm dimensionless}]$
+
 {\noindent}\textbf{RHT distance}: $\rho~[{\rm pixels}]$
 
 {\noindent}\textbf{RHT intensity vs angle}: $R(\theta,x_0,y_0)~[{\rm dimensionless}]$
@@ -930,7 +970,11 @@ It is a complex valued function; the real part corresponds to the response of th
 
 {\noindent}\textbf{Stokes Q}: $Q ~ [\rm Jy]$
 
+{\noindent}\textbf{Stokes Q (RHT)}: $Q_\mathrm{RHT} ~ [\rm Jy]$
+
 {\noindent}\textbf{Stokes U}: $U ~ [\rm Jy]$
+
+{\noindent}\textbf{Stokes U (RHT)}: $U_\mathrm{RHT} ~ [\rm Jy]$
 
 {\noindent}\textbf{Stokes V}: $V ~ [\rm Jy]$
 
@@ -1047,6 +1091,16 @@ It is a complex valued function; the real part corresponds to the response of th
     {\rm EM} = \int\limits_0^\ell n_e^2\mathrm{d}\ell ~ [{\rm pc\,cm^{-6}}]
 \end{align*}
 
+{\noindent}\textbf{Expectation value of $\theta$ on any domain (RHT):}
+\begin{align*}
+    \langle\theta\rangle' = \frac{1}{2}\arctan \left[\frac{\int\sin(2\theta)R_*(\theta)\mathrm{d}\theta}{\int\cos(2\theta)R_*(\theta)\mathrm{d}\theta}\right]
+\end{align*}
+
+{\noindent}\textbf{Expectation value of $\theta$ on $\theta\in[0,\pi)$ (RHT):}
+\begin{align*}
+    \langle\theta\rangle = \pi - {\rm mod}(\langle\theta\rangle'+\pi,\pi) ~ [{\rm rad}]
+\end{align*}
+
 {\noindent}\textbf{Faraday depth:} 
 \begin{align*}
 \phi(\mathbf{r}) = -0.81 \int\limits_\mathrm{source}^\mathrm{observer}n_e\mathbf{B}\cdot \mathrm{d}\mathbf{r} ~ [{\rm rad\,m^{-2}}]
@@ -1097,6 +1151,11 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
 &= \chi_0 + \mathrm{RM}\lambda^2 ~ [{\rm rad}]
 \end{align*}
 
+{\noindent}\textbf{Polarization angle (RHT):}
+\begin{align*}
+\chi_\mathrm{RHT} = \dfrac{1}{2}\arctan\left(\dfrac{U_\mathrm{RHT}}{Q_\mathrm{RHT}}\right) ~ [{\rm rad}]
+\end{align*}
+
 {\noindent}\textbf{Polarization angle distribution standard error:} 
 \begin{align*}
 \sigma_\chi = \left[ \dfrac{1}{N-1} \sum_i\chi_i^2 - \langle\chi\rangle \right]^{-1} ~ [{\rm rad}]
@@ -1105,9 +1164,9 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
 
 {\noindent}\textbf{Polarization angle standard error:}
 \begin{align*}
-\sigma_\chi &= \left[ \left(\dfrac{\partial\chi}{\partial Q}\right)^2\sigma_Q^2 + \left(\dfrac{\partial\chi}{\partial U}\right)^2\sigma_U^2 \right]^{-1}\\
-&= \left[ \left(\dfrac{\partial\frac{1}{2}\arctan\frac{U}{Q}}{\partial Q}\right)^2\sigma_Q^2 + \left(\dfrac{\partial\frac{1}{2}\arctan\frac{U}{Q}}{\partial U}\right)^2\sigma_U^2 \right]^{-1} \\
-&= \left[ \left(\dfrac{1}{4}\dfrac{U^2}{(Q^2+U^2)^2}\right)\sigma_Q^2 + \left(\dfrac{1}{4}\dfrac{Q^2}{(Q^2+U^2)^2}\right)\sigma_U^2 \right]^{-1}\\
+\sigma_\chi &= \sqrt{ \left(\dfrac{\partial\chi}{\partial Q}\right)^2\sigma_Q^2 + \left(\dfrac{\partial\chi}{\partial U}\right)^2\sigma_U^2 }\\
+&= \sqrt{ \left(\dfrac{\partial\frac{1}{2}\arctan\frac{U}{Q}}{\partial Q}\right)^2\sigma_Q^2 + \left(\dfrac{\partial\frac{1}{2}\arctan\frac{U}{Q}}{\partial U}\right)^2\sigma_U^2 } \\
+&= \sqrt{ \left(\dfrac{1}{4}\dfrac{U^2}{(Q^2+U^2)^2}\right)\sigma_Q^2 + \left(\dfrac{1}{4}\dfrac{Q^2}{(Q^2+U^2)^2}\right)\sigma_U^2 } \\
 &= \dfrac{U^2\sigma_Q^2 + Q^2\sigma_U^2}{4\lvert\lvert P \rvert\rvert^4} ~ [{\rm rad}]
 \end{align*}
 (Brentjens \& de Bruyn, 2005)
@@ -1138,19 +1197,19 @@ p(\lambda^2) = \dfrac{P(\lambda^2)}{I(\lambda^2)} ~ [{\rm dimensionless}]
     P\equiv\sqrt{Q^2+U^2} ~ [\rm Jy]
 \end{align*}
 
+{\noindent}\textbf{Polarized intensity standard error:}
+\begin{align*}
+\sigma_P &= \sqrt{ \left(\dfrac{\partial\lvert\lvert P \rvert\rvert}{\partial Q}\right)^2\sigma_Q^2 + \left(\dfrac{\partial\lvert\lvert P \rvert\rvert}{\partial U}\right)^2\sigma_U^2 } \\
+&= \sqrt{ \left(\dfrac{Q^2}{Q^2+U^2}\right)\sigma_Q^2 + \left(\dfrac{U^2}{Q^2+U^2}\right)\sigma_U^2 } \\
+&= \sqrt{ \dfrac{Q^2}{\lvert\lvert P \rvert\rvert^2}\sigma_Q^2 + \dfrac{U^2}{\lvert\lvert P \rvert\rvert^2}\sigma_U^2 } ~ [\rm Jy]
+\end{align*}
+(Brentjens \& de Bruyn, 2005)
+
 {\noindent}\textbf{Polarized surface brightness:}
 \begin{align*}
 P(\lambda^2) &= \lvert\lvert p(\lambda^2) \rvert\rvert I\mathrm{e}^{2i\chi} = p(\lambda^2)I(\lambda^2) = Q+iU ~ [\rm Jy] \\
 &= \int\limits_{-\infty}^\infty F(\phi)\mathrm{e}^{2i\phi\lambda^2}\mathrm{d}\phi ~ [\rm Jy]
 \end{align*}
-
-{\noindent}\textbf{Polarized surface brightness standard error:}
-\begin{align*}
-\sigma_P &= \left[ \left(\dfrac{\partial\lvert\lvert P \rvert\rvert}{\partial Q}\right)^2\sigma_Q^2 + \left(\dfrac{\partial\lvert\lvert P \rvert\rvert}{\partial U}\right)^2\sigma_U^2 \right]^{-1} \\
-&= \left[ \left(\dfrac{Q^2}{Q^2+U^2}\right)\sigma_Q^2 + \left(\dfrac{U^2}{Q^2+U^2}\right)\sigma_U^2 \right]^{-1} \\
-&= \left[ \dfrac{Q^2}{\lvert\lvert P \rvert\rvert^2}\sigma_Q^2 + \dfrac{U^2}{\lvert\lvert P \rvert\rvert^2}\sigma_U^2 \right]^{-1} ~ [\rm Jy]
-\end{align*}
-(Brentjens \& de Bruyn, 2005)
 
 {\noindent}\textbf{Polarized surface brightness (absolute):}
 \begin{align*}
@@ -1177,6 +1236,11 @@ P(\lambda^2) &= \lvert\lvert p(\lambda^2) \rvert\rvert I\mathrm{e}^{2i\chi} = p(
     R(x,y) = \int R(\theta,x,y)\mathrm{d}\theta ~ [{\rm dimensionless}]
 \end{align*}
 
+{\noindent}\textbf{RHT backprojection sampling disk around star:}
+\begin{align*}
+    R_*(x,y) = \int\int_\mathrm{disk} R(\theta,x,y)\mathrm{d}x\mathrm{d}y ~ [{\rm dimensionless}]
+\end{align*}
+
 {\noindent}\textbf{RHT distance:}
 \begin{align*}
     \rho = x\cos\theta+y\sin\theta ~ [{\rm pixels}]
@@ -1200,6 +1264,16 @@ R(\phi) \equiv \dfrac{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{e}^{-2i\p
 {\noindent}\textbf{Spectral correlation function:}
 \begin{align*}
     S_{x,y} \equiv S_{v_i,v_j} = \frac{1}{n}\sum_{a=1}^n T([x,y]_a,v_i)T([x,y]_a,v_j)
+\end{align*}
+
+{\noindent}\textbf{Stokes Q (RHT):}
+\begin{align*}
+    Q_\mathrm{RHT} = \int\cos(2\theta)R(\theta)\mathrm{d}\theta ~ [{\rm Jy}]
+\end{align*}
+
+{\noindent}\textbf{Stokes Q (RHT):}
+\begin{align*}
+    U_\mathrm{RHT} = \int\sin(2\theta)R(\theta)\mathrm{d}\theta ~ [{\rm Jy}]
 \end{align*}
 
 {\noindent}\textbf{Stokes V magnetic field:}
