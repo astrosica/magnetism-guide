@@ -403,7 +403,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
     P\equiv\sqrt{Q^2+U^2} ~ [{\rm Jy}],
 \end{align*}
 
-{\noindent}where $Q$ is the \textit{Stokes Q} polarization and $U$ the \textit{Stokes U} polarization. The images of $P$ (as well as $Q$ and $U$) are often filled with complex structures that bear little resemblance to the \textit{Stokes I} image of total intensity. The intensity variations seen in $P$ (as well as $Q$ and $U$) are the result of small-scale angular structure in the \textit{Faraday rotation} induced by ionized gas, and are thus an indirect representation of turbulent fluctuations in the free-electron density and magnetic field throughout the \textit{interstellar medium}.
+{\noindent}where $Q$ is the \textit{Stokes Q} polarization and $U$ the \textit{Stokes U} polarization. The images of $P$ (as well as $Q$ and $U$) are often filled with complex structures that bear little resemblance to the \textit{Stokes I} image of total intensity. The intensity variations seen in $P$ (as well as $Q$ and $U$) are the result of small-scale angular structure in the \textit{Faraday rotation} induced by ionized gas, and are thus an indirect representation of turbulent fluctuations in the free-electron density and magnetic field throughout the \textit{interstellar medium}. while $Q$ and $U$ exhibit Gaussian noise properties, this is not true for $P$. The noise in $Q$ and $U$ is squared when calculating $P$, having a Ricean distribution, and this causes the observed polarization intensity to be biased toward larger values
 
 {\noindent}\textbf{Polarization angle $(\chi)$:} Given by
 
@@ -427,7 +427,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
     \lvert\nabla P\rvert = \sqrt{\left(\frac{\partial Q}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial x}\right)^2 + \left(\frac{\partial Q}{\partial y}\right)^2 + \left(\frac{\partial U}{\partial y}\right)^2} ~ [{\rm Jy\,beam^{-1}}],
 \end{align*}
 
-{\noindent}where $Q$ and $U$ are the complex \textit{Stokes vectors}. Note that $\lvert\nabla \mathbf{P}\rvert$ cannot be constructed from the scalar quantity $P\equiv\sqrt{Q^2+U^2}$, but is derived from the vector field $\mathbf{P}\equiv(Q,U)$. The amplitude of the polarization gradient $\lvert\nabla \mathbf{P}\rvert$ provides an image of magnetized turbulence in diffuse, ionized gas manifested as a complex filamentary web of discontinuities in gas density and magnetic field strength. This quantity is unaffected by rotation and translation in the $Q-U$ plane, and so has the potential to reveal properties of the polarized distribution that might otherwise be hidden by excess foreground emission or \textit{Faraday rotation}, or in data sets from which large-scale structure is missing. The polarization gradient is shown in Figure \ref{figure:delP}.
+{\noindent}where $Q$ and $U$ are the complex \textit{Stokes vectors} and $x$ and $y$ are the Cartesian axes of the image plane. Note that $\lvert\nabla \mathbf{P}\rvert$ cannot be constructed from the scalar quantity $P\equiv\sqrt{Q^2+U^2}$, but is derived from the vector field $\mathbf{P}\equiv(Q,U)$. The amplitude of the polarization gradient $\lvert\nabla \mathbf{P}\rvert$ provides an image of magnetized turbulence in diffuse, ionized gas manifested as a complex filamentary web of discontinuities in gas density and magnetic field strength. This quantity is rotationally and translationally invariant in the $Q-U$ plane, and so has the potential to reveal properties of the polarized distribution that might otherwise be hidden by excess foreground emission or \textit{Faraday rotation}, or in data sets from which large-scale structure is missing. The polarization gradient is shown in Figure \ref{figure:delP}.
 
 \begin{figure}[h]
 \begin{center}
@@ -620,7 +620,13 @@ It is a complex valued function; the real part corresponds to the response of th
 
 {\noindent}\textbf{Second moment:} 
 
-{\noindent}\textbf{Sonic Mach number ($M_s$):} The sound speed of the \textit{interstellar medium} which is a commonly used parameter of turbulence used to obtain information on gas compressibility and magnetization. Using polarization gradients of \textit{synchrotron radiation}, it was shown by Gaensler (2011) that the turbulence of the WIM has a relatively low \textit{sonic Mach number}, $M_s\lesssim2$.
+{\noindent}\textbf{Sonic Mach number ($M_s$):} The sound speed of the \textit{interstellar medium} given by
+
+\begin{align*}
+    M_s = \left\langle\frac{\lvert\mathbf{v}\rvert}{c_s}\right\rangle ~ [{\rm dimensionless}].
+\end{align*}
+
+This number is a commonly used parameter of turbulence used to obtain information on gas compressibility and magnetization. Using polarization gradients of \textit{synchrotron radiation}, it was shown by Gaensler (2011) that the turbulence of the WIM has a relatively low \textit{sonic Mach number}, $M_s\lesssim2$.
 
 {\noindent}\textbf{Spectral index ($\alpha$):} A measure of the dependence of radiative flux density on frequency. If flux does not follow a power-law distribution, the spectral index itself is a function of frequency. In the radio regime, a spectral index of $\alpha=0-2$ indicates thermal emission while a steep negative spectrum indicates synchrotron radiation.
 
@@ -814,7 +820,9 @@ It is a complex valued function; the real part corresponds to the response of th
 \newpage
 \section{Parameters}
 
-{\noindent}\textbf{Alfv\'en speed}: $V_A~[{\rm m\,s^{-3}}]$
+{\noindent}\textbf{Alfv\'en Mach number}: $M_A~[{\rm dimensionless}]$
+
+{\noindent}\textbf{Alfv\'en speed}: $v_A~[{\rm m\,s^{-1}}]$
 
 {\noindent}\textbf{Ambipolar diffusion scale}: $L_\mathrm{AD}~[{\rm m}]$
 
@@ -956,6 +964,8 @@ It is a complex valued function; the real part corresponds to the response of th
 
 {\noindent}\textbf{Sonic Mach number}: $M_s~[{\rm dimensionless]}$
 
+{\noindent}\textbf{Sound speed}: $c_s ~ [{\rm m\,s^{-1}}]$
+
 {\noindent}\textbf{Spectral correlation function}: $S_{x,y}~[\rm{dimensionless}]$
 
 {\noindent}\textbf{Spectral index}: $\alpha~[\rm{dimensionless}]$
@@ -1042,9 +1052,14 @@ It is a complex valued function; the real part corresponds to the response of th
 \newpage
 \section{Equations}
 
+{\noindent}\textbf{Alfv\'en Mach number:}
+\begin{align*}
+    M_A = \left\langle\frac{\lvert\mathbf{v}\rvert}{v_A}\right\rangle ~ [{\rm dimensionless}]
+\end{align*}
+
 {\noindent}\textbf{Alfv\'en speed:}
 \begin{align*}
-    V_A = \dfrac{B}{4\pi\rho_n} ~ [{\rm m\,s^{-1}}]
+    v_A = \frac{\lvert\mathbf{B}\lvert}{\sqrt{\rho}} ~ [{\rm m\,s^{-1}}]
 \end{align*}
 
 {\noindent}\textbf{Ambipolar diffusion scale:}
@@ -1224,6 +1239,11 @@ P(\lambda^2) &= \lvert\lvert p(\lambda^2) \rvert\rvert I\mathrm{e}^{2i\chi} = p(
     P(k) = \hat{f}(k){\hat{f}(k)}^*
 \end{align*}
 
+{\noindent}\textbf{Radial component of polarization gradient:}
+\begin{align*}
+    \frac{\partial\mathbf{P}}{\partial s}_\mathrm{rad} = \sqrt{\frac{(Q\frac{\partial Q}{\partial x} + U\frac{\partial U}{\partial x})^2 + (Q\frac{\partial Q}{\partial y} + U\frac{\partial U}{\partial y})^2}{Q^2+U^2}}
+\end{align*}
+
 {\noindent}\textbf{Reynolds number for ambipolar diffusion:}
 \begin{align*}
     R_\mathrm{AD} = \dfrac{LV}{\nu_\mathrm{AD}} ~ [{\rm dimensionless}]
@@ -1257,6 +1277,11 @@ R(\phi) \equiv \dfrac{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{e}^{-2i\p
 {\noindent}\textbf{Rotation measure transfer function (RMTF) for box-car weight function $W(\lambda^2)$:}
 \begin{align*}
     R(\phi) = e^{i\phi\lambda_c^2}\left(\dfrac{\sin(\phi\Delta\lambda^2)}{\phi\Delta\lambda^2}\right) ~ [{\rm rad\,m^{-2}}]
+\end{align*}
+
+{\noindent}\textbf{Sonic Mach number:}
+\begin{align*}
+    M_s = \left\langle\frac{\lvert\mathbf{v}\rvert}{c_s}\right\rangle ~ [{\rm dimensionless}]
 \end{align*}
 
 {\noindent}\textbf{Spectral correlation function:}
@@ -1303,6 +1328,11 @@ p = \frac{3\gamma + 3}{3\gamma+7} ~ [{\rm dimensionless}]
 {\noindent}\textbf{Synchrotron radiation power}:
 \begin{align*}
 P = \frac{2}{3}\dfrac{q^4}{m^2c^5}(\gamma\nu)^2(B\sin\theta)^2 ~ [{\rm Jy}]
+\end{align*}
+
+{\noindent}\textbf{Tangential component of polarization gradient:}
+\begin{align*}
+    \frac{\partial\mathbf{P}}{\partial s}_\mathrm{rad} = \sqrt{\frac{(Q\frac{\partial U}{\partial x} - U\frac{\partial Q}{\partial x})^2 + (Q\frac{\partial U}{\partial y} - U\frac{\partial Q}{\partial y})^2}{Q^2+U^2}}
 \end{align*}
 
 {\noindent}\textbf{Wavelength squared distribution standard error:} 
