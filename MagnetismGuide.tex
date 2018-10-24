@@ -54,11 +54,11 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 \maketitle
 \tableofcontents
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
 %                                                          %
-%                       PREFACE                            %
+%                       PREFACE                  %
 %                                                          %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
 
 \section{Preface}
 
@@ -96,11 +96,11 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
 %                                                          %
-%                     TERMINOLOGY                          %
+%                     TERMINOLOGY           %
 %                                                          %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
 
 \newpage
 \section{Terminology}
@@ -211,7 +211,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 {\noindent}\textbf{Dispersion measure (DM):}
 
 \begin{align*}
-    {\rm DM} = \int\limits_0^\ell n_e\mathrm{d}\ell ~ [{\rm pc\,cm^{-3}}]
+    {\rm DM} = -\int\limits_\mathrm{source}^\mathrm{observer} n_e\vec{{\rm d}\ell} ~ [{\rm pc\,cm^{-3}}]
 \end{align*}
 
 {\noindent}\textbf{Dust polarization:} The polarization angle of dust emission is conventionally taken to be $90^\circ$ from the orientation of the local Galactic magnetic field.
@@ -225,7 +225,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 {\noindent}\textbf{Emission measure (EM):} The square of the number density of free electrons integrated over the volume of plasma.
 
 \begin{align*}
-    {\rm EM} = \int\limits_0^\ell n_e^2\mathrm{d}\ell ~ [{\rm pc\,cm^{-6}}]
+    {\rm EM} = -\int\limits_\mathrm{source}^\mathrm{observer} n_e^2\vec{{\rm d}\ell} ~ [{\rm pc\,cm^{-6}}]
 \end{align*}
 
 {\noindent}\textbf{Energy cascade:}
@@ -239,10 +239,10 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 {\noindent}\textbf{Faraday depth $(\phi)$:} The Faraday depth of a source is defined as
 
 \begin{align*}
-    \boxed{\phi(\mathbf{r}) = -0.81 \int\limits_\mathrm{there}^\mathrm{here}n_e\mathbf{B}\cdot d\mathbf{r} ~ [{\rm rad\,m^{-2}}]},
+    \boxed{\phi(\mathbf{r}) = -0.81 \int\limits_\mathrm{source}^\mathrm{observer}n_e\vec{B}\cdot\vec{{\rm d}r} ~ [{\rm rad\,m^{-2}}]},
 \end{align*}
 
-{\noindent}where $n_e$ is the electron density in ${\rm cm^{-3}}$, $\mathbf{B}$ is the magnetic field strength in $\mu{\rm G}$, and ${\rm d\mathbf{r}}$ is an infinitesimal path length in ${\rm pc}$. The negative sign sets the convention that $\phi$ is positive for a $B$ direction pointing towards the observer. Most compact sources like pulsars and extremely compact extragalactic sources show a single value of $\phi$, called the \textit{rotation measure} (RM). The Faraday depth (or RM) does not increase monotonically with distance along the line of sight.
+{\noindent}where $n_e$ is the electron density in ${\rm cm^{-3}}$, $\vec{B}$ is the magnetic field strength in $\mu{\rm G}$, and $\vec{{\rm d}r}$ is an infinitesimal path length in ${\rm pc}$. The negative sign sets the convention that $\phi$ is positive for a $B$ direction pointing towards the observer. Most compact sources like pulsars and extremely compact extragalactic sources show a single value of $\phi$, called the \textit{rotation measure} (RM). The Faraday depth (or RM) does not increase monotonically with distance along the line of sight.
 
 {\noindent}\textbf{Faraday dispersion:} A type of \textit{internal depolarization} caused by emission at different Faraday depths along the same line of sight.
 
@@ -263,14 +263,14 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 {\noindent}When a straight line is fit to this equation to provide a single value for $\phi(\mathbf{r})$, this is traditionally called the \textit{rotation measure} (RM). This would only be a valid approximation for the simplest of cases, for example, a single foreground medium inducing Faraday rotation that is itself not emitting its own polarized emission. In more complex scenarios, polarized synchrotron emission may originate from volumes that are also inducing Faraday rotation which leads to polarized synchrotron emission at a range of Faraday depths. In such situations, \textit{rotation measure synthesis} (RM-synthesis) must be done to obtain the Faraday depth as a function of physical distance, $\phi(\mathbf{r})$. The Faraday depth $\phi(\mathbf{r})$ is a proportionality constant that encapsulates the physics of the situation:
 
 \begin{align*}
-    \boxed{\phi(\mathbf{r}) = -0.81 \int\limits_\mathrm{source}^\mathrm{observer}n_e\mathbf{B}\cdot \mathrm{d}\mathbf{r} ~ [{\rm rad\,m^{-2}}]. }
+    \boxed{\phi(\mathbf{r}) = -0.81 \int\limits_\mathrm{source}^\mathrm{observer}n_e\vec{B}\cdot\vec{{\rm }r} ~ [{\rm rad\,m^{-2}}]. }
 \end{align*}
 
 {\noindent}Additional complications may arise if the Faraday depth is large enough to substantially rotate the polarization vector within the observing bandwidth, an effect known as \textit{bandwidth depolarization}.
 
 {\noindent}\textbf{Faraday spectrum:} See \textit{Faraday dispersion function}.
 
-{\noindent}\textbf{Faraday screen:} A background emitting source of radiation which experiences Faraday rotation by a foreground source. In this case, Rotation Measure (RM) and Faraday depth are identical; otherwise Rotation Measure Synthesis is needed.
+{\noindent}\textbf{Faraday screen:} A background emitting source of radiation which experiences Faraday rotation by a foreground source. In this case,  and Faraday depth are identical; otherwise Rotation Measure Synthesis is needed.
 
 {\noindent}\textbf{Faraday thick:} A source is Faraday thick if the wavelength squared times the extent of the object in units of Faraday depth is much greater than 1: $\lambda^2\Delta\phi\gg1$. In the case of Faraday thick, objects are extended in Faraday space and substantially depolarized at wavelength squared. Remember that whether an object is Faraday thin or Faraday thick is wavelength dependent.
 
@@ -553,6 +553,14 @@ a polarization angle $\chi$ and polarized intensity $P$ or by the Stokes paramet
     \chi = \chi_0 + \mathrm{RM}\lambda^2 ~ [{\rm rad}].
 \end{align*}
 
+{\noindent}The value of $\mathrm{RM}$ is the integral of the line-of-sight component of the magnetic field weighted by the line-of-sight distribution of electron density, given by
+
+\begin{align*}
+	\mathrm{RM} = -0.81 \int\limits_\mathrm{source}^\mathrm{observer} n_e \vec{B}\cdot\vec{{\rm d}l} ~ [{\rm rad\,m^{-2}}],
+\end{align*}
+
+{\noindent}where $\vec{B}$ has units of $\mu{\rm G}$, $n_e$ has ${\rm cm^{-3}}$, and $\vec{{\rm d}l}$ has ${\rm pc}$.
+
 {\noindent}The RM does not increase monotonically with distance along the line of sight. Traditionally, the RM is obtained by performing a least-squares fit to the data to determine the slope. There are however three potential problems to this method: (1) the observed polarization angle is only known modulo $\pi$ radians; thus with measurements in only a few wavelength bands, the RM is often ambiguous (known as the \textit{$n\pi$ ambiguity}), (2) polarized emission with different RM values can be present along a single line of sight; the signal from these regions mix, making a single linear fit inappropriate, and (3) faint sources with high RM will be undetectable in individual channels due to low signal to noise and will remain undetectable even after integrating all channels due to \textit{bandwidth depolarization}; thus, no $\chi(\lambda^2)$ data will be available for the traditional linear fit.
 
 {\noindent}\textbf{Rotation measure (RM) synthesis:} A robust method for determining the \textit{Faraday dispersion function} was proposed by Burn (1966). It was seldom used until Brentjens and de Bruyn (2005) who coined the term \textit{RM Synthesis}. This technique involves Fourier transforming the observed \textit{polarized surface brightness} $P(\lambda^2)$ into the \textit{Faraday dispersion function} $F(\phi)$ (also referred to as the \textit{Faraday spectrum}) which is the complex polarized surface brightness as a function of \textit{Faraday depth}. As shown by Burn (1966), the the observed complex polarization vector can be written as $P(\lambda^2)=pI\mathrm{e}^{2i\chi}$, where $p$ is the \textit{polarization fraction} and $I$ is the \textit{Stokes I} vector. Substituting the expression $\chi(\lambda^2)=\chi_0+\phi\lambda^2$ for the polarization angle $\chi$ as a function of Faraday depth $\phi$, we obtain
@@ -600,7 +608,7 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 \begin{table}[h]
 \begin{center}
 \captionof{table}{Spectral ranges of various radio telescopes and parameters crucial for RM synthesis. Table from Beck et al. (2012).} \label{table:rmsynthesis}
-\includegraphics[width=15cm]{figures/RMsynthesis.png}
+\includegraphics[width=12cm]{figures/RMsynthesis.png}
 \end{center}
 \end{table}
 
@@ -629,7 +637,7 @@ It is a complex valued function; the real part corresponds to the response of th
 {\noindent}\textbf{Sonic Mach number ($M_s$):} The sound speed of the \textit{interstellar medium} given by
 
 \begin{align*}
-    M_s = \left\langle\frac{\lvert\mathbf{v}\rvert}{c_s}\right\rangle ~ [{\rm dimensionless}].
+    M_s = \left\langle\frac{\lvert\vec{v}\rvert}{c_s}\right\rangle ~ [{\rm dimensionless}].
 \end{align*}
 
 This number is a commonly used parameter of turbulence used to obtain information on gas compressibility and magnetization. Using polarization gradients of \textit{synchrotron radiation}, it was shown by Gaensler (2011) that the turbulence of the WIM has a relatively low \textit{sonic Mach number}, $M_s\lesssim2$.
@@ -823,11 +831,11 @@ This number is a commonly used parameter of turbulence used to obtain informatio
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                                          %
-%                     PARAMETERS                           %
-%                                                          %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                       %
+%                     PARAMETERS                          %
+%                                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
 \section{Parameters}
@@ -1059,23 +1067,23 @@ This number is a commonly used parameter of turbulence used to obtain informatio
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
 %                                                          %
-%                      EQUATIONS                           %
+%                      EQUATIONS               %
 %                                                          %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
 
 \newpage
 \section{Equations}
 
 {\noindent}\textbf{Alfv\'en Mach number:}
 \begin{align*}
-    M_A = \left\langle\frac{\lvert\mathbf{v}\rvert}{v_A}\right\rangle ~ [{\rm dimensionless}]
+    M_A = \left\langle\frac{\lvert\vec{v}\rvert}{v_A}\right\rangle ~ [{\rm dimensionless}]
 \end{align*}
 
 {\noindent}\textbf{Alfv\'en speed:}
 \begin{align*}
-    v_A = \frac{\lvert\mathbf{B}\lvert}{\sqrt{\rho}} ~ [{\rm m\,s^{-1}}]
+    v_A = \frac{\lvert\vec{B}\lvert}{\sqrt{\rho}} ~ [{\rm m\,s^{-1}}]
 \end{align*}
 
 {\noindent}\textbf{Ambipolar diffusion scale:}
@@ -1110,14 +1118,14 @@ This number is a commonly used parameter of turbulence used to obtain informatio
     \sigma_\Delta^2(L) = \left\langle \int\limits_0^{3L/2} {(A[r+x]-\langle A\rangle)\odot(x)}^2\mathrm{d}x \right\rangle,
 \end{align*}
 
-{\noindent}\textbf{Dispersion measure:}
+{\noindent}\textbf{Dispersion measure (DM):}
 \begin{align*}
-    {\rm DM} = \int\limits_0^\ell n_e\mathrm{d}\ell ~ [{\rm pc\,cm^{-3}}]
+    {\rm DM} = -\int\limits_\mathrm{source}^\mathrm{observer} n_e\vec{{\rm d}\ell} ~ [{\rm pc\,cm^{-3}}]
 \end{align*}
 
 {\noindent}\textbf{Emission measure:}
 \begin{align*}
-    {\rm EM} = \int\limits_0^\ell n_e^2\mathrm{d}\ell ~ [{\rm pc\,cm^{-6}}]
+    {\rm EM} = -\int\limits_\mathrm{source}^\mathrm{observer} n_e^2\vec{{\rm d}\ell} ~ [{\rm pc\,cm^{-6}}]
 \end{align*}
 
 {\noindent}\textbf{Expectation value of $\theta$ on any domain (RHT):}
@@ -1132,7 +1140,7 @@ This number is a commonly used parameter of turbulence used to obtain informatio
 
 {\noindent}\textbf{Faraday depth:} 
 \begin{align*}
-\phi(\mathbf{r}) = -0.81 \int\limits_\mathrm{source}^\mathrm{observer}n_e\mathbf{B}\cdot \mathrm{d}\mathbf{r} ~ [{\rm rad\,m^{-2}}]
+    \boxed{\phi(\vec{r}) = -0.81 \int\limits_\mathrm{source}^\mathrm{observer}n_e\vec{B}\cdot\vec{{\rm d}r} ~ [{\rm rad\,m^{-2}}]}
 \end{align*}
 
 {\noindent}\textbf{Faraday depth standard error:}
@@ -1282,7 +1290,8 @@ P(\lambda^2) &= \lvert\lvert p(\lambda^2) \rvert\rvert I\mathrm{e}^{2i\chi} = p(
 
 {\noindent}\textbf{Rotation measure:}
 \begin{align*}
-{\rm RM} = \dfrac{\mathrm{d}\chi(\lambda^2)}{\mathrm{d}\lambda^2} ~ [{\rm rad\,m^{-2}}]
+{\rm RM} &= \dfrac{\mathrm{d}\chi(\lambda^2)}{\mathrm{d}\lambda^2} ~ [{\rm rad\,m^{-2}}] \\
+\mathrm{RM}& = -0.81 \int\limits_\mathrm{source}^\mathrm{observer} n_e \vec{B}\cdot\vec{{\rm d}l} ~ [{\rm rad\,m^{-2}}]
 \end{align*}
 
 {\noindent}\textbf{Rotation measure transfer function (RMTF):}
@@ -1297,7 +1306,7 @@ R(\phi) \equiv \dfrac{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{e}^{-2i\p
 
 {\noindent}\textbf{Sonic Mach number:}
 \begin{align*}
-    M_s = \left\langle\frac{\lvert\mathbf{v}\rvert}{c_s}\right\rangle ~ [{\rm dimensionless}]
+    M_s = \left\langle\frac{\lvert\vec{v}\rvert}{c_s}\right\rangle ~ [{\rm dimensionless}]
 \end{align*}
 
 {\noindent}\textbf{Spectral correlation function:}
