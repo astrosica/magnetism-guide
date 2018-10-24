@@ -1,6 +1,6 @@
 %%% Template originaly created by Karol Kozioł (mail@karol-koziol.net) and modified for ShareLaTeX use
 
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 \usepackage[
 colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,bookmarks=true,
@@ -239,7 +239,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 {\noindent}\textbf{Faraday depth $(\phi)$:} The Faraday depth of a source is defined as
 
 \begin{align*}
-    \boxed{\phi(\mathbf{r}) = -0.81 \int\limits_\mathrm{source}^\mathrm{observer}n_e\vec{B}\cdot\vec{{\rm d}r} ~ [{\rm rad\,m^{-2}}]},
+    \phi(\mathbf{r}) = -0.81 \int\limits_\mathrm{source}^\mathrm{observer}n_e\vec{B}\cdot\vec{{\rm d}r} ~ [{\rm rad\,m^{-2}}],
 \end{align*}
 
 {\noindent}where $n_e$ is the electron density in ${\rm cm^{-3}}$, $\vec{B}$ is the magnetic field strength in $\mu{\rm G}$, and $\vec{{\rm d}r}$ is an infinitesimal path length in ${\rm pc}$. The negative sign sets the convention that $\phi$ is positive for a $B$ direction pointing towards the observer. Most compact sources like pulsars and extremely compact extragalactic sources show a single value of $\phi$, called the \textit{rotation measure} (RM). The Faraday depth (or RM) does not increase monotonically with distance along the line of sight.
@@ -249,7 +249,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 {\noindent}\textbf{Faraday dispersion function ($F(\phi)$):} Also referred to as the \textit{Faraday spectrum} introduced by Burn (1966) which describes the complex polarization vector as a function of Faraday depth as
 
 \begin{align*}
-    \boxed{F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\mathrm{d}\lambda^2 ~ [{\rm rad\,m^{-2}}]},
+    F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\mathrm{d}\lambda^2 ~ [{\rm rad\,m^{-2}}],
 \end{align*}
 
 {\noindent}where $F(\phi)$ is the complex polarized surface brightness per unit Faraday depth and $P(\lambda^2) = p(\lambda^2)I(\lambda^2)$ is the complex polarized surface brightness. To obtain the Faraday dispersion function, \textit{rotation measure (RM) synthesis} is used to Fourier transform the observed polarized surface brightness into the Faraday spectrum. This Faraday dispersion function is not straightforward to interpret; in particular, there is no direct relationship between Faraday depth and physical depth. Further, the Faraday dispersion function suffers from sidelobes of the main components caused by limited coverage of the observed wavelength space. Burn (1966) assumes that $F(\phi)$ is independent of frequency. The equation for $P(\lambda^2)$ is very similar to a Fourier transform; a fundamental difference is that $P(\lambda^2)$ only has physical meaning for $\lambda\geq0$. Since $P(\lambda^2)$ cannot be measured for $\lambda<0$, it is only invertible if one makes assumptions about the values of $P$ for $\lambda^2<0$ based on those for $\lambda^2\geq0$ (Burn 1966). For example, assuming that $P(\lambda^2)$ is Hermitian corresponds to assuming that $F(\phi)$ is strictly real.
@@ -263,7 +263,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 {\noindent}When a straight line is fit to this equation to provide a single value for $\phi(\mathbf{r})$, this is traditionally called the \textit{rotation measure} (RM). This would only be a valid approximation for the simplest of cases, for example, a single foreground medium inducing Faraday rotation that is itself not emitting its own polarized emission. In more complex scenarios, polarized synchrotron emission may originate from volumes that are also inducing Faraday rotation which leads to polarized synchrotron emission at a range of Faraday depths. In such situations, \textit{rotation measure synthesis} (RM-synthesis) must be done to obtain the Faraday depth as a function of physical distance, $\phi(\mathbf{r})$. The Faraday depth $\phi(\mathbf{r})$ is a proportionality constant that encapsulates the physics of the situation:
 
 \begin{align*}
-    \boxed{\phi(\mathbf{r}) = -0.81 \int\limits_\mathrm{source}^\mathrm{observer}n_e\vec{B}\cdot\vec{{\rm }r} ~ [{\rm rad\,m^{-2}}]. }
+    \phi(\mathbf{r}) = -0.81 \int\limits_\mathrm{source}^\mathrm{observer}n_e\vec{B}\cdot\vec{{\rm }r} ~ [{\rm rad\,m^{-2}}].
 \end{align*}
 
 {\noindent}Additional complications may arise if the Faraday depth is large enough to substantially rotate the polarization vector within the observing bandwidth, an effect known as \textit{bandwidth depolarization}.
@@ -575,13 +575,13 @@ a polarization angle $\chi$ and polarized intensity $P$ or by the Stokes paramet
 {\noindent}where $F(\phi)$ is the \textit{Faraday dispersion function} which describes the intrinsic polarized flux as a function of Faraday depth. Since the observed polarization originates from emission along all Faraday depths, integrating this over $\phi$ gives the final form
 
 \begin{align*}
-    \boxed{P(\lambda^2) = \int\limits_{-\infty}^\infty F(\phi)\mathrm{e}^{2i\phi\lambda^2}\mathrm{d}\phi ~ [{\rm Jy}]}.
+    P(\lambda^2) = \int\limits_{-\infty}^\infty F(\phi)\mathrm{e}^{2i\phi\lambda^2}\mathrm{d}\phi ~ [{\rm Jy}].
 \end{align*}
 
 {\noindent}Thus there is a simple expression that relates the intrinsic quantity $F(\phi)$ to the observable $P(\lambda^2)$ which takes the form of a Fourier transform. This can now be inverted to obtain the Faraday dispersion function
 
 \begin{align*}
-    \boxed{F(\phi) = \int\limits_{-\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\mathrm{d}\lambda^2 ~ [{\rm rad\,m^{-2}}]}.
+    F(\phi) = \int\limits_{-\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\mathrm{d}\lambda^2 ~ [{\rm rad\,m^{-2}}].
 \end{align*}
 
 {\noindent}However, one is confronted with a problem: namely, that we cannot observe at wavelengths $\lambda<0$, nor do we observe for all wavelengths $\lambda>0$. To resolve this issue, Brentjens \& de Bruyn (2005) introduce a window function $W(\lambda^2)$ which is non-zero only at wavelengths sampled by the telescope. They show that the observed polarized surface brightness can be rewritten as 
@@ -593,14 +593,14 @@ a polarization angle $\chi$ and polarized intensity $P$ or by the Stokes paramet
 {\noindent}and the reconstructed Faraday dispersion function as
 
 \begin{align*}
-    \boxed{\tilde{F}(\phi) \equiv \dfrac{\int\limits_{-\infty}^\infty \tilde{P}(\lambda^2)\mathrm{e}^{-2i\phi(\lambda^2-\lambda_0^2)}\mathrm{d}\lambda^2}{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{d}\lambda^2} = F(\phi) * R(\phi) ~ [{\rm rad\,m^{-2}}]},
+    \tilde{F}(\phi) \equiv \dfrac{\int\limits_{-\infty}^\infty \tilde{P}(\lambda^2)\mathrm{e}^{-2i\phi(\lambda^2-\lambda_0^2)}\mathrm{d}\lambda^2}{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{d}\lambda^2} = F(\phi) * R(\phi) ~ [{\rm rad\,m^{-2}}],
 \end{align*}
 
 {\noindent}where $*$ denotes convolution. $\tilde{F}(\phi)$ is an approximate reconstruction of $F(\phi)$. More precisely, it is $F(\phi)$ convolved with $R(\phi)$ after Fourier filtering by the weight function $W(\
 lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) which is a crucially important quantity defined by
 
 \begin{align*}
-    \boxed{R(\phi) \equiv \dfrac{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{e}^{-2i\phi(\lambda^2-\lambda_0^2)}\mathrm{d}\lambda^2}{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{d}\lambda^2} ~ [{\rm rad\,m^{-2}}]},
+    R(\phi) \equiv \dfrac{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{e}^{-2i\phi(\lambda^2-\lambda_0^2)}\mathrm{d}\lambda^2}{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{d}\lambda^2} ~ [{\rm rad\,m^{-2}}],
 \end{align*}
 
 {\noindent}which is normalized to unity at $\phi=0$. It is a complex valued function. The real part corresponds to the response of the transform parallel to the ($Q,U$) vector at $\lambda_0=\lambda$ while the imaginary part corresponds to the response orthogonal to it. Taking a look at the equations above for $\tilde{F}(\phi)$ and $R(\phi)$, these can be seen as applications of the Fourier shift theorem -- since the shift theorem only affects the argument and not the absolute value of the resulting complex vector function, de-rotating these equations to $\lambda_0\neq0$ does not change their amplitude. The Faraday spectrum is not straightforward to interpret; in particular, there is no direct relationship between Faraday depth and physical depth. Further, the Faraday dispersion function suffers from sidelobes of the main components caused by limited coverage of the observed wavelength space. RM Synthesis is required when multiple emitting and rotating regions are located along the line of sight, as opposed to a single emitting region (i.e., Faraday screen) behind a single rotating region. RM synthesis was applied to an entire field of view for the first time by de Bruyn (1966) using pulsar observations. When applied to a complete field of view instead of just a single line of sight, the output of RM synthesis is referred to as an ``RM cube''. RM synthesis is characterized by four parameters: (1) the resolution in Faraday space, which is inversely proportional to the coverage in wavelength space, (2) the maximum observable of a point-like source in Faraday space, which is inversely proportional to the width of a single frequency channel, (3) the maximum width of extended structures in Faraday space (Faraday rotating and synchrotron emitting sources), which is inversely proportional to the square of the minimum observable wavelength; wide-band observations at long wavelengths yield high resolution in Faraday space but cannot detect extended structures, and (4) the ratio of maximum to minimum wavelengths which is crucial to recognize a range of different scales in Faraday space. Table \ref{table:rmsynthesis} these parameters for a variety of radio telescopes. The highest resolution in Faraday space are for those with the largest wavelength coverage (LOFAR and SKA) while the largest range of scales in Faraday space are for those with the greatest ratio of maximum to minimum wavelengths (ATCA, JVLA, SKA).
@@ -615,7 +615,7 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 {\noindent}\textbf{Rotation measure transfer function (RMTF):} A crucially important quantity introduced by de Bruyn (1966) and defined by
 
 \begin{align*}
-    \boxed{R(\phi) \equiv \dfrac{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{e}^{-2i\phi(\lambda^2-\lambda_0^2)}\mathrm{d}\lambda^2}{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{d}\lambda^2} ~ [{\rm rad\,m^{-2}}]},
+    R(\phi) \equiv \dfrac{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{e}^{-2i\phi(\lambda^2-\lambda_0^2)}\mathrm{d}\lambda^2}{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{d}\lambda^2} ~ [{\rm rad\,m^{-2}}],
 \end{align*}
 
 {\noindent}which is normalized to unity at $\phi=0$. For a simple weight function $W(\lambda^2)$ that is a top-hat (boxcar) fuction centered on $\lambda_c^2$ with width $\Delta\lambda^2 = \lambda_2^2-\lambda_1^2$, the corresponding RMTF is a sinc function with a phase wind:
@@ -634,13 +634,13 @@ It is a complex valued function; the real part corresponds to the response of th
 
 {\noindent}\textbf{Second moment:} 
 
-{\noindent}\textbf{Sonic Mach number ($M_s$):} The sound speed of the \textit{interstellar medium} given by
+{\noindent}\textbf{Sonic Mach number ($\mathcal{M}_s$):} The sound speed of the \textit{interstellar medium} given by
 
 \begin{align*}
-    M_s = \left\langle\frac{\lvert\vec{v}\rvert}{c_s}\right\rangle ~ [{\rm dimensionless}].
+    \mathcal{M}_s = \left\langle\frac{\lvert\vec{v}\rvert}{c_s}\right\rangle ~ [{\rm dimensionless}].
 \end{align*}
 
-This number is a commonly used parameter of turbulence used to obtain information on gas compressibility and magnetization. Using polarization gradients of \textit{synchrotron radiation}, it was shown by Gaensler (2011) that the turbulence of the WIM has a relatively low \textit{sonic Mach number}, $M_s\lesssim2$.
+This number is a commonly used parameter of turbulence used to obtain information on gas compressibility and magnetization. Using polarization gradients of \textit{synchrotron radiation}, it was shown by Gaensler (2011) that the turbulence of the WIM has a relatively low \textit{sonic Mach number}, $\mathcal{M}_s\lesssim2$.
 
 {\noindent}\textbf{Spectral index ($\alpha$):} A measure of the dependence of radiative flux density on frequency. If flux does not follow a power-law distribution, the spectral index itself is a function of frequency. In the radio regime, a spectral index of $\alpha=0-2$ indicates thermal emission while a steep negative spectrum indicates synchrotron radiation.
 
@@ -768,7 +768,7 @@ This number is a commonly used parameter of turbulence used to obtain informatio
 
 {\noindent}\textbf{Volume filling factor ($f$):} A correction factor such that a fraction $f$ of the line of sight intersects clouds of uniform density $N$. There are three effects of the interstellar magnetic field that conspire to lower the filling factor of hot cavities: (1) the background magnetic pressure acting on the surrounding shells directly opposes their expansion, (2) the magnetic tension in the swept-up field lines gives rise to an inward restoring force, while the associated magnetic pressure prevents the shells from fully collapsing and, therefore, keeps them relatively thick, and (3) the enhanced external ``signal speed'' causes the shells to merge earlier than they would in an unmagnetized medium.
 
-{\noindent}\textbf{Warm ionized medium (WIM):} A diffuse phase of the \textit{interstellar medium} with a typical temperature of $T\sim8,000\,{\rm K}$ and average electron density of $\sim0.2-0.5\,{\rm cm^{-3}}$. The ionized gas has mostly been mapped using the H$\alpha$ line. One limitation of the H$\alpha$ line comes from the obscuration caused by dust, which restricts visibility to within $2-3\,{\rm kpc}$ from the Sun. Using polarization gradients of \textit{synchrotron radiation}, it was shown by Gaensler (2011) that the turbulence of the WIM has a relatively low \textit{sonic Mach number}, $M_s\lesssim2$.
+{\noindent}\textbf{Warm ionized medium (WIM):} A diffuse phase of the \textit{interstellar medium} with a typical temperature of $T\sim8,000\,{\rm K}$ and average electron density of $\sim0.2-0.5\,{\rm cm^{-3}}$. The ionized gas has mostly been mapped using the H$\alpha$ line. One limitation of the H$\alpha$ line comes from the obscuration caused by dust, which restricts visibility to within $2-3\,{\rm kpc}$ from the Sun. Using polarization gradients of \textit{synchrotron radiation}, it was shown by Gaensler (2011) that the turbulence of the WIM has a relatively low \textit{sonic Mach number}, $\mathcal{M}_s\lesssim2$.
 
 {\noindent}\textbf{Warm partially ionized medium (WPIM):}
 
@@ -840,7 +840,7 @@ This number is a commonly used parameter of turbulence used to obtain informatio
 \newpage
 \section{Parameters}
 
-{\noindent}\textbf{Alfv\'en Mach number}: $M_A~[{\rm dimensionless}]$
+{\noindent}\textbf{Alfv\'en Mach number}: $\mathcal{M}_A~[{\rm dimensionless}]$
 
 {\noindent}\textbf{Alfv\'en speed}: $v_A~[{\rm m\,s^{-1}}]$
 
@@ -926,7 +926,7 @@ This number is a commonly used parameter of turbulence used to obtain informatio
 
 {\noindent}\textbf{Lorentz factor}: $\gamma ~ [\rm dimensionless]$
 
-{\noindent}\textbf{Mach number}: $M~[{\rm dimensionless]}$
+{\noindent}\textbf{Mach number}: $\mathcal{M}~[{\rm dimensionless]}$
 
 {\noindent}\textbf{Magnetic field strength}: $B~[{\rm \mu G]}$
 
@@ -984,7 +984,7 @@ This number is a commonly used parameter of turbulence used to obtain informatio
 
 {\noindent}\textbf{Rotation measure transfer function (RMTF)}: $R(\phi) {\rm [rad\,m^{-2}]}$
 
-{\noindent}\textbf{Sonic Mach number}: $M_s~[{\rm dimensionless]}$
+{\noindent}\textbf{Sonic Mach number}: $\mathcal{M}_s~[{\rm dimensionless]}$
 
 {\noindent}\textbf{Sound speed}: $c_s ~ [{\rm m\,s^{-1}}]$
 
@@ -1078,7 +1078,7 @@ This number is a commonly used parameter of turbulence used to obtain informatio
 
 {\noindent}\textbf{Alfv\'en Mach number:}
 \begin{align*}
-    M_A = \left\langle\frac{\lvert\vec{v}\rvert}{v_A}\right\rangle ~ [{\rm dimensionless}]
+    \mathcal{M}_A = \left\langle\frac{\lvert\vec{v}\rvert}{v_A}\right\rangle ~ [{\rm dimensionless}]
 \end{align*}
 
 {\noindent}\textbf{Alfv\'en speed:}
@@ -1140,7 +1140,7 @@ This number is a commonly used parameter of turbulence used to obtain informatio
 
 {\noindent}\textbf{Faraday depth:} 
 \begin{align*}
-    \boxed{\phi(\vec{r}) = -0.81 \int\limits_\mathrm{source}^\mathrm{observer}n_e\vec{B}\cdot\vec{{\rm d}r} ~ [{\rm rad\,m^{-2}}]}
+    \phi(\vec{r}) = -0.81 \int\limits_\mathrm{source}^\mathrm{observer}n_e\vec{B}\cdot\vec{{\rm d}r} ~ [{\rm rad\,m^{-2}}]
 \end{align*}
 
 {\noindent}\textbf{Faraday depth standard error:}
@@ -1306,7 +1306,7 @@ R(\phi) \equiv \dfrac{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{e}^{-2i\p
 
 {\noindent}\textbf{Sonic Mach number:}
 \begin{align*}
-    M_s = \left\langle\frac{\lvert\vec{v}\rvert}{c_s}\right\rangle ~ [{\rm dimensionless}]
+    \mathcal{M}_s = \left\langle\frac{\lvert\vec{v}\rvert}{c_s}\right\rangle ~ [{\rm dimensionless}]
 \end{align*}
 
 {\noindent}\textbf{Spectral correlation function:}
