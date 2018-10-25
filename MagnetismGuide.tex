@@ -944,6 +944,14 @@ This number is a commonly used parameter of turbulence used to obtain informatio
 
 {\noindent}\textbf{Polarization angle at $\lambda=0$}: $\chi_0~[{\rm rad}]$
 
+{\noindent}\textbf{Polarization directional derivative}: $\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert~ [\rm Jy\,beam^{-1}]$
+
+{\noindent}\textbf{Polarization directional derivative (maximum value)}: $\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{max}~ [\rm Jy\,beam^{-1}]$
+
+{\noindent}\textbf{Polarization directional derivative (radial component)}: $\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{rad}~ [\rm Jy\,beam^{-1}]$
+
+{\noindent}\textbf{Polarization directional derivative (tangential component)}: $\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{tan}~ [\rm Jy\,beam^{-1}]$
+
 {\noindent}\textbf{Polarization fraction}: $p(\lambda^2)~[{\rm dimensionless}]$
 
 {\noindent}\textbf{Polarization gradient}: $\lvert\nabla \mathbf{P}\rvert ~ [\rm Jy\,beam^{-1}]$
@@ -1213,6 +1221,50 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
 \sigma_{\chi_0} = \left[ \dfrac{\sigma_Q^2\approx\sigma_U^2\approx\sigma^2}{4(N-2)\lvert\lvert P \rvert\rvert^2} \left( \dfrac{N-1}{N} + \dfrac{\lambda_0^4}{\sigma_{\lambda^2}^2} \right) \right]^{-1} ~ [{\rm rad}]
 \end{align*}
 (Brentjens \& de Bruyn, 2005)
+
+{\noindent}\textbf{Polarization directional derivative}:
+\begin{align*}
+	\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert = \sqrt{ \cos^2\theta\left(\left(\frac{\partial Q}{\partial x}\right)^2+\left(\frac{\partial U}{\partial x}\right)^2\right) + 2\cos\theta\sin\theta\left(\frac{\partial Q}{\partial x}\frac{\partial Q}{\partial y} + \frac{\partial U}{\partial x}\frac{\partial U}{\partial y}\right) + \sin^2\theta\left(\left(\frac{\partial Q}{\partial y}\right)^2 + \left(\frac{\partial U}{\partial y}\right)^2\right) } ~ [\rm Jy\,beam^{-1}]
+\end{align*}
+(Herron, 2005)
+
+{\noindent}\textbf{Polarization directional derivative (maximum value)}:
+\begin{equation*}
+\begin{split}
+\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{max} = \sqrt{ \frac{1}{2}\left[ \left(\frac{\partial Q}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial y}\right)^2 \right] + \frac{1}{2} 
+  \sqrt{
+    \begin{aligned}
+    & \sqrt{\left[ \left(\frac{\partial Q}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial y}\right)^2 \right]^2 } \\
+    &- 4\left[ \frac{\partial Q}{\partial x}\frac{\partial U}{\partial y} - \frac{\partial Q}{\partial y}\frac{\partial U}{\partial x}  \right]^2
+    \end{aligned}
+    }}
+\end{split}
+\end{equation*}
+(Herron, 2005)
+
+{\noindent}\textbf{Polarization directional derivative (radial component)}:
+\begin{align*}
+	\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{rad} = \cos\left(\arctan\frac{U}{Q}\right)\left(\frac{\partial Q}{\partial x}\cos\theta+\frac{\partial Q}{\partial y}\sin\theta\right) + \sin\left(\arctan\frac{U}{Q}\right)\left(\frac{\partial U}{\partial x}\cos\theta+\frac{\partial U}{\partial y}\sin\theta\right) ~ [\rm Jy\,beam^{-1}]
+\end{align*}
+(Herron, 2005)
+
+{\noindent}\textbf{Polarization directional derivative (radial component; max value)}:
+\begin{align*}
+	\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{rad,max} = \sqrt{\frac{\left(Q\frac{\partial Q}{\partial x}+U\frac{\partial U}{\partial x}\right)^2 +\left(Q\frac{\partial Q}{\partial y}+U\frac{\partial U}{\partial y}\right)^2}{Q^2+U^2}} ~ [\rm Jy\,beam^{-1}]
+\end{align*}
+(Herron, 2005)
+
+{\noindent}\textbf{Polarization directional derivative (tangential component)}:
+\begin{align*}
+	\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{tan} = -\sin\left(\arctan\frac{U}{Q}\right)\left(\frac{\partial Q}{\partial x}\cos\theta+\frac{\partial Q}{\partial y}\sin\theta\right) + \cos\left(\arctan\frac{U}{Q}\right)\left(\frac{\partial U}{\partial x}\cos\theta+\frac{\partial U}{\partial y}\sin\theta\right) ~ [\rm Jy\,beam^{-1}]
+\end{align*}
+(Herron, 2005)
+
+{\noindent}\textbf{Polarization directional derivative (tangential component; max value)}:
+\begin{align*}
+	\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{tan,max} = \sqrt{\frac{\left(Q\frac{\partial U}{\partial x}-U\frac{\partial Q}{\partial x}\right)^2 +\left(Q\frac{\partial U}{\partial y}-U\frac{\partial Q}{\partial y}\right)^2}{Q^2+U^2}} ~ [\rm Jy\,beam^{-1}]
+\end{align*}
+(Herron, 2005)
 
 {\noindent}\textbf{Polarization fraction:}
 \begin{align*}
