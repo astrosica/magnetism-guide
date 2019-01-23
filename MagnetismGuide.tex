@@ -1,22 +1,27 @@
-%%% Template originaly created by Karol Kozioł (mail@karol-koziol.net) and modified for ShareLaTeX use
-
 \documentclass[a4paper,10pt]{article}
-
-\usepackage[
-colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,bookmarks=true,
-bookmarksopenlevel=2]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,upgreek,textcomp,cancel,caption}
-\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{enumitem}
 \usepackage{multicol}
-\usepackage{tikz}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{mathtools}
+\usepackage{amsmath,amsthm,amssymb,cancel,bm,upgreek}
+\usepackage{floatrow}
+\setcounter{tocdepth}{2}
 \usepackage{geometry}
 \geometry{total={210mm,297mm},
 left=25mm,right=25mm,%
 bindingoffset=0mm, top=20mm,bottom=20mm}
-
-\linespread{1.3}
-
 \newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+\AtBeginDocument{%
+   \setlength\abovedisplayskip{-3pt}
+   \setlength\belowdisplayskip{5pt}}
+
+% links
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=green,filecolor=cyan,urlcolor=magenta}
+
 % my own titles
 \makeatletter
 \renewcommand{\maketitle}{
@@ -31,7 +36,6 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 \end{center}
 }
 \makeatother
-%%%
 
 % custom footers and headers
 \usepackage{fancyhdr,lastpage}
@@ -62,7 +66,7 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 
 \section{Preface}
 
-The interstellar medium (ISM) is a complex environment of gas and dust with varying degrees of ionization, densities, and spatial distributions called \textit{phases}. It accounts for $\sim10-15\%$ of the mass and $1-2\%$ of the volume of our Galaxy. From the largest of Galactic scales to the smallest scales of star and planet formation, this tenuous plasma is threaded with magnetic field lines and exhibits large degrees of turbulence, both of which are believed to be major driving forces in shaping the structure and dynamics of our Galaxy. These magnetic fields, along with cosmic rays, exert outward pressures on the ISM which are counterbalanced by the gravitational attraction provided by the ordinary matter. The ordinary matter, cosmic rays, and magnetic fields are therefore in a state of pressure equilibrium. Turbulence is an important aspect of the ISM as it not only transports energy from large ($\sim$kpc) to small ($\sim$pc) scales, but also amplifies magnetic fields and accelerates cosmic rays, explaining the observed $\mu$G magnetic field strengths as well as the $\sim$GeV cosmic ray energies in our Galaxy. Turbulence itself is a complex nonlinear fluid phenomenon which results in an extreme range of correlated spatial and temporal scales in the multi-phase ISM, and is driven by a variety of large- and small-scale energy sources. While magnetic fields and turbulence are generally understood to play fundamental roles in shaping the structure and dynamics of our Galaxy, the degree to which they do so across different phases and spatial scales of the ISM remains poorly understood. As such, this will be the focus of my thesis work!
+The interstellar medium (ISM) is a complex environment of gas and dust with varying degrees of ionization, densities, and spatial distributions called \textit{phases}. It accounts for $\sim10-15\%$ of the mass and $1-2\%$ of the volume of our Galaxy. From the largest of Galactic scales to the smallest scales of star and planet formation, this tenuous plasma is threaded with magnetic field lines and exhibits large degrees of turbulence, both of which are believed to be major driving forces in shaping the structure and dynamics of our Galaxy. These magnetic fields, along with cosmic rays, exert outward pressures on the ISM which are counterbalanced by the gravitational attraction provided by the ordinary matter. The ordinary matter, cosmic rays, and magnetic fields are therefore in a state of pressure equilibrium. Turbulence is an important aspect of the ISM as it not only transports energy from large ($\sim$kpc) to small ($\sim$pc) scales, but also amplifies magnetic fields and accelerates cosmic rays, explaining the observed $\mu$G magnetic field strengths as well as the $\sim$GeV cosmic ray energies in our Galaxy. Turbulence itself is a complex nonlinear fluid phenomenon which results in an extreme range of correlated spatial and temporal scales in the multi-phase ISM, and is driven by a variety of large- and small-scale energy sources. While magnetic fields and turbulence are generally understood to play fundamental roles in shaping the structure and dynamics of our Galaxy, the degree to which they do so across different phases and spatial scales of the ISM remains poorly understood.
 
 
 
@@ -109,17 +113,23 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}\textbf{Advection operator:}
 
-{\noindent}\textbf{Alfv\'en Mach number:} A commonly used parameter of turbulence used to obtain information on gas compressibility and magnetization.
-
-{\noindent}\textbf{Alfv\'en speed ($V_A$):} Given by
+{\noindent}\textbf{Alfv\'en Mach number:} A commonly used parameter of turbulence used to obtain information on gas compressibility and magnetization given by
 
 \begin{align*}
-    V_A = \frac{B}{4\pi\rho_n} ~ [{\rm m\,s^{-1}}],
+    \mathcal{M}_A \equiv \frac{|\vec{v}|}{v_A},
 \end{align*}
 
-{\noindent}where $B$ is the magnetic field strength and $\rho$ is the density of neutral particles. When the Alfv\'en speed is greater than the sound speed, the fast and Alfv\'en wave families are damped at or below the \textit{ambipolar diffusion scale} $L_\mathrm{AD}$; when the Alfv\'en speed is less than the sound speed, the slow and Alfv\'en wave families are damped.
+{\noindent}where $|\vec{v}|$ is the local velocity and $v_A$ is the \textit{Alfv\'en speed}.
 
-{\noindent}\textbf{Alfv\'en wave:} A type of magnetohydrodynamic (MHD) wave in which ions oscillate in response to a restoring force provided by an effective tension on the magnetic field lines.
+{\noindent}\textbf{Alfv\'en speed ($v_A$):} Given by
+
+\begin{align*}
+    v_A = \frac{|\vec{B}|}{4\pi\rho_n} ~ [{\rm m\,s^{-1}}],
+\end{align*}
+
+{\noindent}where $|\vec{B}|$ is the magnetic field strength and $\rho$ is the density of neutral particles. When the Alfv\'en speed is greater than the sound speed, the fast and Alfv\'en wave families are damped at or below the \textit{ambipolar diffusion scale} $L_\mathrm{AD}$; when the Alfv\'en speed is less than the sound speed, the slow and Alfv\'en wave families are damped.
+
+{\noindent}\textbf{Alfv\'en wave:} In 1942, Hannes Alfv\'en combined the mathematics of fluid mechanics and electromagnetism to predict that plasmas could support wave-like variation in the magnetic field, a wave phenomenon that now bears his name, Alfv\'en waves. These are a type of magnetohydrodynamic (MHD) wave in which ions oscillate in response to a restoring force provided by an effective tension on the magnetic field lines. The waves initially proposed by Alfv\'en are considered ``basic''. They have a characteristic that they are compressional, which means that magnetic field variation of the Alfv\'en waves is in the direction of the wave motion. Charged particles moving through a plasma with these waves have very little alteration of their trajectory. But Alfv\'en waves can exhibit more variety. A variant is the ``kinetic'' Alfv\'en wave which is transverse, with strong magnetic field variation perpendicular to the wave motion, so can trade energy between the different frequencies which might propagate through a plasma. This also means it can exchange energy with the particles in the plasma, in some cases, trapping particles in the troughs of the waves and carrying them along.
 
 {\noindent}\textbf{Ambipolar diffusion:} The drift of neutral particles towards the central gravitational potential through the ionized particles tied to the magnetic field. This is often invoked as a source of dissipation of the magnetohydrodynamic (MHD) energy cascade. The scale at which ions and neutral particles decouple is called the \textit{ambipolar diffusion scale}. The application of ambipolar diffusion extends beyond direct studies of star formation and to include general studies of magnetic fields. Ambipolar diffusion has been proposed to damp particular families of MHD waves. 
 
@@ -135,7 +145,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
     R_\mathrm{AD} = \frac{LV}{\nu_\mathrm{AD}} ~ [{\rm dimensionless}],
 \end{align*}
 
-{\noindent}where $V$ is a characteristic velocity (e.g., for trans-Alfv\'enic turbulence it is the Alfv\'en speed, $V_A = \dfrac{B}{4\pi\rho_n}$) and $L=L_\mathrm{AD}$ when $R_\mathrm{AD}=1$. This gives the form of the ambipolar diffusion scale as often found in the literature:
+{\noindent}where $V$ is a characteristic velocity (e.g., for trans-Alfv\'enic turbulence it is the \textit{Alfv\'en speed}, $v_A = \dfrac{B}{4\pi\rho_n}$) and $L=L_\mathrm{AD}$ when $R_\mathrm{AD}=1$. This gives the form of the ambipolar diffusion scale as often found in the literature:
 
 \begin{align*}
     L_\mathrm{AD} = \frac{V_A}{\alpha\rho_i} ~ [{\rm m}].
@@ -151,25 +161,25 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}\textbf{Axi-symmetric spiral (ASS) model:}
 
-{\noindent}\textbf{Balbus-Hawley instability:} Also known as the magnetorotational instability.
+{\noindent}\textbf{Balbus-Hawley instability:} See \textit{magnetorotational instability}.
 
 {\noindent}\textbf{Bandwidth depolarization:} A type of \textit{external depolarization} where the polarization vector is substantially rotated within the observing bandwidth if the Faraday depth is large enough.
 
 {\noindent}\textbf{Beam depolarization:} A type of \textit{external depolarization} due to fluctuations in the foreground screen within the observing beam: unresolved density or magnetic field inhomogeneities of the media through which the radiation propagates induces unresolved spatial variations in the Faraday rotation measure.
 
-{\noindent}\textbf{Birefringence:} The optical property of a medium to have a refractive index that is dependent on the polarization and direction of propagation of light. The magneto-ionic medium is an example of such a medium as the \textit{polarization angle} of light becomes rotated as it propagates via Faraday rotation as a function of frequency.
+{\noindent}\textbf{Birefringence:} The optical property of a medium to have a refractive index that is dependent on the polarization and direction of propagation of light. Birefringence implies that there are two natural wave modes which may be described by their polarizations, which are necessarily orthogonal to each other, and by $\Delta k$, the difference in their wavenumbers. The magneto-ionic medium is an example of such a medium as the \textit{polarization angle} of light becomes rotated as it propagates via Faraday rotation as a function of frequency.
 
 {\noindent}\textbf{Bi-symmetric spiral (BSS) model:}
 
 {\noindent}\textbf{Bonnor-Ebert sphere:}
 
-{\noindent}\textbf{Bremmstrahlung radiation:} Also known as "braking radiation". This radiation is produced by the deceleration of a charged particle after being deflected by another charged particle, typically an electron by an atomic nucleus. The particle being deflected loses energy which is lost via radiation of a photon. For example, when free electrons within an H$_\mathrm{II}$ region pass near a positive ion (H$^+$, He$^+$) they are accelerated by the Coulomb field and emit bremsstrahlung radiation. Bremsstrahlung emission is a source of polarized continuum radiation and is a type of free-free radiation.
+{\noindent}\textbf{Bremmstrahlung radiation:} Also known as ``braking radiation". This radiation is produced by the deceleration of a charged particle after being deflected by another charged particle, typically an electron by an atomic nucleus. The particle being deflected loses energy which is lost via radiation of a photon. For example, when free electrons within an H$_\mathrm{II}$ region pass near a positive ion (H$^+$, He$^+$) they are accelerated by the Coulomb field and emit bremsstrahlung radiation. Bremsstrahlung emission is a source of polarized continuum radiation and is a type of free-free radiation.
 
 {\noindent}\textbf{Cascade rate:}
 
 {\noindent}\textbf{Chaotic system:}
 
-{\noindent}\textbf{Coherent magnetic field:} Also known as an ordered magnetic field.
+{\noindent}\textbf{Coherent magnetic field:} See \textit{ordered magnetic field}.
 
 {\noindent}\textbf{Cold neutral medium (CNM):}
 
@@ -254,7 +264,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}where $F(\phi)$ is the complex polarized surface brightness per unit Faraday depth and $P(\lambda^2) = p(\lambda^2)I(\lambda^2)$ is the complex polarized surface brightness. To obtain the Faraday dispersion function, \textit{rotation measure (RM) synthesis} is used to Fourier transform the observed polarized surface brightness into the Faraday spectrum. This Faraday dispersion function is not straightforward to interpret; in particular, there is no direct relationship between Faraday depth and physical depth. Further, the Faraday dispersion function suffers from sidelobes of the main components caused by limited coverage of the observed wavelength space. Burn (1966) assumes that $F(\phi)$ is independent of frequency. The equation for $P(\lambda^2)$ is very similar to a Fourier transform; a fundamental difference is that $P(\lambda^2)$ only has physical meaning for $\lambda\geq0$. Since $P(\lambda^2)$ cannot be measured for $\lambda<0$, it is only invertible if one makes assumptions about the values of $P$ for $\lambda^2<0$ based on those for $\lambda^2\geq0$ (Burn 1966). For example, assuming that $P(\lambda^2)$ is Hermitian corresponds to assuming that $F(\phi)$ is strictly real.
 
-{\noindent}\textbf{Faraday rotation:} A frequency-dependent magneto-optical phenomenon (i.e., an interaction between light and a magnetic field) in which the plane of polarization is rotated by an amount that is linearly proportional to the strength of the magnetic field in the direction of propagation. Faraday rotation results from the fact that right-handed circularly (RHC) and left-handed circularly (LHC) polarized light experience different phase velocities when traveling through a magneto-ionic medium. Faraday rotation is induced by thermal electrons (not synchrotron radiation) coincident with a magnetic field which is at least partially oriented along the line of sight between the source and the observer. The Faraday rotation is used to measure the parallel component of the magnetic field via ionized gas. Given an initial polarization angle $\chi_0$ and an observing frequency $\lambda^2$, the observed polarization angle is a function of the Faraday depth $\phi$ of the medium at a given physical distance $\mathbf{r}$ given by
+{\noindent}\textbf{Faraday rotation:} A frequency-dependent magneto-optical phenomenon (i.e., an interaction between light and a magnetic field) in which the plane of polarization is rotated by an amount that is linearly proportional to the strength of the magnetic field in the direction of propagation. Faraday rotation results from the fact that right-handed circularly (RHC) and left-handed circularly (LHC) polarized light experience different phase velocities when traveling through a magneto-ionic medium. Faraday rotation is induced by thermal electrons (not synchrotron radiation) coincident with a magnetic field which is at least partially oriented along the line of sight between the source and the observer. Non-thermal electrons have linear (not circular) modes, and produce \textit{generalized Faraday rotation}. The Faraday rotation is used to measure the parallel component of the magnetic field via ionized gas. Given an initial polarization angle $\chi_0$ and an observing frequency $\lambda^2$, the observed polarization angle is a function of the Faraday depth $\phi$ of the medium at a given physical distance $\mathbf{r}$ given by
 
 \begin{align*}
     \chi = \chi_0 + \phi(\mathbf{r}) \lambda^2 ~[{\rm rad}].
@@ -296,6 +306,8 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}\textbf{Fractional polarization $(p(\alpha))$:}
 
+{\noindent}\textbf{Generalized Faraday rotation:} In a medium whose natural modes are linearly or elliptically polarized, the counterpart of Faraday rotation, referred to as ``generalized Faraday rotation'', can lead to a partial conversion of linear into circular polarization.
+
 {\noindent}\textbf{Great circle:} A circle on the surface of a sphere that lies in a plane passing through the sphere's center which represents the shortest distance between any two points on the surface of a sphere.
 
 {\noindent}\textbf{Gyration frequency ($\omega$):} The angular frequency of circular motion.
@@ -316,7 +328,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 \begin{table}[h]
 \begin{center}
-\captionof{table}{Descriptive parameters of the different components of the interstellar gas. $T$ is the temperature, $n$ is the true (as opposed to space-averaged) number density of hydrogen nuclei near the Sun, $\Sigma_\odot$ is the azimuthally averaged mass density per unit area at the solar circle, and $\mathcal{M}$ is the mass contained in the entire Milky Way. Both $\Sigma_\odot$ and $\mathcal{M}$ include 70.4\% hydrogen, 28.1\% helium, and 1.5\% heavier elements. All values were rescaled to $R_\odot=8.5\,{\rm kpc}$ Table taken from Ferri\'ere (2001).} \label{table:ismphases}
+\captionof{table}{\footnotesize{Descriptive parameters of the different components of the interstellar gas. $T$ is the temperature, $n$ is the true (as opposed to space-averaged) number density of hydrogen nuclei near the Sun, $\Sigma_\odot$ is the azimuthally averaged mass density per unit area at the solar circle, and $\mathcal{M}$ is the mass contained in the entire Milky Way. Both $\Sigma_\odot$ and $\mathcal{M}$ include 70.4\% hydrogen, 28.1\% helium, and 1.5\% heavier elements. All values were rescaled to $R_\odot=8.5\,{\rm kpc}$ Table taken from Ferri\'ere (2001).}} \label{table:ismphases}
 \includegraphics[width=15cm]{figures/ISMphases.png}
 \end{center}
 \end{table}
@@ -337,9 +349,13 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}\textbf{Kolmogorov spectrum:}
 
-%{\noindent}\textbf{Kolmogorov ction:}
+{\noindent}\textbf{Kurtosis:} The fourth order statistical \textit{moment} which is a measure of whether the data are heavy-tailed or light-tailed relative to a normal distribution. That is, data sets with high kurtosis tend to have heavy tails, or outliers. Data sets with low kurtosis tend to have light tails, or lack of outliers. Kurtosis is defined as
 
-{\noindent}\textbf{Kurtosis:}
+\begin{align*}
+    {\rm Kurt}[x] = \frac{1}{N} \sum_{i=1}^N \left(\frac{x_i-\mu}{\sigma}\right)^3 ~ [{\rm dimensionless}],
+\end{align*}
+
+{\noindent}where $\mu$ is the statistical mean and $\sigma$ is the standard deviation. Like the \textit{skewness}, it is a dimensionless quantity.
 
 {\noindent}\textbf{Lorentz factor ($\gamma$):} The factor by which time, length, and relativistic mass change for an object while that object is moving with speed $\mathbf{v}$:
 
@@ -421,26 +437,60 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}where $P(\lambda^2)$ is the polarized surface brightness and $I(\lambda^2)$ is the total surface brightness.
 
-{\noindent}\textbf{Polarization gradient ($\lvert\nabla \mathbf{P}\rvert$):} The rate at which the \textit{polarized intensity} complex vector $\mathbf{P}\equiv\sqrt{Q^2+U^2}$ traces out a trajectory in the \textit{Q-U} plane as a function of position on the sky given by
+{\noindent}\textbf{Polarization gradient ($\lvert\vec{\nabla}\vec{P}\rvert$):} The rate at which the \textit{polarized intensity} complex vector $\vec{P}\equiv\sqrt{Q^2+U^2}$ traces out a trajectory in the \textit{Q-U} plane as a function of position on the sky given by
 
 \begin{align*}
-    \lvert\nabla P\rvert = \sqrt{\left(\frac{\partial Q}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial x}\right)^2 + \left(\frac{\partial Q}{\partial y}\right)^2 + \left(\frac{\partial U}{\partial y}\right)^2} ~ [{\rm Jy\,beam^{-1}}],
+    \lvert\vec\nabla\vec{P}\rvert = \sqrt{\left(\frac{\partial Q}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial x}\right)^2 + \left(\frac{\partial Q}{\partial y}\right)^2 + \left(\frac{\partial U}{\partial y}\right)^2} ~ [{\rm Jy\,beam^{-1}}],
 \end{align*}
 
-{\noindent}where $Q$ and $U$ are the complex \textit{Stokes vectors} and $x$ and $y$ are the Cartesian axes of the image plane. Note that $\lvert\nabla \mathbf{P}\rvert$ cannot be constructed from the scalar quantity $P\equiv\sqrt{Q^2+U^2}$, but is derived from the vector field $\mathbf{P}\equiv(Q,U)$. The amplitude of the polarization gradient $\lvert\nabla \mathbf{P}\rvert$ provides an image of magnetized turbulence in diffuse, ionized gas manifested as a complex filamentary web of discontinuities in gas density and magnetic field strength. This quantity is rotationally and translationally invariant in the $Q-U$ plane, and so has the potential to reveal properties of the polarized distribution that might otherwise be hidden by excess foreground emission or \textit{Faraday rotation}, or in data sets from which large-scale structure is missing. The polarization gradient is shown in Figure \ref{figure:delP}.
+{\noindent}where $Q$ and $U$ are the complex \textit{Stokes vectors} and $x$ and $y$ are the Cartesian axes of the image plane. Note that $\lvert\nabla\vec{P}\rvert$ cannot be constructed from the scalar quantity $P\equiv\sqrt{Q^2+U^2}$, but is derived from the vector field $\vec{P}\equiv(Q,U)$. The amplitude of the polarization gradient $\lvert\vec\nabla\vec{P}\rvert$ provides an image of magnetized turbulence in diffuse, ionized gas manifested as a complex filamentary web of discontinuities in gas density and magnetic field strength. This quantity is rotationally and translationally invariant in the $Q-U$ plane, and so has the potential to reveal properties of the polarized distribution that might otherwise be hidden by excess foreground emission or \textit{Faraday rotation}, or in data sets from which large-scale structure is missing. The polarization gradient is shown in Figure \ref{figure:delP}.
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=15cm]{figures/delP.jpg}
-\caption{$\lvert\nabla P\rvert$ for an $18$-deg$^2$ region of the Southern Galactic Plane Survey which reveals a complex network of tangled filaments. In particular, all regions in which $\lvert\nabla \mathbf{P}\rvert$ is high consists of elongated, narrow structures rather than extended patches. In the inset, the direction of $\lvert\nabla\mathbf{P}\rvert$ is shown for a small subregion of the image, demonstrating that $\lvert\nabla\mathbf{P}\rvert$ changes most rapidly along directions oriented perpendicular to the filaments. Figure taken from Gaensler (2011).}
+\includegraphics[width=12cm]{figures/delP.jpg}
+\caption{\footnotesize{$\lvert\nabla P\rvert$ for an $18$-deg$^2$ region of the Southern Galactic Plane Survey which reveals a complex network of tangled filaments. In particular, all regions in which $\lvert\nabla \vec{P}\rvert$ is high consists of elongated, narrow structures rather than extended patches. In the inset, the direction of $\lvert\nabla\mathbf{P}\rvert$ is shown for a small subregion of the image, demonstrating that $\lvert\nabla\vec{P}\rvert$ changes most rapidly along directions oriented perpendicular to the filaments. Figure taken from Gaensler (2011).}}
 \label{figure:delP}
 \end{center}
 \end{figure}
 
-{\noindent}\textbf{Polarization gradient direction $(\mathrm{arg}\nabla \mathbf{P})$:} The direction of the \textit{polarization gradient} at a given spatial position defined as
+{\noindent}In the ISM, fluctuations in density and magnetic field will occur as a result of MHD turbulence, which will be visible in polarimetric maps. In the case of taking gradients of a turbulent field, one would expect to find filamentary structure created by shock fronts, jumps, and discontinuities. Figure \ref{fig:polgradprofiles} shows a schematic illustrating these three separate cases of a possible profile and its respective derivative. The cases are as follows:
+
+\begin{itemize}
+    \item A H\"older continuous profile that is not differentiable at a given point (e.g., the absolute value function at the origin): common for all types of MHD turbulence. It is known that the turbulent velocity field in a Kolmogorov-type inertial range both in hydro and MHD is not differentiable, but only H\"older continuous. This case can be found in both subsonic- and supersonic turbulence.
+    \item A jump profile: weak shocks, strong fluctuations, or edges (e.g., a cloud in the foreground which suddenly stops). This case creates a structure in the gradient by a shock jump or a large fluctuation in either $n_e$ or $\vec{B}$. Here again, this type of enhancement in $\lvert\nabla\vec{P}\rvert$ could be found in supersonic- and subsonic turbulence, and is due either to large random spatial increases or decreases due to turbulent fluctuations along the LOS or weak shocks. We expect weak shock turbulence to show a larger amplitude in $\lvert\nabla\vec{P}\rvert$ than the subsonic case due to increases in density fluctuations.
+    \item A spike profile (e.g., delta function): strong shock regime. This case is unique to supersonic turbulence in that it represents a very sharp spike in $n_e$ and/or $\vec{B}$ across a shock front. The difference between this case and what might be seen in case two is that here we are dealing with interactions of strong shock fronts, which are known to create delta function-like distributions in density, creating a ``double jump'' profile across the shock front.
+\end{itemize}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm]{figures/PolGradProfiles.png}
+\caption{\footnotesize{Schematic example of three possible scenarios for enhancements in a generic image ``n,'' where ``n'' could be $|\vec{P}|$, $\rm RM$, or $\rho/N/{\rm EM}$ (density, column density, emission measure). Case one (top row) shows an example of a H\"older continuous function that is not differentiable at the origin (applicable to all turbulent fields). Case two (middle row) shows an example of a jump resulting from strong turbulent fluctuations along the LOS or weak shocks. Case three (bottom row) shows a delta function profile resulting from interactions of strong shocks. In this case, the derivative gives a double jump profile which produces morphology that is distinctly different from the previous cases. In all cases we show examples from $|\vec{P}|$ simulations. Figure taken from Burkhart (2012).}}
+\label{figure:polgradprofiles}
+\end{center}
+\end{figure}
+
+{\noindent}Of great interest is the question of which quantity is providing the dominant contribution to the structures in $\lvert\nabla\vec{P}\rvert$: $\lvert\nabla n_{e,{\rm LOS}} \rvert$, $\lvert\nabla\vec{B}_{\rm LOS}\rvert$, or both equally? Especially in the case of compressible turbulence, the magnetic energy is correlated with density: denser regions contain stronger magnetic fields due to the compressibility of the gas and the potential dynamo amplification of the magnetic field in dense gas. This causes the magnetic field to follow the flow of plasma if the magnetic tension is negligible. The compressed regions are dense enough to distort the magnetic field lines, enhance the magnetic field intensity, and effectively trap the magnetic energy due to the frozen-in condition. Thus, for the supersonic cases, the intensity of the structures seen in $\lvert\nabla\vec{P}\rvert$ is more pronounced than in the subsonic case. However, in the case of subsonic turbulence, there are no compressive motions. In this case, random fluctuations in density and magnetic field will create structures in $\lvert\nabla\vec{P}\rvert$.
+
+{\noindent}\textbf{Polarization gradient (radial component):} The radial component quantifies how changes in polarization intensity contribute to the directional derivative $|\partial\vec{P}/\partial s|$:
 
 \begin{align*}
-    \mathrm{arg}(\nabla\mathbf{P}) \equiv \arctan \left[ \mathrm{sign} \left(\dfrac{\partial Q}{\partial x}\dfrac{\partial Q}{\partial y} + \dfrac{\partial U}{\partial x}\dfrac{\partial U}{\partial y}\right) \dfrac{\sqrt{\left(\dfrac{\partial Q}{\partial y}\right)^2 + \left(\dfrac{\partial U}{\partial y}\right)^2}}{\sqrt{\left(\dfrac{\partial Q}{\partial x}\right)^2 + \left(\dfrac{\partial U}{\partial x}\right)^2}} \right] ~ [{\rm rad}],
+    \left\lvert\frac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{rad} = \sqrt{\frac{(Q\frac{\partial Q}{\partial x} + U\frac{\partial U}{\partial x})^2 + (Q\frac{\partial Q}{\partial y} + U\frac{\partial U}{\partial y})^2}{Q^2+U^2}} ~ [{\rm Jy\,pc^{-1}}]
+\end{align*}
+
+{\noindent}If changes in polarization intensity are dominant for a feature, then this could imply that the amount of depolarization due to the addition of polarization vectors along the line of sight varies significantly between different positions, and it follows that the medium producing the polarized emission may be very turbulent. This is true for both thermal dust emission and for synchrotron emission.
+
+{\noindent}\textbf{Polarization gradient (tangential component):} The tangential component quantifies how changes in polarization angle, weighted by polarization intensity, contribute to the directional derivative $|\partial\vec{P}/\partial s|$:
+
+\begin{align*}
+    \left\lvert\frac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{tan} = \sqrt{\frac{(Q\frac{\partial U}{\partial x} - U\frac{\partial Q}{\partial x})^2 + (Q\frac{\partial U}{\partial y} - U\frac{\partial Q}{\partial y})^2}{Q^2+U^2}} ~ [{\rm Jy\,pc^{-1}}]
+\end{align*}
+
+{\noindent}If changes in polarization angle are dominant, then this could indicate changes in the regular magnetic field threading the observed region, as this would produce significant changes in the emitted polarization angle in the case of thermal dust emission or synchrotron emission. Additionally, changes in the regular magnetic field may also cause the amount of Faraday rotation along different lines of sight to vary significantly, in the case of synchrotron emission.
+
+{\noindent}\textbf{Polarization gradient direction $(\mathrm{arg}\vec\nabla\vec{P})$:} The direction of the \textit{polarization gradient} at a given spatial position defined as
+
+\begin{align*}
+    \mathrm{arg}(\vec\nabla\vec{P}) \equiv \arctan \left[ \mathrm{sign} \left(\dfrac{\partial Q}{\partial x}\dfrac{\partial Q}{\partial y} + \dfrac{\partial U}{\partial x}\dfrac{\partial U}{\partial y}\right) \dfrac{\sqrt{\left(\dfrac{\partial Q}{\partial y}\right)^2 + \left(\dfrac{\partial U}{\partial y}\right)^2}}{\sqrt{\left(\dfrac{\partial Q}{\partial x}\right)^2 + \left(\dfrac{\partial U}{\partial x}\right)^2}} \right] ~ [{\rm rad}],
 \end{align*}
 
 {\noindent}where $Q$ and $U$ are the complex \textit{Stokes vectors}.
@@ -473,19 +523,26 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}\textbf{$Q-U$ plane:} Translations and rotations within the $Q-U$ plane can result from one or more of a smooth distribution of intervening polarized emission, a uniform screen of foreground \textit{Faraday rotation}, and the effects of missing large-scale structure in an interferometric data set.
 
-{\noindent}\textbf{Radial component of polarization gradient:}
-
-\begin{align*}
-    \frac{\partial\mathbf{P}}{\partial s}_\mathrm{rad} = \sqrt{\frac{(Q\frac{\partial Q}{\partial x} + U\frac{\partial U}{\partial x})^2 + (Q\frac{\partial Q}{\partial y} + U\frac{\partial U}{\partial y})^2}{Q^2+U^2}} ~ [{\rm Jy\,pc^{-1}}]
-\end{align*}
-
 {\noindent}\textbf{Random magnetic field:} See turbulent magnetic field.
 
 {\noindent}\textbf{Rayleigh-Taylor instability:} Also known as magnetic buoyancy.
 
-{\noindent}\textbf{Reynold's number:}
+{\noindent}\textbf{Reynolds number (Re):}  An important dimensionless quantity in fluid mechanics used to help predict flow patterns in different fluid flow situations which characterizes the relative importance of inertial (resistant to change or motion) and viscous (heavy and gluey) forces:
 
-{\noindent}\textbf{Rolling Hough Transform (RHT):} A machine vision algorithm designed for detecting and paramaterizing linear structure in astronomical data, originally applied to HI images. The detection of astronomical linear structure is approached in various ways depending on the context. Because HI structures are not objects with distinct boundaries, the problem is fundamentally different from many others. As these diffuse HI fibers were not formed by gravitational forces, there is no reason to require that they must be, or bridge, local overdensities. Indeed, these fibers are found often to be in groups of parallel structures, very unlike the cosmic web. Thus, methods developed for gravitationally dominated systems are not optimal for these purposes. The RHT is, as its name suggests, a modification of the Hough transform. The Hough transform was first introduced in in a patent for the detection of complex patterns in bubble chamber photographs. It was soon recognized as a powerful line detection technique, and has found wide applications in image processing and machine vision. The adaption of the Hough transform with the RHT is a rolling version that is particularly well suited to the detection and quantization of specific linear features in astronomical data. The RHT does not merely identify fibers; it encodes the probability that any given image pixel is part of a coherent linear structure. This allows the user to quantify the linearity of regions of sky without specifying fibers as discrete entities. The RHT operates on two-dimensional data and is designed to be sensitive to linear structure irrespective of the overall brightness of the region. The first step is to unsharp mask the image. The image is convolved with a two-dimensional top-hat smoothing kernel of a user-defined diameter, $D_K$. The smoothed data is then subtracted from the original data  and the resulting map is thresholded at 0 to obtain a bitmask. The subtraction of the smoothed component can be considered a suppression of large-scale structure, or a high-pass Fourier filter. Each straight line is parameterized in terms of the angle $\theta$ of its normal, and its minimum Euclidean distance from the origin $\rho$,
+\begin{align*}
+    {\rm Re} = \frac{\rho vL}{\mu} ~ [{\rm dimensionless}],
+\end{align*}
+
+{\noindent}where $\rho$ is the density in ${\rm kg\,m^{-3}}$, $v$ is the velocity in ${\rm m\,s^{-1}}$, $L$ is the characteristic length in ${\rm m}$, and $\mu$ is the dynamic viscosity coefficient in ${\rm Ps\,s}$. At low Reynolds numbers, flows tend to be dominated by laminar (sheet-like) flow, while at high Reynolds numbers, turbulence results from differences in the fluid's speed and direction, which may sometimes intersect or even move counter to the overall direction of the flow (eddy currents).
+
+\begin{figure}[h]
+    \floatbox[{\capbeside\thisfloatsetup{capbesideposition={right,top},capbesidewidth=4cm}}]{figure}[\FBwidth]
+    {\caption{\footnotesize{Flows at varying Reynolds number Re. In each panel, a fluid that has been dyed red is injected from the top into the clear fluid on the bottom. The fluids are glycerin-water mixture, for which the viscosity can be changed by altering the glycerin to water ratio. By changing the viscosity and the injection speed, it is possible to alter the Reynolds number of the injected flow. The frames show how the flow develops as the Reynolds number is varied. This image is a still from the National Committee for Fluid Mechanics Film series (Taylor, 1964), which, once you get past the distinctly 1960s production values, are a wonderful resource for everything related to fluids.}}
+    \label{fig:variablezones}}
+    {\includegraphics[width=10cm]{figures/ReynoldsNumber.png}}
+\end{figure}
+
+{\noindent}\textbf{Rolling Hough Transform (RHT):} A machine vision algorithm designed for detecting and parameterizing linear structure in astronomical data, originally applied to HI images. The detection of astronomical linear structure is approached in various ways depending on the context. Because HI structures are not objects with distinct boundaries, the problem is fundamentally different from many others. As these diffuse HI fibers were not formed by gravitational forces, there is no reason to require that they must be, or bridge, local overdensities. Indeed, these fibers are found often to be in groups of parallel structures, very unlike the cosmic web. Thus, methods developed for gravitationally dominated systems are not optimal for these purposes. The RHT is, as its name suggests, a modification of the Hough transform. The Hough transform was first introduced in in a patent for the detection of complex patterns in bubble chamber photographs. It was soon recognized as a powerful line detection technique, and has found wide applications in image processing and machine vision. The adaption of the Hough transform with the RHT is a rolling version that is particularly well suited to the detection and quantization of specific linear features in astronomical data. The RHT does not merely identify fibers; it encodes the probability that any given image pixel is part of a coherent linear structure. This allows the user to quantify the linearity of regions of sky without specifying fibers as discrete entities. The RHT operates on two-dimensional data and is designed to be sensitive to linear structure irrespective of the overall brightness of the region. The first step is to unsharp mask the image. The image is convolved with a two-dimensional top-hat smoothing kernel of a user-defined diameter, $D_K$. The smoothed data is then subtracted from the original data  and the resulting map is thresholded at 0 to obtain a bitmask. The subtraction of the smoothed component can be considered a suppression of large-scale structure, or a high-pass Fourier filter. Each straight line is parameterized in terms of the angle $\theta$ of its normal, and its minimum Euclidean distance from the origin $\rho$,
 
 \begin{align*}
     \rho = x\cos\theta+y\sin\theta ~ [{\rm pixels}].
@@ -563,7 +620,7 @@ a polarization angle $\chi$ and polarized intensity $P$ or by the Stokes paramet
 
 {\noindent}The RM does not increase monotonically with distance along the line of sight. Traditionally, the RM is obtained by performing a least-squares fit to the data to determine the slope. There are however three potential problems to this method: (1) the observed polarization angle is only known modulo $\pi$ radians; thus with measurements in only a few wavelength bands, the RM is often ambiguous (known as the \textit{$n\pi$ ambiguity}), (2) polarized emission with different RM values can be present along a single line of sight; the signal from these regions mix, making a single linear fit inappropriate, and (3) faint sources with high RM will be undetectable in individual channels due to low signal to noise and will remain undetectable even after integrating all channels due to \textit{bandwidth depolarization}; thus, no $\chi(\lambda^2)$ data will be available for the traditional linear fit.
 
-{\noindent}\textbf{Rotation measure (RM) synthesis:} A robust method for determining the \textit{Faraday dispersion function} was proposed by Burn (1966). It was seldom used until Brentjens and de Bruyn (2005) who coined the term \textit{RM Synthesis}. This technique involves Fourier transforming the observed \textit{polarized surface brightness} $P(\lambda^2)$ into the \textit{Faraday dispersion function} $F(\phi)$ (also referred to as the \textit{Faraday spectrum}) which is the complex polarized surface brightness as a function of \textit{Faraday depth}. As shown by Burn (1966), the the observed complex polarization vector can be written as $P(\lambda^2)=pI\mathrm{e}^{2i\chi}$, where $p$ is the \textit{polarization fraction} and $I$ is the \textit{Stokes I} vector. Substituting the expression $\chi(\lambda^2)=\chi_0+\phi\lambda^2$ for the polarization angle $\chi$ as a function of Faraday depth $\phi$, we obtain
+{\noindent}\textbf{Rotation measure (RM) synthesis:} A robust method for determining the \textit{Faraday dispersion function} as proposed by Burn (1966). It was seldom used until Brentjens and de Bruyn (2005) who coined the term \textit{RM Synthesis}. This technique involves Fourier transforming the observed \textit{polarized surface brightness} $P(\lambda^2)$ into the \textit{Faraday dispersion function} $F(\phi)$ (also referred to as the \textit{Faraday spectrum}) which is the complex polarized surface brightness as a function of \textit{Faraday depth}. As shown by Burn (1966), the the observed complex polarization vector can be written as $P(\lambda^2)=pI\mathrm{e}^{2i\chi}$, where $p$ is the \textit{polarization fraction} and $I$ is the \textit{Stokes I} vector. Substituting the expression $\chi(\lambda^2)=\chi_0+\phi\lambda^2$ for the polarization angle $\chi$ as a function of Faraday depth $\phi$, we obtain
 
 \begin{align*}
     P(\lambda^2) &= pI\mathrm{e}^{2i(\chi_0+\phi\lambda^2)}\\
@@ -607,7 +664,7 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 \begin{table}[h]
 \begin{center}
-\captionof{table}{Spectral ranges of various radio telescopes and parameters crucial for RM synthesis. Table from Beck et al. (2012).} \label{table:rmsynthesis}
+\captionof{table}{\footnotesize{Spectral ranges of various radio telescopes and parameters crucial for RM synthesis. Table from Beck et al. (2012).}} \label{table:rmsynthesis}
 \includegraphics[width=12cm]{figures/RMsynthesis.png}
 \end{center}
 \end{table}
@@ -624,7 +681,7 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
     R(\phi) = e^{i\phi\lambda_c^2}\left(\dfrac{\sin(\phi\Delta\lambda^2)}{\phi\Delta\lambda^2}\right) ~ [{\rm rad\,m^{-2}}]
 \end{align*}
 
-It is a complex valued function; the real part corresponds to the response of the transform parallel to the ($Q,U$) vector at $\lambda_0=\lambda$ while the imaginary part corresponds to the response orthogonal to it. Ideally, the response in the entire main peak of the RMTF should be parallel to the actual polarization vector at $\lambda_0$. Brentjens \& de Bruyn (2005) show that this optimal choice of $\lambda_0^2$ is the mean of the sampled $\lambda^2$ values weighted by $W(\lambda^2)$. However, since the shift theorem of Fourier theory only applies to the argument, changing the value of $\lambda_0$ will not change the absolute value of the RMTF. A drawback of having $\lambda_0\neq0$ is that the polarization angle that one derives still needs to be transformed to a polarization angle at $\lambda=0$ if one wants information on the electric or magnetic field direction of the source. In the case of a high $S/N$, this is easy:
+{\noindent}It is a complex valued function; the real part corresponds to the response of the transform parallel to the ($Q,U$) vector at $\lambda_0=\lambda$ while the imaginary part corresponds to the response orthogonal to it. Ideally, the response in the entire main peak of the RMTF should be parallel to the actual polarization vector at $\lambda_0$. Brentjens \& de Bruyn (2005) show that this optimal choice of $\lambda_0^2$ is the mean of the sampled $\lambda^2$ values weighted by $W(\lambda^2)$. However, since the shift theorem of Fourier theory only applies to the argument, changing the value of $\lambda_0$ will not change the absolute value of the RMTF. A drawback of having $\lambda_0\neq0$ is that the polarization angle that one derives still needs to be transformed to a polarization angle at $\lambda=0$ if one wants information on the electric or magnetic field direction of the source. In the case of a high $S/N$, this is easy:
 
 \begin{align*}
     \chi_0 = \chi(\lambda_0^2) - \phi\lambda_0^2 ~ [{\rm rad}].
@@ -634,13 +691,21 @@ It is a complex valued function; the real part corresponds to the response of th
 
 {\noindent}\textbf{Second moment:} 
 
-{\noindent}\textbf{Sonic Mach number ($\mathcal{M}_s$):} The sound speed of the \textit{interstellar medium} given by
+{\noindent}\textbf{Skewness:} The degree of asymmetry of a distribution, and can be quantified to define the extent to which a distribution differs from a normal distribution. Skewness is defined as
 
 \begin{align*}
-    \mathcal{M}_s = \left\langle\frac{\lvert\vec{v}\rvert}{c_s}\right\rangle ~ [{\rm dimensionless}].
+    {\rm Skew}[x] = \frac{1}{N} \sum_{i=1}^N \left(\frac{x_i-\mu}{\sigma}\right)^4 -3 ~ [{\rm dimensionless}],
 \end{align*}
 
-This number is a commonly used parameter of turbulence used to obtain information on gas compressibility and magnetization. Using polarization gradients of \textit{synchrotron radiation}, it was shown by Gaensler (2011) that the turbulence of the WIM has a relatively low \textit{sonic Mach number}, $\mathcal{M}_s\lesssim2$.
+{\noindent}where $\mu$ is the statistical mean and $\sigma$ is the standard deviation. It can be negative, positive, zero or undefined, and like the \textit{kurtosis}, is a dimensionless quantity.
+
+{\noindent}\textbf{Sonic Mach number ($\mathcal{M}_s$):} The ratio of the flow speed to that of the sound speed of the \textit{interstellar medium} given by
+
+\begin{align*}
+    \mathcal{M}_s = \left\langle\frac{\lvert\vec{v}\rvert}{c_s}\right\rangle ~ [{\rm dimensionless}],
+\end{align*}
+
+{\noindent}where $|\vec{v}|$ is the local velocity and $c_s$ is the sound speed. This number is a commonly used parameter of turbulence used to obtain information on gas compressibility and magnetization. Using polarization gradients of \textit{synchrotron radiation}, it was shown by Gaensler (2011) that the turbulence of the WIM has a relatively low \textit{sonic Mach number}, $\mathcal{M}_s\lesssim2$.
 
 {\noindent}\textbf{Spectral index ($\alpha$):} A measure of the dependence of radiative flux density on frequency. If flux does not follow a power-law distribution, the spectral index itself is a function of frequency. In the radio regime, a spectral index of $\alpha=0-2$ indicates thermal emission while a steep negative spectrum indicates synchrotron radiation.
 
@@ -731,16 +796,10 @@ This number is a commonly used parameter of turbulence used to obtain informatio
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=15cm]{figures/408MHz.png}
-\caption{The synchrotron emission at $408\,{\rm MHz}$ across the entire sky in Galactic coordinates. As expected, the emission is concentrated along the Galactic plane. However, the feature known as Loop I, is clearly arching up from $\ell=55^\circ$ towards the North Galactic Pole. This Figure is adapted from Haslam et al. (1981). Figure taken from Newton-McGee (2009).}
+\caption{\footnotesize{The synchrotron emission at $408\,{\rm MHz}$ across the entire sky in Galactic coordinates. As expected, the emission is concentrated along the Galactic plane. However, the feature known as Loop I, is clearly arching up from $\ell=55^\circ$ towards the North Galactic Pole. This Figure is adapted from Haslam et al. (1981). Figure taken from Newton-McGee (2009).}}
 \label{figure:408mhz}
 \end{center}
 \end{figure}
-
-{\noindent}\textbf{Tangential component of polarization gradient:}
-
-\begin{align*}
-    \frac{\partial\mathbf{P}}{\partial s}_\mathrm{rad} = \sqrt{\frac{(Q\frac{\partial U}{\partial x} - U\frac{\partial Q}{\partial x})^2 + (Q\frac{\partial U}{\partial y} - U\frac{\partial Q}{\partial y})^2}{Q^2+U^2}} ~ [{\rm Jy\,pc^{-1}}]
-\end{align*}
 
 {\noindent}\textbf{Taylor scale:}
 
@@ -750,7 +809,7 @@ This number is a commonly used parameter of turbulence used to obtain informatio
     R_q = a \left[ 1+(q-1) \dfrac{\Delta f(r)^2}{w^2} \right]^{-1/(q-1)}.
 \end{align*}
 
-{\noindent}The fit is described by three dependent variables. The $a$ parameter describes the amplitude while $w$ is related to the width or dispersion of the distribution. Parameter $q$, referred to as the ``non-extensivity parameter'' or ``entropic index'' describes the sharpness and tail size of the distribution. The Tsallis fit parameters are in many ways similar to statistical moments. Moments, more specifically the third- and fourth-order moments, have been used to describe the density distributions and have shown sensitivities to simulation compressibility. The first- and second-order moments simply correspond to the mean and variance of a distribution. Skewness, or third-order moment, describes the asymmetry of a distribution about its mode. Skewness can have positive or negative values corresponding to right and left shifts of a distribution, respectively. The fourth-order moment, kurtosis, is a measure of a distribution’s peaked or flatness compared to a Gaussian distribution. Like skewness, kurtosis can have positive or negative values corresponding to increased sharpness or flatness. With regard to the Tsallis fitting parameters, the w parameter is similar to the second-order moment variance while q is closely analogous to fourth-order moment kurtosis. Unlike higher order moments, however, the Tsallis fitting parameters are dependent least-squares fit coefficients and are more sensitive to subtle changes in the PDF.
+{\noindent}The fit is described by three dependent variables. The $a$ parameter describes the amplitude while $w$ is related to the width or dispersion of the distribution. Parameter $q$, referred to as the ``non-extensivity parameter'' or ``entropic index'' describes the sharpness and tail size of the distribution. The Tsallis fit parameters are in many ways similar to statistical moments. Moments, more specifically the third- and fourth-order moments, have been used to describe the density distributions and have shown sensitivities to simulation compressibility. The first- and second-order moments simply correspond to the mean and variance of a distribution. Skewness, or third-order moment, describes the asymmetry of a distribution about its mode. Skewness can have positive or negative values corresponding to right and left shifts of a distribution, respectively. The fourth-order moment, kurtosis, is a measure of a distributions peaked or flatness compared to a Gaussian distribution. Like skewness, kurtosis can have positive or negative values corresponding to increased sharpness or flatness. With regard to the Tsallis fitting parameters, the w parameter is similar to the second-order moment variance while q is closely analogous to fourth-order moment kurtosis. Unlike higher order moments, however, the Tsallis fitting parameters are dependent least-squares fit coefficients and are more sensitive to subtle changes in the PDF.
 
 {\noindent}\textbf{Turbulence:} Astrophysical turbulence is a complex nonlinear fluid phenomenon that can occur in a multiphase medium which results in the excitation of an extreme range of correlated spatial and temporal scales. There are many injection sources on scales ranging from ${\rm kp}$ down to sub-${\rm AU}$ The physical processes by which kinetic energy is converted into turbulence are not well understood for the ISM. The main sources for large-scale motions are: (a) stars, whose energy input is in the form of protostellar winds, expanding HII regions, O star and Wolf-Rayet winds, supernovae, and combinations of these producing superbubbles; (b) Galactic rotation in the shocks of spiral arms or bars, in the \textit{Balbus-Hawley instability} (also known as the magnetorotational instability), and in the gravitational scattering of cloud complexes at different epicyclic phases; (c) gaseous self-gravity through swing-amplified instabilities and cloud collapse; (d) \textit{Kelvin-Helmholtz} and other fluid instabilities; and (e) Galactic gravity during disk-halo circulation, the \textit{Parker instability}, and galaxy interactions. Interstellar turbulence has been characterized by \textit{structure functions}, \textit{autocorrelations}, \textit{power spectra}, \textit{energy spectra}, and \textit{delta variance}. Sources for small-scale turbulence observed by radio \textit{scintillation} include sonic reflections of shock waves hitting clouds, cosmic ray streaming and other instabilities, field star motions and winds, and energy cascades from larger scales. Turbulence affects the structure and motion of nearly all temperature and density regimes of the interstellar gas. Magnetohydrodynamic (MHD) turbulence is a key element in the study of star formation, molecular cloud structure, magnetic reconnection, heat transport, and cosmic ray propagation. MHD turbulence is known to be different from a collection of linear Alfv\'enic waves. Does MHD turbulence, specifically the Alfv\'en wave modes, damp at the decoupling scale of the \textit{ambipolar diffusion scale} $L_\mathrm{AD}$? Cascading rates and the anisotropy of turbulence should be accounted for carefully before a definitive conclusion about turbulent damping in the partially ionized media. Despite the importance of turbulence for ISM studies, many mysteries remain including the nature of turbulence driving and damping. The most common observational techniques for studying turbulence include scintillation studies (which are limited to fluctuations in ionized plasmas), density fluctuations via column density maps, and radio spectroscopic observations via centroids of spectral lines. Position-position-velocity (PPV) spectroscopic data have the advantage over column density maps in that it contains information on the turbulent velocity field. However, this type of data provides contributions of both velocity and density fluctuations entangled together, and the process of separating the two has proven to be a challenging problem. One of the main approaches for characterizing ISM turbulence is based on using statistical techniques and descriptions (e.g., spatial power spectrum). Although the power spectrum is useful for obtaining information about energy transfer over scales, it does not provide a full picture of turbulence, partly because it only contains information on Fourier amplitudes (i.e., two substantially different density distributions can have the same power spectrum). Probability distribution functions (PDFs) of turbulence in PPV and column density data have been studied for decades and have proven to be very useful to show that turbulence is present in the ISM, providing insight into the effects of turbulent driving and characterizing the type of turbulence in question. Many studies on turbulence focus on obtaining parameters such as \textit{sonic and Alfv\'en Mach numbers}, \textit{injection scale}, gas temperature, and \textit{Reynolds number}. In particular, the sonic and Alfv\'en Mach numbers provide much coveted information on the gas compressibility and magnetization.
 
@@ -930,6 +989,8 @@ This number is a commonly used parameter of turbulence used to obtain informatio
 
 {\noindent}\textbf{Magnetic field strength}: $B~[{\rm \mu G]}$
 
+{\noindent}\textbf{Mean}: $\mu(x)$
+
 {\noindent}\textbf{Number of $\theta$ bins (RHT)}: $n ~ [{\rm dimensionless}]$
 
 {\noindent}\textbf{Order}: $p~[{\rm dimensionless}]$
@@ -944,19 +1005,17 @@ This number is a commonly used parameter of turbulence used to obtain informatio
 
 {\noindent}\textbf{Polarization angle at $\lambda=0$}: $\chi_0~[{\rm rad}]$
 
-{\noindent}\textbf{Polarization directional derivative}: $\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert~ [\rm Jy\,beam^{-1}]$
-
-{\noindent}\textbf{Polarization directional derivative (maximum value)}: $\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{max}~ [\rm Jy\,beam^{-1}]$
-
-{\noindent}\textbf{Polarization directional derivative (radial component)}: $\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{rad}~ [\rm Jy\,beam^{-1}]$
-
-{\noindent}\textbf{Polarization directional derivative (tangential component)}: $\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{tan}~ [\rm Jy\,beam^{-1}]$
-
 {\noindent}\textbf{Polarization fraction}: $p(\lambda^2)~[{\rm dimensionless}]$
 
-{\noindent}\textbf{Polarization gradient}: $\lvert\nabla \mathbf{P}\rvert ~ [\rm Jy\,beam^{-1}]$
+{\noindent}\textbf{Polarization gradient}: $\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert~{\rm or}~\lvert\vec\nabla\vec{P}\rvert ~ [\rm Jy\,beam^{-1}]$
 
-{\noindent}\textbf{Polarization gradient direction}: $\mathrm{arg}(\nabla\mathbf{P}) ~ [\rm rad]$
+{\noindent}\textbf{Polarization gradient (maximum value)}: $\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_{\rm max}~{\rm or}~\lvert\vec\nabla\vec{P}\rvert_{\rm max} ~ [\rm Jy\,beam^{-1}]$
+
+{\noindent}\textbf{Polarization gradient (radial component; maximum value)}: $\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{rad}~ [\rm Jy\,beam^{-1}]$
+
+{\noindent}\textbf{Polarization gradient (tangential component; maximum value)}: $\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{tan}~ [\rm Jy\,beam^{-1}]$
+
+{\noindent}\textbf{Polarization gradient (direction)}: $\mathrm{arg}(\vec\nabla\vec{P}) ~ [\rm rad]$
 
 {\noindent}\textbf{Polarized intensity}: $P ~ [\rm Jy]$
 
@@ -974,9 +1033,9 @@ This number is a commonly used parameter of turbulence used to obtain informatio
 
 {\noindent}\textbf{Rest mass}: $m_0~[{\rm kg}]$
 
-{\noindent}\textbf{Reynolds number}: $R~[{\rm dimensionless}]$
+{\noindent}\textbf{Reynolds number}: ${\rm Re}~[{\rm dimensionless}]$
 
-{\noindent}\textbf{Reynolds number for ambipolar diffusion}: $R_\mathrm{AD}~[{\rm dimensionless}]$
+{\noindent}\textbf{Reynolds number for ambipolar diffusion}: ${\rm R}_\mathrm{\rm AD}~[{\rm dimensionless}]$
 
 {\noindent}\textbf{RHT angle}: $\theta~[{\rm rad}]$
 
@@ -1023,6 +1082,8 @@ This number is a commonly used parameter of turbulence used to obtain informatio
 {\noindent}\textbf{Tangential component of polarization gradient}: $\dfrac{\partial\mathbf{P}}{\partial s}_\mathrm{tan} ~ [{\rm Jy\,pc^{-1}}]$
 
 {\noindent}\textbf{Variance}: $\sigma^2$
+
+{\noindent}\textbf{Viscosity coefficient}: $\mu ~ [{\rm Pa\,s}]$
 
 {\noindent}\textbf{Wavelength}: $\lambda~[{\rm m}]$
 
@@ -1180,6 +1241,11 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
     f(x) = \int\limits_{-\infty}^\infty \hat{f}(x')e^{2\pi ixx'}dx'
 \end{align*}
 
+{\noindent}\textbf{Kurtosis:}
+\begin{align*}
+    {\rm Kurt}[x] = \frac{1}{N} \sum_{i=1}^N \left(\frac{x_i-\mu}{\sigma}\right)^3 ~ [{\rm dimensionless}]
+\end{align*}
+
 {\noindent}\textbf{Lorentz factor:}
 \begin{align*}
     \gamma = \sqrt{\frac{1 - (v/c)^2}{c^2}} ~ [{\rm dimensionless}]
@@ -1222,13 +1288,19 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
 \end{align*}
 (Brentjens \& de Bruyn, 2005)
 
-{\noindent}\textbf{Polarization directional derivative}:
+{\noindent}\textbf{Polarization gradient}:
 \begin{align*}
 	\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert = \sqrt{ \cos^2\theta\left(\left(\frac{\partial Q}{\partial x}\right)^2+\left(\frac{\partial U}{\partial x}\right)^2\right) + 2\cos\theta\sin\theta\left(\frac{\partial Q}{\partial x}\frac{\partial Q}{\partial y} + \frac{\partial U}{\partial x}\frac{\partial U}{\partial y}\right) + \sin^2\theta\left(\left(\frac{\partial Q}{\partial y}\right)^2 + \left(\frac{\partial U}{\partial y}\right)^2\right) } ~ [\rm Jy\,beam^{-1}]
 \end{align*}
 (Herron, 2005)
 
-{\noindent}\textbf{Polarization directional derivative (maximum value)}:
+{\noindent}\textbf{Polarization gradient (direction):}
+\begin{align*}
+    \mathrm{arg}(\vec\nabla\vec{P}) \equiv \arctan \left[ \mathrm{sign} \left(\dfrac{\partial Q}{\partial x}\dfrac{\partial Q}{\partial y} + \dfrac{\partial U}{\partial x}\dfrac{\partial U}{\partial y}\right) \dfrac{\sqrt{\left(\dfrac{\partial Q}{\partial y}\right)^2 + \left(\dfrac{\partial U}{\partial y}\right)^2}}{\sqrt{\left(\dfrac{\partial Q}{\partial x}\right)^2 + \left(\dfrac{\partial U}{\partial x}\right)^2}} \right] ~ [\rm rad]
+\end{align*}
+(Herron, 2005)
+
+{\noindent}\textbf{Polarization gradient (maximum value)}:
 \begin{equation*}
 \begin{split}
 \left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{max} = \sqrt{ \frac{1}{2}\left[ \left(\frac{\partial Q}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial y}\right)^2 \right] + \frac{1}{2} 
@@ -1242,25 +1314,25 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
 \end{equation*}
 (Herron, 2005)
 
-{\noindent}\textbf{Polarization directional derivative (radial component)}:
+{\noindent}\textbf{Polarization gradient (radial component)}:
 \begin{align*}
 	\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{rad} = \cos\left(\arctan\frac{U}{Q}\right)\left(\frac{\partial Q}{\partial x}\cos\theta+\frac{\partial Q}{\partial y}\sin\theta\right) + \sin\left(\arctan\frac{U}{Q}\right)\left(\frac{\partial U}{\partial x}\cos\theta+\frac{\partial U}{\partial y}\sin\theta\right) ~ [\rm Jy\,beam^{-1}]
 \end{align*}
 (Herron, 2005)
 
-{\noindent}\textbf{Polarization directional derivative (radial component; max value)}:
+{\noindent}\textbf{Polarization gradient (radial component; maximum value)}:
 \begin{align*}
 	\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{rad,max} = \sqrt{\frac{\left(Q\frac{\partial Q}{\partial x}+U\frac{\partial U}{\partial x}\right)^2 +\left(Q\frac{\partial Q}{\partial y}+U\frac{\partial U}{\partial y}\right)^2}{Q^2+U^2}} ~ [\rm Jy\,beam^{-1}]
 \end{align*}
 (Herron, 2005)
 
-{\noindent}\textbf{Polarization directional derivative (tangential component)}:
+{\noindent}\textbf{Polarization gradient (tangential component)}:
 \begin{align*}
 	\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{tan} = -\sin\left(\arctan\frac{U}{Q}\right)\left(\frac{\partial Q}{\partial x}\cos\theta+\frac{\partial Q}{\partial y}\sin\theta\right) + \cos\left(\arctan\frac{U}{Q}\right)\left(\frac{\partial U}{\partial x}\cos\theta+\frac{\partial U}{\partial y}\sin\theta\right) ~ [\rm Jy\,beam^{-1}]
 \end{align*}
 (Herron, 2005)
 
-{\noindent}\textbf{Polarization directional derivative (tangential component; max value)}:
+{\noindent}\textbf{Polarization gradient (tangential component; maximum value)}:
 \begin{align*}
 	\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{tan,max} = \sqrt{\frac{\left(Q\frac{\partial U}{\partial x}-U\frac{\partial Q}{\partial x}\right)^2 +\left(Q\frac{\partial U}{\partial y}-U\frac{\partial Q}{\partial y}\right)^2}{Q^2+U^2}} ~ [\rm Jy\,beam^{-1}]
 \end{align*}
@@ -1269,16 +1341,6 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
 {\noindent}\textbf{Polarization fraction:}
 \begin{align*}
 p(\lambda^2) = \dfrac{P(\lambda^2)}{I(\lambda^2)} ~ [{\rm dimensionless}]
-\end{align*}
-
-{\noindent}\textbf{Polarization gradient:}
-\begin{align*}
-    \lvert\nabla \mathbf{P}\rvert = \sqrt{\left(\frac{\partial Q}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial x}\right)^2 + \left(\frac{\partial Q}{\partial y}\right)^2 + \left(\frac{\partial U}{\partial y}\right)^2} ~ [\rm Jy\,beam^{-1}]
-\end{align*}
-
-{\noindent}\textbf{Polarization gradient direction:}
-\begin{align*}
-    \mathrm{arg}(\nabla\mathbf{P}) \equiv \arctan \left[ \mathrm{sign} \left(\dfrac{\partial Q}{\partial x}\dfrac{\partial Q}{\partial y} + \dfrac{\partial U}{\partial x}\dfrac{\partial U}{\partial y}\right) \dfrac{\sqrt{\left(\dfrac{\partial Q}{\partial y}\right)^2 + \left(\dfrac{\partial U}{\partial y}\right)^2}}{\sqrt{\left(\dfrac{\partial Q}{\partial x}\right)^2 + \left(\dfrac{\partial U}{\partial x}\right)^2}} \right] ~ [\rm rad]
 \end{align*}
 
 {\noindent}\textbf{Polarized intensity:}
@@ -1315,14 +1377,14 @@ P(\lambda^2) &= \lvert\lvert p(\lambda^2) \rvert\rvert I\mathrm{e}^{2i\chi} = p(
     P(k) = \hat{f}(k){\hat{f}(k)}^*
 \end{align*}
 
-{\noindent}\textbf{Radial component of polarization gradient:}
+{\noindent}\textbf{Reynolds number:}
 \begin{align*}
-    \frac{\partial\mathbf{P}}{\partial s}_\mathrm{rad} = \sqrt{\frac{(Q\frac{\partial Q}{\partial x} + U\frac{\partial U}{\partial x})^2 + (Q\frac{\partial Q}{\partial y} + U\frac{\partial U}{\partial y})^2}{Q^2+U^2}} ~ [{\rm Jy\,pc^{-1}}]
+    {\rm Re} = \frac{\rho vL}{\mu} ~ [{\rm dimensionless}],
 \end{align*}
 
 {\noindent}\textbf{Reynolds number for ambipolar diffusion:}
 \begin{align*}
-    R_\mathrm{AD} = \dfrac{LV}{\nu_\mathrm{AD}} ~ [{\rm dimensionless}]
+    {\rm R}_\mathrm{\rm AD} = \dfrac{LV}{\nu_\mathrm{AD}} ~ [{\rm dimensionless}]
 \end{align*}
 
 {\noindent}\textbf{RHT backprojection:}
@@ -1354,6 +1416,11 @@ R(\phi) \equiv \dfrac{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{e}^{-2i\p
 {\noindent}\textbf{Rotation measure transfer function (RMTF) for box-car weight function $W(\lambda^2)$:}
 \begin{align*}
     R(\phi) = e^{i\phi\lambda_c^2}\left(\dfrac{\sin(\phi\Delta\lambda^2)}{\phi\Delta\lambda^2}\right) ~ [{\rm rad\,m^{-2}}]
+\end{align*}
+
+{\noindent}\textbf{Skewness:}
+\begin{align*}
+    {\rm Skew}[x] = \frac{1}{N} \sum_{i=1}^N \left(\frac{x_i-\mu}{\sigma}\right)^4 -3 ~ [{\rm dimensionless}]
 \end{align*}
 
 {\noindent}\textbf{Sonic Mach number:}
@@ -1405,11 +1472,6 @@ p = \frac{3\gamma + 3}{3\gamma+7} ~ [{\rm dimensionless}]
 {\noindent}\textbf{Synchrotron radiation power}:
 \begin{align*}
 P = \frac{2}{3}\dfrac{q^4}{m^2c^5}(\gamma\nu)^2(B\sin\theta)^2 ~ [{\rm Jy}]
-\end{align*}
-
-{\noindent}\textbf{Tangential component of polarization gradient:}
-\begin{align*}
-    \frac{\partial\mathbf{P}}{\partial s}_\mathrm{rad} = \sqrt{\frac{(Q\frac{\partial U}{\partial x} - U\frac{\partial Q}{\partial x})^2 + (Q\frac{\partial U}{\partial y} - U\frac{\partial Q}{\partial y})^2}{Q^2+U^2}} ~ [{\rm Jy\,pc^{-1}}]
 \end{align*}
 
 {\noindent}\textbf{Wavelength squared distribution standard error:} 
