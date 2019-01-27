@@ -264,7 +264,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}where $F(\phi)$ is the complex polarized surface brightness per unit Faraday depth and $P(\lambda^2) = p(\lambda^2)I(\lambda^2)$ is the complex polarized surface brightness. To obtain the Faraday dispersion function, \textit{rotation measure (RM) synthesis} is used to Fourier transform the observed polarized surface brightness into the Faraday spectrum. This Faraday dispersion function is not straightforward to interpret; in particular, there is no direct relationship between Faraday depth and physical depth. Further, the Faraday dispersion function suffers from sidelobes of the main components caused by limited coverage of the observed wavelength space. Burn (1966) assumes that $F(\phi)$ is independent of frequency. The equation for $P(\lambda^2)$ is very similar to a Fourier transform; a fundamental difference is that $P(\lambda^2)$ only has physical meaning for $\lambda\geq0$. Since $P(\lambda^2)$ cannot be measured for $\lambda<0$, it is only invertible if one makes assumptions about the values of $P$ for $\lambda^2<0$ based on those for $\lambda^2\geq0$ (Burn 1966). For example, assuming that $P(\lambda^2)$ is Hermitian corresponds to assuming that $F(\phi)$ is strictly real.
 
-{\noindent}\textbf{Faraday rotation:} A frequency-dependent magneto-optical phenomenon (i.e., an interaction between light and a magnetic field) in which the plane of polarization is rotated by an amount that is linearly proportional to the strength of the magnetic field in the direction of propagation. Faraday rotation results from the fact that right-handed circularly (RHC) and left-handed circularly (LHC) polarized light experience different phase velocities when traveling through a magneto-ionic medium. Faraday rotation is induced by thermal electrons (not synchrotron radiation) coincident with a magnetic field which is at least partially oriented along the line of sight between the source and the observer. Non-thermal electrons have linear (not circular) modes, and produce \textit{generalized Faraday rotation}. The Faraday rotation is used to measure the parallel component of the magnetic field via ionized gas. Given an initial polarization angle $\chi_0$ and an observing frequency $\lambda^2$, the observed polarization angle is a function of the Faraday depth $\phi$ of the medium at a given physical distance $\mathbf{r}$ given by
+{\noindent}\textbf{Faraday rotation:} A frequency-dependent magneto-optical phenomenon (i.e., an interaction between light and a magnetic field) in which the plane of polarization is rotated by an amount that is linearly proportional to the strength of the magnetic field in the direction of propagation. A linearly polarized electromagnetic wave propagating along the magnetic field of an ionized medium can be decomposed into two circularly polarized modes: a right-hand mode, whose $\vec{E}$ vector rotates about the magnetic field in the same sense as the free electrons gyrate around it, and a left-hand mode, whose $\vec{E}$ vector rotates in the opposite direction. As a result of the interaction between the $\vec{E}$ vector and the free electrons, the right-hand mode travels faster than the left-hand mode; consequently the plane of linear polarization experiences Faraday rotation as the wave propagates. Faraday rotation results from the fact that right-handed circularly (RHC) and left-handed circularly (LHC) polarized light experience different phase velocities when traveling through a magneto-ionic medium. Faraday rotation is induced by thermal electrons (not synchrotron radiation) coincident with a magnetic field which is at least partially oriented along the line of sight between the source and the observer. Non-thermal electrons have linear (not circular) modes, and produce \textit{generalized Faraday rotation}. The Faraday rotation is used to measure the parallel component of the magnetic field via ionized gas. Given an initial polarization angle $\chi_0$ and an observing frequency $\lambda^2$, the observed polarization angle is a function of the Faraday depth $\phi$ of the medium at a given physical distance $\mathbf{r}$ given by
 
 \begin{align*}
     \chi = \chi_0 + \phi(\mathbf{r}) \lambda^2 ~[{\rm rad}].
@@ -288,6 +288,8 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}\textbf{Filling factor:} See \textit{volume filling factor}.
 
+{\noindent}\textbf{First moment:} See \textit{mean}.
+
 {\noindent}\textbf{Fluid turbulence:}
 
 {\noindent}\textbf{Flux freezing:} The coupling between the \textit{cold neutral medium} (CNM) and the magnetic field due to its non-zero ionization fraction.
@@ -302,7 +304,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}The reason for the negative sign convention in the definition of $\hat{f}(x)$ is that the integral produces the amplitude and phase of the function $f(x')e^{-2\pi xx'}$ at frequency zero ($0$), which is identical to the amplitude and phase of the function $f(x')$ at frequency $x'$ , which is what $\hat{f}(x)$ is supposed to represent. The function $f(x)$ can be reconstructed from its Fourier transform $\hat{f}(x)$, which is known as the Fourier inverse theorem.
 
-{\noindent}\textbf{First moment:} 
+{\noindent}\textbf{Fourth moment:} See \textit{kurtosis}.
 
 {\noindent}\textbf{Fractional polarization $(p(\alpha))$:}
 
@@ -443,13 +445,37 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
     \lvert\vec\nabla\vec{P}\rvert = \sqrt{\left(\frac{\partial Q}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial x}\right)^2 + \left(\frac{\partial Q}{\partial y}\right)^2 + \left(\frac{\partial U}{\partial y}\right)^2} ~ [{\rm Jy\,beam^{-1}}],
 \end{align*}
 
+{\noindent}or
+
+\begin{equation*}
+\begin{split}
+\left\lvert\dfrac{\partial\vec{P}}{\partial s}\right\rvert_\mathrm{max} = \sqrt{ \frac{1}{2}\left[ \left(\frac{\partial Q}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial y}\right)^2 \right] + \frac{1}{2} 
+  \sqrt{
+    \begin{aligned}
+    & \left[ \left(\frac{\partial Q}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial x}\right)^2 + \left(\frac{\partial U}{\partial y}\right)^2 \right]^2 \\
+    &- 4\left[ \frac{\partial Q}{\partial x}\frac{\partial U}{\partial y} - \frac{\partial Q}{\partial y}\frac{\partial U}{\partial x}  \right]^2,
+    \end{aligned}
+    }}
+\end{split}
+\end{equation*}
+
 {\noindent}where $Q$ and $U$ are the complex \textit{Stokes vectors} and $x$ and $y$ are the Cartesian axes of the image plane. Note that $\lvert\nabla\vec{P}\rvert$ cannot be constructed from the scalar quantity $P\equiv\sqrt{Q^2+U^2}$, but is derived from the vector field $\vec{P}\equiv(Q,U)$. The amplitude of the polarization gradient $\lvert\vec\nabla\vec{P}\rvert$ provides an image of magnetized turbulence in diffuse, ionized gas manifested as a complex filamentary web of discontinuities in gas density and magnetic field strength. This quantity is rotationally and translationally invariant in the $Q-U$ plane, and so has the potential to reveal properties of the polarized distribution that might otherwise be hidden by excess foreground emission or \textit{Faraday rotation}, or in data sets from which large-scale structure is missing. The polarization gradient is shown in Figure \ref{figure:delP}.
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=12cm]{figures/delP.jpg}
-\caption{\footnotesize{$\lvert\nabla P\rvert$ for an $18$-deg$^2$ region of the Southern Galactic Plane Survey which reveals a complex network of tangled filaments. In particular, all regions in which $\lvert\nabla \vec{P}\rvert$ is high consists of elongated, narrow structures rather than extended patches. In the inset, the direction of $\lvert\nabla\mathbf{P}\rvert$ is shown for a small subregion of the image, demonstrating that $\lvert\nabla\vec{P}\rvert$ changes most rapidly along directions oriented perpendicular to the filaments. Figure taken from Gaensler (2011).}}
+\caption{\footnotesize{$\lvert\vec\nabla \vec{P}\rvert$ for an $18$-deg$^2$ region of the Southern Galactic Plane Survey which reveals a complex network of tangled filaments. In particular, all regions in which $\lvert\nabla \vec{P}\rvert$ is high consists of elongated, narrow structures rather than extended patches. In the inset, the direction of $\lvert\nabla\mathbf{P}\rvert$ is shown for a small subregion of the image, demonstrating that $\lvert\nabla\vec{P}\rvert$ changes most rapidly along directions oriented perpendicular to the filaments. Figure taken from Gaensler (2011).}}
 \label{figure:delP}
+\end{center}
+\end{figure}
+
+{\noindent}Using polarization gradients of isothermal MHD turbulence, the supersonic case (Figure \ref{figure:delPmach}c) was found to show localized groupings of very high-gradient filaments, corresponding to ensembles of intersecting shocks. By contrast, the subsonic (Figure \ref{figure:delPmach}a) and tran-sonic (Figure \ref{figure:delPmach}b) cases showed more diffuse networks of filaments, representing the cusps and discontinuities characteristic of any turbulent velocity field. 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=12cm]{figures/delP_mach.png}
+\caption{\footnotesize{$\lvert\vec\nabla \vec{P}\rvert$ derived from propagation of linear radio polarization through three different isothermal simulations of magnetized turbulence. Figure taken from Gaensler (2011).}}
+\label{figure:delPmach}
 \end{center}
 \end{figure}
 
@@ -465,11 +491,11 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 \begin{center}
 \includegraphics[width=10cm]{figures/PolGradProfiles.png}
 \caption{\footnotesize{Schematic example of three possible scenarios for enhancements in a generic image ``n,'' where ``n'' could be $|\vec{P}|$, $\rm RM$, or $\rho/N/{\rm EM}$ (density, column density, emission measure). Case one (top row) shows an example of a H\"older continuous function that is not differentiable at the origin (applicable to all turbulent fields). Case two (middle row) shows an example of a jump resulting from strong turbulent fluctuations along the LOS or weak shocks. Case three (bottom row) shows a delta function profile resulting from interactions of strong shocks. In this case, the derivative gives a double jump profile which produces morphology that is distinctly different from the previous cases. In all cases we show examples from $|\vec{P}|$ simulations. Figure taken from Burkhart (2012).}}
-\label{figure:polgradprofiles}
+\label{fig:polgradprofiles}
 \end{center}
 \end{figure}
 
-{\noindent}Of great interest is the question of which quantity is providing the dominant contribution to the structures in $\lvert\nabla\vec{P}\rvert$: $\lvert\nabla n_{e,{\rm LOS}} \rvert$, $\lvert\nabla\vec{B}_{\rm LOS}\rvert$, or both equally? Especially in the case of compressible turbulence, the magnetic energy is correlated with density: denser regions contain stronger magnetic fields due to the compressibility of the gas and the potential dynamo amplification of the magnetic field in dense gas. This causes the magnetic field to follow the flow of plasma if the magnetic tension is negligible. The compressed regions are dense enough to distort the magnetic field lines, enhance the magnetic field intensity, and effectively trap the magnetic energy due to the frozen-in condition. Thus, for the supersonic cases, the intensity of the structures seen in $\lvert\nabla\vec{P}\rvert$ is more pronounced than in the subsonic case. However, in the case of subsonic turbulence, there are no compressive motions. In this case, random fluctuations in density and magnetic field will create structures in $\lvert\nabla\vec{P}\rvert$.
+{\noindent}Of great interest is the question of which quantity is providing the dominant contribution to the structures in $\lvert\nabla\vec{P}\rvert$: $\lvert\nabla n_{e,{\rm LOS}} \rvert$, $\lvert\nabla\vec{B}_{\rm LOS}\rvert$, or both equally? Especially in the case of compressible turbulence, the magnetic energy is correlated with density: denser regions contain stronger magnetic fields due to the compressibility of the gas and the potential dynamo amplification of the magnetic field in dense gas. This causes the magnetic field to follow the flow of plasma if the magnetic tension is negligible. The compressed regions are dense enough to distort the magnetic field lines, enhance the magnetic field intensity, and effectively trap the magnetic energy due to the frozen-in condition. Thus, for the supersonic cases, the intensity of the structures seen in $\lvert\nabla\vec{P}\rvert$ is more pronounced than in the subsonic case. However, in the case of subsonic turbulence, there are no compressive motions. In this case, random fluctuations in density and magnetic field will create structures in $\lvert\nabla\vec{P}\rvert$. It's been shown using MHD simulations that in the case of subsonic turbulence, $\lvert\nabla\vec{P}\rvert$ correlates with $\lvert\nabla\vec{B}\rvert$ while in the supersonic case $\lvert\nabla\vec{P}\rvert$ correlates with density fluctuations. This is because density enhancements are dominant due to shock fronts in the case of supersonic turbulence, while in subsonic turbulence density is marginally incompressible.
 
 {\noindent}\textbf{Polarization gradient (radial component):} The radial component quantifies how changes in polarization intensity contribute to the directional derivative $|\partial\vec{P}/\partial s|$:
 
@@ -689,7 +715,7 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}However, if the $S/N$ is low, the uncertainty in $\phi$ usually prevents accurate de-rotation to $\lambda=0$. 
 
-{\noindent}\textbf{Second moment:} 
+{\noindent}\textbf{Second moment:} See \textit{variance}.
 
 {\noindent}\textbf{Skewness:} The degree of asymmetry of a distribution, and can be quantified to define the extent to which a distribution differs from a normal distribution. Skewness is defined as
 
@@ -803,6 +829,8 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}\textbf{Taylor scale:}
 
+{\noindent}\textbf{Third moment:} See \textit{skewness}.
+
 {\noindent}\textbf{Tsallis distribution:} A function that can be fit to incremental probability distribution functions (PDFs) of turbulent density, magnetic field, and velocity. The Tsallis distribution was originally derived by Tsallis (1988) as a means to extend traditional Boltzmann-Gibbs mechanics to fractal and multifractal systems. The complex dynamics of multifractal systems apply to many natural environments, such as ISM turbulence. The Tsallis function of an arbitrary incremental PDF $\Delta f$ has the form
 
 \begin{align*}
@@ -827,7 +855,7 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}\textbf{Volume filling factor ($f$):} A correction factor such that a fraction $f$ of the line of sight intersects clouds of uniform density $N$. There are three effects of the interstellar magnetic field that conspire to lower the filling factor of hot cavities: (1) the background magnetic pressure acting on the surrounding shells directly opposes their expansion, (2) the magnetic tension in the swept-up field lines gives rise to an inward restoring force, while the associated magnetic pressure prevents the shells from fully collapsing and, therefore, keeps them relatively thick, and (3) the enhanced external ``signal speed'' causes the shells to merge earlier than they would in an unmagnetized medium.
 
-{\noindent}\textbf{Warm ionized medium (WIM):} A diffuse phase of the \textit{interstellar medium} with a typical temperature of $T\sim8,000\,{\rm K}$ and average electron density of $\sim0.2-0.5\,{\rm cm^{-3}}$. The ionized gas has mostly been mapped using the H$\alpha$ line. One limitation of the H$\alpha$ line comes from the obscuration caused by dust, which restricts visibility to within $2-3\,{\rm kpc}$ from the Sun. Using polarization gradients of \textit{synchrotron radiation}, it was shown by Gaensler (2011) that the turbulence of the WIM has a relatively low \textit{sonic Mach number}, $\mathcal{M}_s\lesssim2$.
+{\noindent}\textbf{Warm ionized medium (WIM):} A diffuse phase of the \textit{interstellar medium} with a typical temperature of $T\sim8,000\,{\rm K}$ and average electron density of $\sim0.2-0.5\,{\rm cm^{-3}}$.  The ionized gas has mostly been mapped using the H$\alpha$ line. One limitation of the H$\alpha$ line comes from the obscuration caused by dust, which restricts visibility to within $2-3\,{\rm kpc}$ from the Sun. Using polarization gradients of \textit{synchrotron radiation}, it was shown by Gaensler (2011) that the turbulence of the WIM has a relatively low \textit{sonic Mach number}, $\mathcal{M}_s\lesssim2$.
 
 {\noindent}\textbf{Warm partially ionized medium (WPIM):}
 

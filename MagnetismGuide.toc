@@ -1,4 +1,4 @@
 \contentsline {section}{\numberline {1}Preface}{1}{section.1}
 \contentsline {section}{\numberline {2}Terminology}{2}{section.2}
-\contentsline {section}{\numberline {3}Parameters}{21}{section.3}
-\contentsline {section}{\numberline {4}Equations}{23}{section.4}
+\contentsline {section}{\numberline {3}Parameters}{22}{section.3}
+\contentsline {section}{\numberline {4}Equations}{24}{section.4}
