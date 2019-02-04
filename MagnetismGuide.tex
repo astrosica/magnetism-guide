@@ -167,6 +167,20 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}\textbf{Beam depolarization:} A type of \textit{external depolarization} due to fluctuations in the foreground screen within the observing beam: unresolved density or magnetic field inhomogeneities of the media through which the radiation propagates induces unresolved spatial variations in the Faraday rotation measure.
 
+{\noindent}\textbf{Biermann battery mechanism:} The process by which a weak seed magnetic field can be produced from zero magnetic field initial conditions via perpendicular density and temperature gradients. The Biermann mechanism can explain the generation of a $\sim10^{-20}\,$G field after recombination, but it is questionable whether turbulent dynamo growth alone can explain amplification up to the $10\,\mu$G fields seen today throughout the ISM. A possible solution to this problem may be provided by the potential role played by kinetic instabilities in the amplification of magnetic fields. One such instability is the \textit{Weibel instability}. Temperature gradients form perpendicular to astrophysical shocks (hotter in the center of the shock), while density gradients form parallel to the shock, once again allowing the Biermann battery to take place. The Biermann mechanism is also the presumed cause of self-generated magnetic fields ($\sim10^6\,$G) found in laser-solid interaction experiments. The laser generates an expanding bubble of plasma by hitting and ionizing a solid foil of metal or plastic. This bubble thus has a temperature gradient perpendicular to the beam (hottest closest to the beam axis), and a density gradient in the direction normal to the foil, allowing for the Biermann battery mechanism to take place. Assuming a two-fluid description of a plasma with massless electrons, the magnetic field evolution is given by the generalized \textit{induction equation}:
+
+\begin{align*}
+    \frac{\partial\vec{B}}{\partial t} = \nabla\times(\vec{v}\times\vec{B}) + \frac{\eta c^2}{4\pi}\nabla^2\vec{B} - \frac{1}{en}\nabla\times(\vec{j}\times\vec{B}) - \frac{c}{ne}\nabla n\times\nabla T_e,
+\end{align*}
+
+{\noindent}which shows the evolution of magnetic field $\vec{B}$, based on the fluid velocity $\vec{v}$, the current density $\vec{j}=c\nabla\times\vec{B}/4\pi$, the number density $n$, and the electron temperature $T_e=P_e/n$, where $P_e$ is the electron plasma pressure. Here, $c$ is the speed of light, $\eta$ is the resistivity, and $e$ is the charge of an electron. The terms on the RHS from left to right are the convective term, the resistive term, the Hall term, and the Biermann battery term. Starting with $\vec{B}=0$, all terms on the RHS except for the Biermann term can be ignored, and thus $\vec{B}$ grows linearly. Based on scaling, given $T_e=m_ev_{\rm th}^2$, we find
+
+\begin{align*}
+    B(t) \approx \frac{m_ec}{e}\frac{v_{\rm th}^2}{L_TL_n}t ~ [{\rm G}],
+\end{align*}
+
+{\noindent}where $L$ is more precisely defined by the length of the gradients ($L_n\equiv n/\nabla n$, $L_T\equiv T_e/\nabla T_e$, which can be assumed to be approximately comparable).
+
 {\noindent}\textbf{Birefringence:} The optical property of a medium to have a refractive index that is dependent on the polarization and direction of propagation of light. Birefringence implies that there are two natural wave modes which may be described by their polarizations, which are necessarily orthogonal to each other, and by $\Delta k$, the difference in their wavenumbers. The magneto-ionic medium is an example of such a medium as the \textit{polarization angle} of light becomes rotated as it propagates via Faraday rotation as a function of frequency.
 
 {\noindent}\textbf{Bi-symmetric spiral (BSS) model:}
@@ -174,6 +188,12 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 {\noindent}\textbf{Bonnor-Ebert sphere:}
 
 {\noindent}\textbf{Bremmstrahlung radiation:} Also known as ``braking radiation". This radiation is produced by the deceleration of a charged particle after being deflected by another charged particle, typically an electron by an atomic nucleus. The particle being deflected loses energy which is lost via radiation of a photon. For example, when free electrons within an H$_\mathrm{II}$ region pass near a positive ion (H$^+$, He$^+$) they are accelerated by the Coulomb field and emit bremsstrahlung radiation. Bremsstrahlung emission is a source of polarized continuum radiation and is a type of free-free radiation.
+
+{\noindent}\textbf{$\beta$ parameter:} The squared ratio of the sound speed to the Alfv\'ens speen:
+
+\begin{align*}
+    \beta \equiv \frac{c_s^2}{v_A^2} ~ [{\rm dimensionless}].
+\end{align*}
 
 {\noindent}\textbf{Cascade rate:}
 
@@ -226,7 +246,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}\textbf{Dust polarization:} The polarization angle of dust emission is conventionally taken to be $90^\circ$ from the orientation of the local Galactic magnetic field.
 
-{\noindent}\textbf{Dynamo theory:} The mechanism by which a magnetic field is produced in which a rotating, convecting, and electrically conducting fluid can generate and maintain a magnetic field over astronomical timescales. 
+{\noindent}\textbf{Dynamo theory:} The mechanism by which a magnetic field is produced in which a rotating, convecting, and electrically conducting fluid can generate and maintain a magnetic field over astronomical timescales. The dynamo that creates the large-scale magnetic field acts by violation of the reflection symmetry of the turbulence in rotating galaxies; this violation is associated, in turn, with dominance of, for example, right-handed helical motions in the turbulent flow.
 
 {\noindent}\textbf{Eddies:}
 
@@ -264,7 +284,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}where $F(\phi)$ is the complex polarized surface brightness per unit Faraday depth and $P(\lambda^2) = p(\lambda^2)I(\lambda^2)$ is the complex polarized surface brightness. To obtain the Faraday dispersion function, \textit{rotation measure (RM) synthesis} is used to Fourier transform the observed polarized surface brightness into the Faraday spectrum. This Faraday dispersion function is not straightforward to interpret; in particular, there is no direct relationship between Faraday depth and physical depth. Further, the Faraday dispersion function suffers from sidelobes of the main components caused by limited coverage of the observed wavelength space. Burn (1966) assumes that $F(\phi)$ is independent of frequency. The equation for $P(\lambda^2)$ is very similar to a Fourier transform; a fundamental difference is that $P(\lambda^2)$ only has physical meaning for $\lambda\geq0$. Since $P(\lambda^2)$ cannot be measured for $\lambda<0$, it is only invertible if one makes assumptions about the values of $P$ for $\lambda^2<0$ based on those for $\lambda^2\geq0$ (Burn 1966). For example, assuming that $P(\lambda^2)$ is Hermitian corresponds to assuming that $F(\phi)$ is strictly real.
 
-{\noindent}\textbf{Faraday rotation:} A frequency-dependent magneto-optical phenomenon (i.e., an interaction between light and a magnetic field) in which the plane of polarization is rotated by an amount that is linearly proportional to the strength of the magnetic field in the direction of propagation. A linearly polarized electromagnetic wave propagating along the magnetic field of an ionized medium can be decomposed into two circularly polarized modes: a right-hand mode, whose $\vec{E}$ vector rotates about the magnetic field in the same sense as the free electrons gyrate around it, and a left-hand mode, whose $\vec{E}$ vector rotates in the opposite direction. As a result of the interaction between the $\vec{E}$ vector and the free electrons, the right-hand mode travels faster than the left-hand mode; consequently the plane of linear polarization experiences Faraday rotation as the wave propagates. Faraday rotation results from the fact that right-handed circularly (RHC) and left-handed circularly (LHC) polarized light experience different phase velocities when traveling through a magneto-ionic medium. Faraday rotation is induced by thermal electrons (not synchrotron radiation) coincident with a magnetic field which is at least partially oriented along the line of sight between the source and the observer. Non-thermal electrons have linear (not circular) modes, and produce \textit{generalized Faraday rotation}. The Faraday rotation is used to measure the parallel component of the magnetic field via ionized gas. Given an initial polarization angle $\chi_0$ and an observing frequency $\lambda^2$, the observed polarization angle is a function of the Faraday depth $\phi$ of the medium at a given physical distance $\mathbf{r}$ given by
+{\noindent}\textbf{Faraday rotation:} A frequency-dependent magneto-optical phenomenon (i.e., an interaction between light and a magnetic field) in which the plane of polarization is rotated by an amount that is linearly proportional to the strength of the magnetic field in the direction of propagation. The Faraday effect is very useful in studies of galactic magnetism because it allows one to determine not only the strength but also the direction of a magnetic field. A linearly polarized electromagnetic wave propagating along the magnetic field of an ionized medium can be decomposed into two circularly polarized modes: a right-hand mode, whose $\vec{E}$ vector rotates about the magnetic field in the same sense as the free electrons gyrate around it, and a left-hand mode, whose $\vec{E}$ vector rotates in the opposite direction. As a result of the interaction between the $\vec{E}$ vector and the free electrons, the right-hand mode travels faster than the left-hand mode; consequently the plane of linear polarization experiences Faraday rotation as the wave propagates. Faraday rotation results from the fact that right-handed circularly (RHC) and left-handed circularly (LHC) polarized light experience different phase velocities when traveling through a magneto-ionic medium. Faraday rotation is induced by thermal electrons (not synchrotron radiation) coincident with a magnetic field which is at least partially oriented along the line of sight between the source and the observer. Non-thermal electrons have linear (not circular) modes, and produce \textit{generalized Faraday rotation}. The Faraday rotation is used to measure the parallel component of the magnetic field via ionized gas. Given an initial polarization angle $\chi_0$ and an observing frequency $\lambda^2$, the observed polarization angle is a function of the Faraday depth $\phi$ of the medium at a given physical distance $\mathbf{r}$ given by
 
 \begin{align*}
     \chi = \chi_0 + \phi(\mathbf{r}) \lambda^2 ~[{\rm rad}].
@@ -321,6 +341,14 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 {\noindent}\textbf{H$_\mathrm{II}$ region:} The ionized clouds around massive OB stars which are responsible for ionizing most of the hydrogen around such stars. The boundaries of H$_\mathrm{II}$ regions are determined by the volume in which the rate of UV photoionization equals the rate of recombination of electrons. When free electrons within an H$_\mathrm{II}$ region pass near a positive ion (H$^+$, He$^+$) they are accelerated by the Coulomb field and emit radiation known as ``free-free'' or \textit{bremsstrahlung emission} which is a source of polarized continuum emission. The average electron density of an H$_\mathrm{II}$ region is $\sim10^3\,{\rm cm^{-3}}$.
 
 {\noindent}\textbf{Incompressible turbulence:} The \textit{Kolmogorov power spectrum} for incompressible turbulence in three dimensions is $P(k)\propto k^{-11/3}$ while its \textit{energy spectrum} is $E(k)\propto k^{-5/3}$. In two dimensions, $P(k)\propto k^{-8/3}$ and $E(k)\propto k^{-5/3}$ (unchanged). For one dimension, $P(k)\propto k^{-5/3}$ and $E(k)\propto k^{-5/3}$ (unchanged).
+
+{\noindent}\textbf{Induction equation:} Assuming a two-fluid description of a plasma with massless electrons, the magnetic field evolution is given by the generalized induction equation
+
+\begin{align*}
+    \frac{\partial\vec{B}}{\partial t} = \nabla\times(\vec{v}\times\vec{B}) + \frac{\eta c^2}{4\pi}\nabla^2\vec{B} - \frac{1}{en}\nabla\times(\vec{j}\times\vec{B}) - \frac{c}{ne}\nabla n\times\nabla T_e,
+\end{align*}
+
+{\noindent}which shows the evolution of magnetic field $\vec{B}$, based on the fluid velocity $\vec{v}$, the current density $\vec{j}=c\nabla\times\vec{B}/4\pi$, the number density $n$, and the electron temperature $T_e=P_e/n$, where $P_e$ is the electron plasma pressure. Here, $c$ is the speed of light, $\eta$ is the resistivity, and $e$ is the charge of an electron. The terms on the RHS from left to right are the convective term, the resistive term, the Hall term, and the Biermann battery term. The induction equation is often simplified by assuming that the system size $L$ is large compared to all kinetic scales, and only considering the convective term on the RHS. 
 
 {\noindent}\textbf{Infrared polarization:} The same large-scale alignment of aspherical, spinning dust grains that causes \textit{starlight polarization} also causes polarization of far-infrared emission.
 
@@ -413,7 +441,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}\textbf{Plasma beta ($\beta$):} The ratio of the gas to magnetic pressure. For either high or low $\beta$, it was predicted that \textit{Alfv\'en waves} should should damp at the \textit{ambipolar diffusion scale} $L_\mathrm{AD}$ and thus the magnetohydrodynamic (MHD) cascade should damp past the ambipolar diffusion scale.
 
-{\noindent}\textbf{Poincaré sphere:}
+{\noindent}\textbf{Poincar\'e sphere:}
 
 {\noindent}\textbf{Polarized intensity ($P$):} A measure of the total linear polarization in radio emission given as
 
@@ -545,7 +573,13 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}for wavenumber $k$ where $\hat{f}(k)$ denotes the \textit{Fourier transform} (FT) and ${\hat{f}(k)}$ its \textit{complex conjugate}. The power spectrum is the \textit{Fourier transform} (FT) of the \textit{autocorrelation function}.
 
-{\noindent}\textbf{Prandtl number:}
+{\noindent}\textbf{Prandtl number:} The ratio of momentum diffusivity (kinematic viscosity) to thermal diffusivity:
+
+\begin{align*}
+    {\rm Pr} = \frac{\nu}{\alpha} = \frac{\mu c_p}{k} ~ [{\rm dimensionless}],
+\end{align*}
+
+{\noindent}where $\nu=\mu/\rho$ is the momentum diffusivity (kinematic viscosity) in ${\rm m^2\,s^{-1}}$, $\alpha=k/(c_p\rho)$ is the thermal diffusivity in ${\rm m^2\,s^{-1}}$, $\mu$ is the dynamic viscosity in ${\rm Ps\,s}$, $k$ is the thermal conductivity in ${\rm W\,m^{-1}\,K}$, $c_p$ is the specific heat in ${\rm J\,kg^{-1}\,K}$, and $\rho$ is the density in ${\rm kg\,m^{-3}}$.
 
 {\noindent}\textbf{$Q-U$ plane:} Translations and rotations within the $Q-U$ plane can result from one or more of a smooth distribution of intervening polarized emission, a uniform screen of foreground \textit{Faraday rotation}, and the effects of missing large-scale structure in an interferometric data set.
 
@@ -767,6 +801,8 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}where $I$ is \textit{Stokes I} and $\nu$ is the observed frequency.
 
+{\noindent}\textbf{Striation:} 
+
 {\noindent}\textbf{Str\"{o}mgren sphere:} A sphere of ionized hydrogen (HII) around young OB stars.
 
 {\noindent}\textbf{Structure function ($S_p(\delta r)$):} The structure function of order $p$ for an observable $A$ is given by
@@ -839,7 +875,7 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}The fit is described by three dependent variables. The $a$ parameter describes the amplitude while $w$ is related to the width or dispersion of the distribution. Parameter $q$, referred to as the ``non-extensivity parameter'' or ``entropic index'' describes the sharpness and tail size of the distribution. The Tsallis fit parameters are in many ways similar to statistical moments. Moments, more specifically the third- and fourth-order moments, have been used to describe the density distributions and have shown sensitivities to simulation compressibility. The first- and second-order moments simply correspond to the mean and variance of a distribution. Skewness, or third-order moment, describes the asymmetry of a distribution about its mode. Skewness can have positive or negative values corresponding to right and left shifts of a distribution, respectively. The fourth-order moment, kurtosis, is a measure of a distributions peaked or flatness compared to a Gaussian distribution. Like skewness, kurtosis can have positive or negative values corresponding to increased sharpness or flatness. With regard to the Tsallis fitting parameters, the w parameter is similar to the second-order moment variance while q is closely analogous to fourth-order moment kurtosis. Unlike higher order moments, however, the Tsallis fitting parameters are dependent least-squares fit coefficients and are more sensitive to subtle changes in the PDF.
 
-{\noindent}\textbf{Turbulence:} Astrophysical turbulence is a complex nonlinear fluid phenomenon that can occur in a multiphase medium which results in the excitation of an extreme range of correlated spatial and temporal scales. There are many injection sources on scales ranging from ${\rm kp}$ down to sub-${\rm AU}$ The physical processes by which kinetic energy is converted into turbulence are not well understood for the ISM. The main sources for large-scale motions are: (a) stars, whose energy input is in the form of protostellar winds, expanding HII regions, O star and Wolf-Rayet winds, supernovae, and combinations of these producing superbubbles; (b) Galactic rotation in the shocks of spiral arms or bars, in the \textit{Balbus-Hawley instability} (also known as the magnetorotational instability), and in the gravitational scattering of cloud complexes at different epicyclic phases; (c) gaseous self-gravity through swing-amplified instabilities and cloud collapse; (d) \textit{Kelvin-Helmholtz} and other fluid instabilities; and (e) Galactic gravity during disk-halo circulation, the \textit{Parker instability}, and galaxy interactions. Interstellar turbulence has been characterized by \textit{structure functions}, \textit{autocorrelations}, \textit{power spectra}, \textit{energy spectra}, and \textit{delta variance}. Sources for small-scale turbulence observed by radio \textit{scintillation} include sonic reflections of shock waves hitting clouds, cosmic ray streaming and other instabilities, field star motions and winds, and energy cascades from larger scales. Turbulence affects the structure and motion of nearly all temperature and density regimes of the interstellar gas. Magnetohydrodynamic (MHD) turbulence is a key element in the study of star formation, molecular cloud structure, magnetic reconnection, heat transport, and cosmic ray propagation. MHD turbulence is known to be different from a collection of linear Alfv\'enic waves. Does MHD turbulence, specifically the Alfv\'en wave modes, damp at the decoupling scale of the \textit{ambipolar diffusion scale} $L_\mathrm{AD}$? Cascading rates and the anisotropy of turbulence should be accounted for carefully before a definitive conclusion about turbulent damping in the partially ionized media. Despite the importance of turbulence for ISM studies, many mysteries remain including the nature of turbulence driving and damping. The most common observational techniques for studying turbulence include scintillation studies (which are limited to fluctuations in ionized plasmas), density fluctuations via column density maps, and radio spectroscopic observations via centroids of spectral lines. Position-position-velocity (PPV) spectroscopic data have the advantage over column density maps in that it contains information on the turbulent velocity field. However, this type of data provides contributions of both velocity and density fluctuations entangled together, and the process of separating the two has proven to be a challenging problem. One of the main approaches for characterizing ISM turbulence is based on using statistical techniques and descriptions (e.g., spatial power spectrum). Although the power spectrum is useful for obtaining information about energy transfer over scales, it does not provide a full picture of turbulence, partly because it only contains information on Fourier amplitudes (i.e., two substantially different density distributions can have the same power spectrum). Probability distribution functions (PDFs) of turbulence in PPV and column density data have been studied for decades and have proven to be very useful to show that turbulence is present in the ISM, providing insight into the effects of turbulent driving and characterizing the type of turbulence in question. Many studies on turbulence focus on obtaining parameters such as \textit{sonic and Alfv\'en Mach numbers}, \textit{injection scale}, gas temperature, and \textit{Reynolds number}. In particular, the sonic and Alfv\'en Mach numbers provide much coveted information on the gas compressibility and magnetization.
+{\noindent}\textbf{Turbulence:} Astrophysical turbulence is a complex nonlinear fluid phenomenon that can occur in a multiphase medium which results in the excitation of an extreme range of correlated spatial and temporal scales. There are many injection sources on scales ranging from ${\rm kp}$ down to sub-${\rm AU}$ The physical processes by which kinetic energy is converted into turbulence are not well understood for the ISM. The main sources for large-scale motions are: (a) stars, whose energy input is in the form of protostellar winds, expanding HII regions, O star and Wolf-Rayet winds, supernovae, and combinations of these producing superbubbles; (b) Galactic rotation in the shocks of spiral arms or bars, in the \textit{Balbus-Hawley instability} (also known as the magnetorotational instability), and in the gravitational scattering of cloud complexes at different epicyclic phases; (c) gaseous self-gravity through swing-amplified instabilities and cloud collapse; (d) \textit{Kelvin-Helmholtz} and other fluid instabilities; and (e) Galactic gravity during disk-halo circulation, the \textit{Parker instability}, and galaxy interactions. Interstellar turbulence has been characterized by \textit{structure functions}, \textbf{correlation functions} (e.g., spatial power spectrum), \textit{autocorrelations}, \textit{power spectra}, \textit{energy spectra}, and \textit{delta variance}. Sources for small-scale turbulence observed by radio \textit{scintillation} include sonic reflections of shock waves hitting clouds, cosmic ray streaming and other instabilities, field star motions and winds, and energy cascades from larger scales. Turbulence affects the structure and motion of nearly all temperature and density regimes of the interstellar gas. Magnetohydrodynamic (MHD) turbulence is a key element in the study of star formation, molecular cloud structure, magnetic reconnection, heat transport, and cosmic ray propagation. MHD turbulence is known to be different from a collection of linear Alfv\'enic waves. Does MHD turbulence, specifically the Alfv\'en wave modes, damp at the decoupling scale of the \textit{ambipolar diffusion scale} $L_\mathrm{AD}$? Cascading rates and the anisotropy of turbulence should be accounted for carefully before a definitive conclusion about turbulent damping in the partially ionized media. Despite the importance of turbulence for ISM studies, many mysteries remain including the nature of turbulence driving and damping. The most common observational techniques for studying turbulence include scintillation studies (which are limited to fluctuations in ionized plasmas), density fluctuations via column density maps, and radio spectroscopic observations via centroids of spectral lines. Position-position-velocity (PPV) spectroscopic data have the advantage over column density maps in that it contains information on the turbulent velocity field. However, this type of data provides contributions of both velocity and density fluctuations entangled together, and the process of separating the two has proven to be a challenging problem. One of the main approaches for characterizing ISM turbulence is based on using statistical techniques and descriptions (e.g., spatial power spectrum). Although the power spectrum is useful for obtaining information about energy transfer over scales, it does not provide a full picture of turbulence, partly because it only contains information on Fourier amplitudes (i.e., two substantially different density distributions can have the same power spectrum). Probability distribution functions (PDFs) of turbulence in PPV and column density data have been studied for decades and have proven to be very useful to show that turbulence is present in the ISM, providing insight into the effects of turbulent driving and characterizing the type of turbulence in question. Many studies on turbulence focus on obtaining parameters such as \textit{sonic and Alfv\'en Mach numbers}, \textit{injection scale}, gas temperature, and \textit{Reynolds number}. In particular, the sonic and Alfv\'en Mach numbers provide much coveted information on the gas compressibility and magnetization.
 
 {\noindent}\textbf{Turbulent fragmentation:}
 
@@ -945,6 +981,8 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}\textbf{Bohr magneton}: $\mu_B$
 
+{\noindent}$\boldsymbol{\beta}$ \textbf{parameter}: $\beta$
+
 {\noindent}\textbf{Channel central frequency}: $\nu_c~[{\rm Hz}]$
 
 {\noindent}\textbf{Channel width in frequency}: $\delta\nu~[{\rm Hz}]$
@@ -954,6 +992,8 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 {\noindent}\textbf{Channel width in wavelength}: $\delta\lambda~[{\rm m}]$
 
 {\noindent}\textbf{Complex conjugate}: ${f(x)}^*\,{\rm or}\,\bar{f}(x)$
+
+{\noindent}\textbf{Current density}: $\vec{j} ~ [{\rm A\,m^{-2}}]$
 
 {\noindent}\textbf{Delta function}: $\delta (x)$
 
@@ -973,9 +1013,15 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}\textbf{Dispersion measure}: ${\rm DM} ~ [{\rm pc\,cm^{-3}}]$
 
+{\noindent}\textbf{Dynamic viscosity}: $\mu ~ [{\rm Ps\,s}]$
+
 {\noindent}\textbf{Electron charge}: $e~[{\rm C}]$
 
 {\noindent}\textbf{Electron mass}: $e_m~[{\rm kg}]$
+
+{\noindent}\textbf{Electron plasma pressure}: $P_e~[{\rm Pa}]$
+
+{\noindent}\textbf{Electron temperature}: $T_e~[{\rm K}]$
 
 {\noindent}\textbf{Emission measure}: ${\rm EM} ~ [{\rm pc\,cm^{-6}}]$
 
@@ -1015,9 +1061,13 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}\textbf{Mach number}: $\mathcal{M}~[{\rm dimensionless]}$
 
-{\noindent}\textbf{Magnetic field strength}: $B~[{\rm \mu G]}$
+{\noindent}\textbf{Magnetic field}: $\vec{B}~[{\rm \mu G]}$
 
 {\noindent}\textbf{Mean}: $\mu(x)$
+
+{\noindent}\textbf{Momentum diffusivity}: $\nu ~ [{\rm m^2\,s^{-1}}]$
+
+{\noindent}\textbf{Number density}: $n ~ [{\rm m^{-3}}]$
 
 {\noindent}\textbf{Number of $\theta$ bins (RHT)}: $n ~ [{\rm dimensionless}]$
 
@@ -1059,6 +1109,8 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}\textbf{Radial component of polarization gradient}: $\dfrac{\partial\mathbf{P}}{\partial s}_\mathrm{rad} ~ [{\rm Jy\,pc^{-1}}]$
 
+{\noindent}\textbf{Resistivity}: $\eta~[{\rm \Omega\,m}]$
+
 {\noindent}\textbf{Rest mass}: $m_0~[{\rm kg}]$
 
 {\noindent}\textbf{Reynolds number}: ${\rm Re}~[{\rm dimensionless}]$
@@ -1082,6 +1134,8 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 {\noindent}\textbf{Sonic Mach number}: $\mathcal{M}_s~[{\rm dimensionless]}$
 
 {\noindent}\textbf{Sound speed}: $c_s ~ [{\rm m\,s^{-1}}]$
+
+{\noindent}\textbf{Specific heat}: $c_p ~ [{\rm J\,kg^{-1}\,K}]$
 
 {\noindent}\textbf{Spectral correlation function}: $S_{x,y}~[\rm{dimensionless}]$
 
@@ -1109,7 +1163,13 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}\textbf{Tangential component of polarization gradient}: $\dfrac{\partial\mathbf{P}}{\partial s}_\mathrm{tan} ~ [{\rm Jy\,pc^{-1}}]$
 
+{\noindent}\textbf{Thermal conductivity}: $k ~ [{\rm W\,m^{-1}\,K}]$
+
+{\noindent}\textbf{Thermal diffusivity}: $\alpha ~ [{\rm m^2\,s^{-1}}]$
+
 {\noindent}\textbf{Variance}: $\sigma^2$
+
+{\noindent}\textbf{Velocity}: $\vec{v} ~ [{\rm m\,s^{-1}}]$
 
 {\noindent}\textbf{Viscosity coefficient}: $\mu ~ [{\rm Pa\,s}]$
 
@@ -1195,7 +1255,12 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}\textbf{Autocorrelation:}
 \begin{align*}
-    C(\delta r) = \langle f(r)f(r+\delta r)\rangle ~ [{\rm dimensionless}].
+    C(\delta r) = \langle f(r)f(r+\delta r)\rangle ~ [{\rm dimensionless}]
+\end{align*}
+
+{\noindent}$\beta$ \textbf{parameter}: 
+\begin{align*}
+    \beta \equiv \frac{c_s^2}{v_A^2} ~ [{\rm dimensionless}]
 \end{align*}
 
 {\noindent}\textbf{Channel central wavelength:} 
@@ -1210,6 +1275,12 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 \end{align*}
 (Brentjens \& de Bruyn, 2005)
 
+{\noindent}\textbf{Current density}:
+\begin{align*}
+    \vec{j} = c\nabla\times\frac{\vec{B}}{4\pi} ~ [{\rm A\,m^{-2}}]
+\end{align*}
+(Schoeffler et al., 2016)
+
 {\noindent}\textbf{Delta variance:}
 \begin{align*}
     \sigma_\Delta^2(L) = \left\langle \int\limits_0^{3L/2} {(A[r+x]-\langle A\rangle)\odot(x)}^2\mathrm{d}x \right\rangle,
@@ -1219,6 +1290,18 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 \begin{align*}
     {\rm DM} = -\int\limits_\mathrm{source}^\mathrm{observer} n_e\vec{{\rm d}\ell} ~ [{\rm pc\,cm^{-3}}]
 \end{align*}
+
+{\noindent}\textbf{Electron plasma pressure}:
+\begin{align*}
+    P_e = T_e \eta ~ [{\rm Pa}]
+\end{align*}
+(Schoeffler et al., 2016)
+
+{\noindent}\textbf{Electron temperature}:
+\begin{align*}
+    T_e = \frac{P_e}{\eta} ~ [{\rm K}]
+\end{align*}
+(Schoeffler et al., 2016)
 
 {\noindent}\textbf{Emission measure:}
 \begin{align*}
@@ -1263,6 +1346,12 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
 \begin{align*}
     \hat{f}(x) = \int\limits_{-\infty}^\infty f(x')e^{-2\pi xx'}dx'
 \end{align*}
+
+{\noindent}\textbf{Induction equation:}
+\begin{align*}
+    \frac{\partial\vec{B}}{\partial t} = \nabla\times(\vec{v}\times\vec{B}) + \frac{\eta c^2}{4\pi}\nabla^2\vec{B} - \frac{1}{en}\nabla\times(\vec{j}\times\vec{B}) - \frac{c}{ne}\nabla n\times\nabla T_e
+\end{align*}
+(Schoeffler et al., 2016)
 
 {\noindent}\textbf{Inverse Fourier transform (FT):}
 \begin{align*}
