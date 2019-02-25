@@ -131,7 +131,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}\textbf{Alfv\'en wave:} In 1942, Hannes Alfv\'en combined the mathematics of fluid mechanics and electromagnetism to predict that plasmas could support wave-like variation in the magnetic field, a wave phenomenon that now bears his name, Alfv\'en waves. These are a type of magnetohydrodynamic (MHD) wave in which ions oscillate in response to a restoring force provided by an effective tension on the magnetic field lines. The waves initially proposed by Alfv\'en are considered ``basic''. They have a characteristic that they are compressional, which means that magnetic field variation of the Alfv\'en waves is in the direction of the wave motion. Charged particles moving through a plasma with these waves have very little alteration of their trajectory. But Alfv\'en waves can exhibit more variety. A variant is the ``kinetic'' Alfv\'en wave which is transverse, with strong magnetic field variation perpendicular to the wave motion, so can trade energy between the different frequencies which might propagate through a plasma. This also means it can exchange energy with the particles in the plasma, in some cases, trapping particles in the troughs of the waves and carrying them along.
 
-{\noindent}\textbf{Ambipolar diffusion:} The drift of neutral particles towards the central gravitational potential through the ionized particles tied to the magnetic field. This is often invoked as a source of dissipation of the magnetohydrodynamic (MHD) energy cascade. The scale at which ions and neutral particles decouple is called the \textit{ambipolar diffusion scale}. The application of ambipolar diffusion extends beyond direct studies of star formation and to include general studies of magnetic fields. Ambipolar diffusion has been proposed to damp particular families of MHD waves. 
+{\noindent}\textbf{Ambipolar diffusion:} In many situations, ideal MHD is not a sufficiently good assumption and additional effects need to be accounted for. In many contexts, the dominant correction is the so-called ambipolar diffusion. Since the neutrals are not charged they are not subject to the \textit{Lorentz force} which applies only on the ions. However, through collisions the neutrals and the ions exchange momentum and therefore the Lorentz force has an influence on the neutrals through the ions. If the number of ions is large (i.e., if the ionization is high) the number of collisions is expected to be large and ideal MHD remains a good approximation. However in regions like molecular clouds, the ionization is usually of the order of $10^{-7}$ and therefore the two fluids are not perfectly coupled. The ions drag the field lines and drift with respect to the neutrals implying that the latter can cross the field lines. The field is not frozen in the gas anymore. The drift of neutral particles towards the central gravitational potential through the ionized particles tied to the magnetic field. This is often invoked as a source of dissipation of the MHD energy cascade. The scale at which ions and neutral particles decouple is called the \textit{ambipolar diffusion scale}. The application of ambipolar diffusion extends beyond direct studies of star formation and to include general studies of magnetic fields. Ambipolar diffusion has been proposed to damp particular families of MHD waves. 
 
 {\noindent}\textbf{Ambipolar diffusion scale ($L_\mathrm{AD}$):} The scale at which ions and neutral particles decouple through the process of \textit{ambipolar diffusion}. It can be estimated as the scale at which the \textit{Reynolds number}, with diffusivity given by ambipolar diffusivity, is equal to unity. The ambipolar diffusion scale has been thought to set the dissipation scale of turbulence in molecular clouds and set a fundamental characteristic scale for gravitational collapse in star formation. When the Alfv\'en speed is greater than the sound speed, the fast and Alfv\'en wave families are damped at or below the \textit{ambipolar diffusion scale} $L_\mathrm{AD}$; when the Alfv\'en speed is less than the sound speed, the slow and Alfv\'en wave families are damped. On scales larger than $L_\mathrm{AD}$, it was also predicted that two-fluid turbulence (ion-neutral) acts like single-fluid MHD turbulence. The \textit{ambipolar diffusivity} is given by
 
@@ -340,6 +340,8 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}\textbf{H$_\mathrm{II}$ region:} The ionized clouds around massive OB stars which are responsible for ionizing most of the hydrogen around such stars. The boundaries of H$_\mathrm{II}$ regions are determined by the volume in which the rate of UV photoionization equals the rate of recombination of electrons. When free electrons within an H$_\mathrm{II}$ region pass near a positive ion (H$^+$, He$^+$) they are accelerated by the Coulomb field and emit radiation known as ``free-free'' or \textit{bremsstrahlung emission} which is a source of polarized continuum emission. The average electron density of an H$_\mathrm{II}$ region is $\sim10^3\,{\rm cm^{-3}}$.
 
+{\noindent}\textbf{Ideal magnetohydrodynamics (MHD):} Ideal MHD implies that fluid particles are attached to their field lines, that is to say they can flow along the field lines but cannot go across them. In a turbulent fluid, given the stochastic nature of the motions, such a situation would lead to a field that would be so tangled, that motions would quickly become prohibited. This implies that ideal MHD cannot, strictly speaking, be correct for a turbulent fluid and that some reconnection (i.e., some changes of the field lines topology) must be occurring. The physical origin of this reconnection is still debated but an appealing model has been proposed by Lazarian \& Vishniac (1999). In this view the reconnection is driven by turbulence and is a multi-scale process, that is unrelated to the details of the microphysical processes. It is certainly the case, at least in numerical simulations of MHD turbulence, where the numerical diffusivity is often controlling the reconnection, that the MHD is far to be ideal. This process in particular induces an effective diffusion of the magnetic flux, that is therefore not not fully frozen as one would expect if MHD was truly ideal.
+
 {\noindent}\textbf{Incompressible turbulence:} The \textit{Kolmogorov power spectrum} for incompressible turbulence in three dimensions is $P(k)\propto k^{-11/3}$ while its \textit{energy spectrum} is $E(k)\propto k^{-5/3}$. In two dimensions, $P(k)\propto k^{-8/3}$ and $E(k)\propto k^{-5/3}$ (unchanged). For one dimension, $P(k)\propto k^{-5/3}$ and $E(k)\propto k^{-5/3}$ (unchanged).
 
 {\noindent}\textbf{Induction equation:} Assuming a two-fluid description of a plasma with massless electrons, the magnetic field evolution is given by the generalized induction equation
@@ -398,7 +400,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 {\noindent}\textbf{Lorentz force:} The combination of electric and magnetic force on a point charge due to electromagnetic fields. A particle of mass $m$ and charge $q$ moving with a velocity $v$ within a magnetic field $\mathbf{B}$ experiences a force 
 
 \begin{align*}
-    F = \dfrac{\mathrm{d}}{\mathrm{d}\tau} (m\gamma\mathbf{v}) = q\left(\dfrac{\mathbf{v}}{c}\times\mathbf{B}\right) ~ [{\rm N}],
+    \vec{F} = \dfrac{\mathrm{d}}{\mathrm{d}\tau} (m\gamma\vec{v}) = q\left(\vec{E} + \dfrac{\vec{v}}{c}\times\vec{B}\right) ~ [{\rm N}],
 \end{align*}
 
 {\noindent}where $\tau$ is the retarded time and $\gamma$ is the Lorentz factor. Of course, the Lorentz force only acts on charged particles but its effect is then transmitted to neutral particles via ion-neutral collisions.
@@ -408,6 +410,23 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 {\noindent}\textbf{Magnetic buoyancy:} See Rayleigh-Taylor instability.
 
 {\noindent}\textbf{Magnetic reconnection:}
+
+{\noindent}\textbf{Magnetohydrodynamic (MHD) equations:} The equations of ideal MHD assume that the fluids are perfect conductors. The Lorentz force, which is the force that the EM fields $\vec{E}$ and $\vec{B}$ exert on the fluid must be taken into account. The EM field evolution is described by Maxwell equations. Written in CGS units, these equations are
+
+\begin{align*}
+    \vec\nabla\cdot\vec{B} &= 0 \\
+    \vec\nabla\cdot\vec{E} &= 4\pi\rho_e \\
+    c\vec\nabla\times\vec{E} &= - \frac{\partial\vec{B}}{\partial t} \\
+    c\vec\nabla\times\vec{B} &= 4\pi\vec{j} + \frac{\partial\vec{E}}{\partial t},
+\end{align*}
+
+{\noindent}where $\rho_e$ and $\vec{j}$ are the fluid charge and current densities. The equation for charge conservation links these two quantities:
+
+\begin{align*}
+    \frac{\partial\rho_e}{\partial t} + \vec\nabla\cdot\vec{j} = 0.
+\end{align*}
+
+{\noindent}\textbf{Magnetohydrodynamics (MHD):} Magnetohydrodynamics (MHD) denotes the study of the dynamics of electrically conducting fluids. It establishes a coupling between the \textit{Navier-Stokes equations} for fluid dynamics and Maxwell's equations for electromagnetism. The main concept behind MHD is that magnetic fields can induce currents in a moving conductive fluid, which in turn create forces on the fluid and influence the magnetic field itself. 
 
 {\noindent}\textbf{Magnetoionic medium (MIM):}
 
@@ -995,9 +1014,11 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}\textbf{Channel width in wavelength}: $\delta\lambda~[{\rm m}]$
 
+{\noindent}\textbf{Charge density}: $\rho_e~[{\rm C\,m^{-3}}]$
+
 {\noindent}\textbf{Complex conjugate}: ${f(x)}^*\,{\rm or}\,\bar{f}(x)$
 
-{\noindent}\textbf{Current density}: $\vec{j} ~ [{\rm A\,m^{-2}}]$
+{\noindent}\textbf{Current density}: $\vec{j} ~ [{\rm A\,m^{-3}}]$
 
 {\noindent}\textbf{Delta function}: $\delta (x)$
 
@@ -1273,6 +1294,11 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 \end{align*}
 (Brentjens \& de Bruyn, 2005)
 
+{\noindent}\textbf{Charge conservation:} 
+\begin{align*}
+    \frac{\partial\rho_e}{\partial t} + \vec\nabla\cdot\vec{j} = 0
+\end{align*}
+
 {\noindent}\textbf{Channel width in wavelength:} 
 \begin{align*}
 \delta\lambda^2 \approx \dfrac{2c^2\delta\nu}{\nu_c^3} \left(1+\dfrac{1}{2}\left(\dfrac{\delta\nu}{\nu_c}\right)^2\right) ~ [{\rm m^2}]
@@ -1370,6 +1396,15 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
 {\noindent}\textbf{Lorentz factor:}
 \begin{align*}
     \gamma = \sqrt{\frac{1 - (v/c)^2}{c^2}} ~ [{\rm dimensionless}]
+\end{align*}
+
+{\noindent}\textbf{Magnetohydrodynamic (MHD) equations:}
+
+\begin{align*}
+    \vec\nabla\cdot\vec{B} &= 0 \\
+    \vec\nabla\cdot\vec{E} &= 4\pi\rho_e \\
+    c\vec\nabla\times\vec{E} &= - \frac{\partial\vec{B}}{\partial t} \\
+    c\vec\nabla\times\vec{B} &= 4\pi\vec{j} + \frac{\partial\vec{E}}{\partial t}
 \end{align*}
 
 {\noindent}\textbf{Number of $\theta$ bins (RHT):}
