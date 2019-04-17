@@ -445,13 +445,13 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}\textbf{Kolmogorov spectrum:}
 
-{\noindent}\textbf{Kurtosis:} The fourth order statistical \textit{moment} which is a measure of whether the data are heavy-tailed or light-tailed relative to a normal distribution. That is, data sets with high kurtosis tend to have heavy tails, or outliers. Data sets with low kurtosis tend to have light tails, or lack of outliers. Kurtosis is defined as
+{\noindent}\textbf{Kurtosis ($\beta_x$):} The fourth order statistical \textit{moment} which is a measure of whether the data are heavy-tailed or light-tailed relative to a normal distribution. That is, data sets with high kurtosis tend to have heavy tails, or outliers. Data sets with low kurtosis tend to have light tails, or lack of outliers. Kurtosis is defined as
 
 \begin{align*}
-    {\rm Kurt}[x] = \frac{1}{N} \sum_{i=1}^N \left(\frac{x_i-\mu}{\sigma}\right)^3 ~ [{\rm dimensionless}],
+    \beta_x = \frac{1}{N} \sum_{i=1}^N \left(\frac{x_i-\mu_x}{\sigma}\right)^3 ~ [{\rm dimensionless}],
 \end{align*}
 
-{\noindent}where $\mu$ is the statistical mean and $\sigma$ is the standard deviation. Like the \textit{skewness}, it is a dimensionless quantity.
+{\noindent}where $\mu_x$ is the statistical mean and $\sigma$ is the standard deviation. Like the \textit{skewness}, it is a dimensionless quantity.
 
 {\noindent}\textbf{Large scale magnetic field:} How large is the ``large'' scale? Obviously it should be a scale, relatively much larger than some kind of standard. For example, the large-scale magnetic field of the Sun refers to the global scale field or the field with a scale length comparable to the size of the Sun, up to $10^9\,{\rm m}$, rather than small-scale magnetic fields on the Solar surface. For the magnetic fields of our Galaxy, we should define the ``large'' scale as being a \textit{scale larger than the separation between spiral arms}. That is to say, large scale means a scale larger than $2-3\,{\rm kpc}$. Note that in the literature, ``large'' scale is sometimes used for large angular scale when discussing the structures or prominent plane-of-the-sky features (e.g., the large-scale features in radio continuum surveys). These large angular scale features are often very localized phenomena, and not very large in linear scale.
 
@@ -519,6 +519,14 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 \begin{align*}
     \kappa_\nu = \kappa_0 \left(\frac{\nu}{\nu_0}\right)^\beta ~ [{\rm cm^2\,g^{-1}}]
 \end{align*}
+
+{\noindent}\textbf{Mean ($\mu_x$):} The first order statistical \textit{moment} which is a measure of the central tendency. The mean is defined as
+
+\begin{align*}
+    \mu_x = \frac{1}{N} \sum_{i=1}^N x_i
+\end{align*}
+
+{\noindent}and has the same dimensions as $x_i$.
 
 {\noindent}\textbf{Mean molecular weight ($\mu$):}
 
@@ -671,7 +679,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}where $Q$ and $U$ are the complex \textit{Stokes vectors}.
 
-{\noindent}\textbf{Polarization horizon:} The furthest distance we can see diffuse polarized emission.
+{\noindent}\textbf{Polarization horizon:} The furthest distance we can see diffuse polarized emission. This quantity is a function of the instrumental features (i.e., beam size, observing frequency), as well as of the physical conditions of the probed medium (causing an intrinsic degree of depolarization), and depends on the viewing direction in the Milky Way. The smaller the beam and/or the higher the observing frequency, the farther the polarization horizon; the brighter and/or more coherent the synchrotron emission, the farther the corresponding polarization horizon.
 
 {\noindent}\textbf{Polarized surface brightness ($P(\lambda^2)$):} 
 
@@ -875,13 +883,13 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}\textbf{Second moment:} See \textit{variance}.
 
-{\noindent}\textbf{Skewness:} The degree of asymmetry of a distribution, and can be quantified to define the extent to which a distribution differs from a normal distribution. Skewness is defined as
+{\noindent}\textbf{Skewness ($\gamma_x$):} The degree of asymmetry of a distribution, and can be quantified to define the extent to which a distribution differs from a normal distribution. Skewness is defined as
 
 \begin{align*}
-    {\rm Skew}[x] = \frac{1}{N} \sum_{i=1}^N \left(\frac{x_i-\mu}{\sigma}\right)^4 -3 ~ [{\rm dimensionless}],
+    \gamma_x = \frac{1}{N} \sum_{i=1}^N \left(\frac{x_i-\mu_x}{\sigma}\right)^4 -3 ~ [{\rm dimensionless}],
 \end{align*}
 
-{\noindent}where $\mu$ is the statistical mean and $\sigma$ is the standard deviation. It can be negative, positive, zero or undefined, and like the \textit{kurtosis}, is a dimensionless quantity.
+{\noindent}where $\mu_x$ is the statistical mean and $\sigma$ is the standard deviation. It can be negative, positive, zero or undefined, and like the \textit{kurtosis}, is a dimensionless quantity.
 
 {\noindent}\textbf{Sonic Mach number ($\mathcal{M}_s$):} The ratio of the flow speed to that of the sound speed of the \textit{interstellar medium} given by
 
@@ -889,7 +897,7 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
     \mathcal{M}_s = \left\langle\frac{\lvert\vec{v}\rvert}{c_s}\right\rangle ~ [{\rm dimensionless}],
 \end{align*}
 
-{\noindent}where $|\vec{v}|$ is the local velocity and $c_s$ is the sound speed. This number is a commonly used parameter of turbulence used to obtain information on gas compressibility and magnetization. Using polarization gradients of \textit{synchrotron radiation}, it was shown by Gaensler (2011) that the turbulence of the WIM has a relatively low \textit{sonic Mach number}, $\mathcal{M}_s\lesssim2$.
+{\noindent}where $|\vec{v}|$ is the local velocity and $c_s$ is the sound speed. This number is a commonly used parameter of turbulence used to obtain information on gas compressibility and magnetization. The statistical determination of the sonic Mach number is possible because of the relationship between turbulence regimes and the probability distribution functions (PDFs) of the image intensity distribution. The probability distribution function of an image distribution gives the frequency of occurrence of intensities values and can be described by the main statistical moments: mean, variance, skewness, and kurtosis. The higher order moments (skewness and kurtosis) measure the degree of deviation of the PDF from a Gaussian, and are sensitive to the imprints of turbulence encoded in the image intensity distribution. For this reason, their use constitutes a common diagnostic for astrophysical turbulence. Using polarization gradients of \textit{synchrotron radiation}, it was shown by Gaensler (2011) that the turbulence of the WIM has a relatively low \textit{sonic Mach number}, $\mathcal{M}_s\lesssim2$.
 
 {\noindent}\textbf{Spectral index ($\alpha$):} A measure of the dependence of radiative flux density on frequency. If flux does not follow a power-law distribution, the spectral index itself is a function of frequency. In the radio regime, a spectral index of $\alpha=0-2$ indicates thermal emission while a steep negative spectrum indicates synchrotron radiation.
 
@@ -1008,7 +1016,7 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}The fit is described by three dependent variables. The $a$ parameter describes the amplitude while $w$ is related to the width or dispersion of the distribution. Parameter $q$, referred to as the ``non-extensivity parameter'' or ``entropic index'' describes the sharpness and tail size of the distribution. The Tsallis fit parameters are in many ways similar to statistical moments. Moments, more specifically the third- and fourth-order moments, have been used to describe the density distributions and have shown sensitivities to simulation compressibility. The first- and second-order moments simply correspond to the mean and variance of a distribution. Skewness, or third-order moment, describes the asymmetry of a distribution about its mode. Skewness can have positive or negative values corresponding to right and left shifts of a distribution, respectively. The fourth-order moment, kurtosis, is a measure of a distributions peaked or flatness compared to a Gaussian distribution. Like skewness, kurtosis can have positive or negative values corresponding to increased sharpness or flatness. With regard to the Tsallis fitting parameters, the w parameter is similar to the second-order moment variance while q is closely analogous to fourth-order moment kurtosis. Unlike higher order moments, however, the Tsallis fitting parameters are dependent least-squares fit coefficients and are more sensitive to subtle changes in the PDF.
 
-{\noindent}\textbf{Turbulence:} Astrophysical turbulence is a complex nonlinear fluid phenomenon that can occur in a multiphase medium which results in the excitation of an extreme range of correlated spatial and temporal scales. There are many injection sources on scales ranging from ${\rm kp}$ down to sub-${\rm AU}$ The physical processes by which kinetic energy is converted into turbulence are not well understood for the ISM. The main sources for large-scale motions are: (a) stars, whose energy input is in the form of protostellar winds, expanding HII regions, O star and Wolf-Rayet winds, supernovae, and combinations of these producing superbubbles; (b) Galactic rotation in the shocks of spiral arms or bars, in the \textit{Balbus-Hawley instability} (also known as the magnetorotational instability), and in the gravitational scattering of cloud complexes at different epicyclic phases; (c) gaseous self-gravity through swing-amplified instabilities and cloud collapse; (d) \textit{Kelvin-Helmholtz} and other fluid instabilities; and (e) Galactic gravity during disk-halo circulation, the \textit{Parker instability}, and galaxy interactions. Interstellar turbulence has been characterized by \textit{structure functions}, \textbf{correlation functions} (e.g., spatial power spectrum), \textit{autocorrelations}, \textit{power spectra}, \textit{energy spectra}, and \textit{delta variance}. Sources for small-scale turbulence observed by radio \textit{scintillation} include sonic reflections of shock waves hitting clouds, cosmic ray streaming and other instabilities, field star motions and winds, and energy cascades from larger scales. Turbulence affects the structure and motion of nearly all temperature and density regimes of the interstellar gas. Magnetohydrodynamic (MHD) turbulence is a key element in the study of star formation, molecular cloud structure, magnetic reconnection, heat transport, and cosmic ray propagation. MHD turbulence is known to be different from a collection of linear Alfv\'enic waves. Does MHD turbulence, specifically the Alfv\'en wave modes, damp at the decoupling scale of the \textit{ambipolar diffusion scale} $L_\mathrm{AD}$? Cascading rates and the anisotropy of turbulence should be accounted for carefully before a definitive conclusion about turbulent damping in the partially ionized media. Despite the importance of turbulence for ISM studies, many mysteries remain including the nature of turbulence driving and damping. The most common observational techniques for studying turbulence include scintillation studies (which are limited to fluctuations in ionized plasmas), density fluctuations via column density maps, and radio spectroscopic observations via centroids of spectral lines. Position-position-velocity (PPV) spectroscopic data have the advantage over column density maps in that it contains information on the turbulent velocity field. However, this type of data provides contributions of both velocity and density fluctuations entangled together, and the process of separating the two has proven to be a challenging problem. One of the main approaches for characterizing ISM turbulence is based on using statistical techniques and descriptions (e.g., spatial power spectrum). Although the power spectrum is useful for obtaining information about energy transfer over scales, it does not provide a full picture of turbulence, partly because it only contains information on Fourier amplitudes (i.e., two substantially different density distributions can have the same power spectrum). Probability distribution functions (PDFs) of turbulence in PPV and column density data have been studied for decades and have proven to be very useful to show that turbulence is present in the ISM, providing insight into the effects of turbulent driving and characterizing the type of turbulence in question. Many studies on turbulence focus on obtaining parameters such as \textit{sonic and Alfv\'en Mach numbers}, \textit{injection scale}, gas temperature, and \textit{Reynolds number}. In particular, the sonic and Alfv\'en Mach numbers provide much coveted information on the gas compressibility and magnetization.
+{\noindent}\textbf{Turbulence:} Astrophysical turbulence is a complex nonlinear fluid phenomenon that can occur in a multiphase medium which results in the excitation of an extreme range of correlated spatial and temporal scales. There are many injection sources on scales ranging from ${\rm kp}$ down to sub-${\rm AU}$. The physical processes by which kinetic energy is converted into turbulence are not well understood for the ISM. The main sources for large-scale motions are: (a) stars, whose energy input is in the form of protostellar winds, expanding HII regions, O star and Wolf-Rayet winds, supernovae, and combinations of these producing superbubbles; (b) Galactic rotation in the shocks of spiral arms or bars, in the \textit{Balbus-Hawley instability} (also known as the magnetorotational instability), and in the gravitational scattering of cloud complexes at different epicyclic phases; (c) gaseous self-gravity through swing-amplified instabilities and cloud collapse; (d) \textit{Kelvin-Helmholtz} and other fluid instabilities; and (e) Galactic gravity during disk-halo circulation, the \textit{Parker instability}, and galaxy interactions. Interstellar turbulence has been characterized by \textit{structure functions}, \textbf{correlation functions} (e.g., spatial power spectrum), \textit{autocorrelations}, \textit{power spectra}, \textit{energy spectra}, and \textit{delta variance}. Sources for small-scale turbulence observed by radio \textit{scintillation} include sonic reflections of shock waves hitting clouds, cosmic ray streaming and other instabilities, field star motions and winds, and energy cascades from larger scales. Turbulence affects the structure and motion of nearly all temperature and density regimes of the interstellar gas. Magnetohydrodynamic (MHD) turbulence is a key element in the study of star formation, molecular cloud structure, magnetic reconnection, heat transport, and cosmic ray propagation. MHD turbulence is known to be different from a collection of linear Alfv\'enic waves. Does MHD turbulence, specifically the Alfv\'en wave modes, damp at the decoupling scale of the \textit{ambipolar diffusion scale} $L_\mathrm{AD}$? Cascading rates and the anisotropy of turbulence should be accounted for carefully before a definitive conclusion about turbulent damping in the partially ionized media. Despite the importance of turbulence for ISM studies, many mysteries remain including the nature of turbulence driving and damping. The most common observational techniques for studying turbulence include scintillation studies (which are limited to fluctuations in ionized plasmas), density fluctuations via column density maps, and radio spectroscopic observations via centroids of spectral lines. Position-position-velocity (PPV) spectroscopic data have the advantage over column density maps in that it contains information on the turbulent velocity field. However, this type of data provides contributions of both velocity and density fluctuations entangled together, and the process of separating the two has proven to be a challenging problem. One of the main approaches for characterizing ISM turbulence is based on using statistical techniques and descriptions (e.g., spatial power spectrum). Although the power spectrum is useful for obtaining information about energy transfer over scales, it does not provide a full picture of turbulence, partly because it only contains information on Fourier amplitudes (i.e., two substantially different density distributions can have the same power spectrum). Probability distribution functions (PDFs) of turbulence in PPV and column density data have been studied for decades and have proven to be very useful to show that turbulence is present in the ISM, providing insight into the effects of turbulent driving and characterizing the type of turbulence in question. Many studies on turbulence focus on obtaining parameters such as \textit{sonic and Alfv\'en Mach numbers}, \textit{injection scale}, gas temperature, and \textit{Reynolds number}. In particular, the sonic and Alfv\'en Mach numbers provide much coveted information on the gas compressibility and magnetization.
 
 {\noindent}\textbf{Turbulent fragmentation:}
 
@@ -1033,6 +1041,14 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 \end{figure}
 
 {\noindent}One of the most interesting features of $p(n)f$ is that over a density range of a factor of $350$, from $0.2$ to $70\,{\rm cm^{-3}}$, the thermal pressure variation is less than a factor of three. In Figure \ref{fig:pressure-density}, this region is shown enclosed by a dashed purple rectangle. It is a regime in which the thermal pressure offers essentially zero bulk modulus. This means that if, for some reason, the ISM had a totally random distribution of densities within this range, the corresponding distribution of thermal pressures would be observationally indistinguishable from one in which thermal pressure had an active role in arranging things, except there would be no range of forbidden densities. The small variation in thermal pressure between regions of differing density can be compensated by slight changes in the somewhat stronger magnetic field pressure. This is true when establishing pressure uniformity across the magnetic field lines, but equilibrium parallel to the field cannot be established in this way.
+
+{\noindent}\textbf{Variance ($\nu_x~{\rm or}~\sigma^2$):} The second order statistical \textit{moment} which is a measure of the deviation from the \textit{mean}. The variance is defined as
+
+\begin{align*}
+    \mu_x = \frac{1}{N-1} \sum_{i=1}^N (x_i-\bar{x})
+\end{align*}
+
+{\noindent}and, like the \textit{mean}, has the same dimensions as $x_i$.
 
 {\noindent}\textbf{Volume filling factor ($f$):} A correction factor such that a fraction $f$ of the line of sight intersects clouds of uniform density $N$. There are three effects of the interstellar magnetic field that conspire to lower the filling factor of hot cavities: (1) the background magnetic pressure acting on the surrounding shells directly opposes their expansion, (2) the magnetic tension in the swept-up field lines gives rise to an inward restoring force, while the associated magnetic pressure prevents the shells from fully collapsing and, therefore, keeps them relatively thick, and (3) the enhanced external ``signal speed'' causes the shells to merge earlier than they would in an unmagnetized medium.
 
@@ -1226,7 +1242,7 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 
 {\noindent}\textbf{Mass absorption coefficient:} $\kappa_\nu ~ [{\rm cm^2\,g^{-1}}]$
 
-{\noindent}\textbf{Mean}: $\mu(x)$
+{\noindent}\textbf{Mean}: $\mu_x$
 
 {\noindent}\textbf{Mean molecular weight:} $\mu ~ [{\rm dimensionless}]$
 
@@ -1338,7 +1354,7 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 
 {\noindent}\textbf{Thermal diffusivity}: $\alpha ~ [{\rm m^2\,s^{-1}}]$
 
-{\noindent}\textbf{Variance}: $\sigma^2$
+{\noindent}\textbf{Variance}: $\nu_x~{\rm or}~\sigma^2$
 
 {\noindent}\textbf{Velocity}: $\vec{v} ~ [{\rm m\,s^{-1}}]$
 
@@ -1555,7 +1571,7 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
 
 {\noindent}\textbf{Kurtosis:}
 \begin{align*}
-    {\rm Kurt}[x] = \frac{1}{N} \sum_{i=1}^N \left(\frac{x_i-\mu}{\sigma}\right)^3 ~ [{\rm dimensionless}]
+    \beta_x = \frac{1}{N} \sum_{i=1}^N \left(\frac{x_i-\mu_x}{\sigma}\right)^3 ~ [{\rm dimensionless}]
 \end{align*}
 
 {\noindent}\textbf{Lorentz factor:}
@@ -1581,6 +1597,11 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
 \begin{align*}
     \kappa_\nu &= \kappa_0 \left(\frac{\nu}{\nu_0}\right)^\beta ~ [{\rm cm^2\,g^{-1}}] \\
                        &= \frac{\sigma_e(\nu)}{\mu m_{\rm H}} ~ [{\rm cm^2\,g^{-1}}]
+\end{align*}
+
+{\noindent}\textbf{Mean:} 
+\begin{align*}
+    \mu_x = \frac{1}{N} \sum_{i=1}^N x_i
 \end{align*}
 
 {\noindent}\textbf{Number of $\theta$ bins (RHT):}
@@ -1758,7 +1779,7 @@ R(\phi) \equiv \dfrac{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{e}^{-2i\p
 
 {\noindent}\textbf{Skewness:}
 \begin{align*}
-    {\rm Skew}[x] = \frac{1}{N} \sum_{i=1}^N \left(\frac{x_i-\mu}{\sigma}\right)^4 -3 ~ [{\rm dimensionless}]
+    \gamma_x = \frac{1}{N} \sum_{i=1}^N \left(\frac{x_i-\mu_x}{\sigma}\right)^4 -3 ~ [{\rm dimensionless}]
 \end{align*}
 
 {\noindent}\textbf{Sonic Mach number:}
@@ -1816,6 +1837,11 @@ p = \frac{3\gamma + 3}{3\gamma+7} ~ [{\rm dimensionless}]
 {\noindent}\textbf{Synchrotron radiation power}:
 \begin{align*}
 P = \frac{2}{3}\dfrac{q^4}{m^2c^5}(\gamma\nu)^2(B\sin\theta)^2 ~ [{\rm Jy}]
+\end{align*}
+
+{\noindent}\textbf{Variance:}
+\begin{align*}
+    \nu_x = \sigma^2= \frac{1}{N-1} \sum_{i=1}^N (x_i-\bar{x})
 \end{align*}
 
 {\noindent}\textbf{Wavelength squared distribution standard error:} 
