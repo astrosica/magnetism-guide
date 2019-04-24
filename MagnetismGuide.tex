@@ -892,6 +892,8 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}However, if the $S/N$ is low, the uncertainty in $\phi$ usually prevents accurate de-rotation to $\lambda=0$. 
 
+{\noindent}\textbf{Scintillation:}
+
 {\noindent}\textbf{Second moment:} See \textit{variance}.
 
 {\noindent}\textbf{Skewness ($\gamma_x$):} The degree of asymmetry of a distribution, and can be quantified to define the extent to which a distribution differs from a normal distribution. Skewness is defined as
@@ -910,9 +912,13 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}where $|\vec{v}|$ is the local velocity and $c_s$ is the sound speed. This number is a commonly used parameter of turbulence used to obtain information on gas compressibility and magnetization. The statistical determination of the sonic Mach number is possible because of the relationship between turbulence regimes and the probability distribution functions (PDFs) of the image intensity distribution. The probability distribution function of an image distribution gives the frequency of occurrence of intensities values and can be described by the main statistical moments: mean, variance, skewness, and kurtosis. The higher order moments (skewness and kurtosis) measure the degree of deviation of the PDF from a Gaussian, and are sensitive to the imprints of turbulence encoded in the image intensity distribution. For this reason, their use constitutes a common diagnostic for astrophysical turbulence. Using polarization gradients of \textit{synchrotron radiation}, it was shown by Gaensler (2011) that the turbulence of the WIM has a relatively low \textit{sonic Mach number}, $\mathcal{M}_s\lesssim2$.
 
-{\noindent}\textbf{Spectral index ($\alpha$):} A measure of the dependence of radiative flux density on frequency. If flux does not follow a power-law distribution, the spectral index itself is a function of frequency. In the radio regime, a spectral index of $\alpha=0-2$ indicates thermal emission while a steep negative spectrum indicates synchrotron radiation.
+{\noindent}\textbf{Spectral index ($\alpha$):} A measure of the dependence of radiative flux density on frequency. Between any two frequencies ($\nu$) with total intensity ($I$), the spectral index is given by:
 
-{\noindent}\textbf{Scintillation:}
+\begin{align*}
+    \alpha \equiv \frac{\log(I_1/I_2)}{\log(\nu_1/\nu_2)} ~ [{\rm dimensionless}].
+\end{align*}
+
+{\noindent}If flux does not follow a power-law distribution, the spectral index itself is a function of frequency. In the radio regime, a spectral index of $\alpha=0-2$ indicates thermal emission while a steep negative spectrum indicates synchrotron radiation.
 
 {\noindent}\textbf{Spectral correlation function ($S_{x,y}$):} The average over all neighboring spectra of the normalized rms difference between \textit{brightness temperatures} $T_b$ for pairs of velocity channels $(v_i,v_j)$ defined as
 
