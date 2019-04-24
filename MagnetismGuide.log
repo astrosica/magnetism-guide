@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 APR 2019 22:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  23 APR 2019 22:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -621,190 +621,239 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4] [5]
-[6] [7] [8] [9] <figures/ISMphases.png, id=78, 690.58pt x 198.7425pt>
-File: figures/ISMphases.png Graphic file (type png)
-
-<use figures/ISMphases.png>
-Package pdftex.def Info: figures/ISMphases.png used on input line 424.
-(pdftex.def)             Requested size: 426.79134pt x 122.82787pt.
- [10 <./figures/ISMphases.png>] [11] [12] [13]
-Overfull \hbox (31.80858pt too wide) in paragraph at lines 618--618
-[] 
+[6]
+Underfull \hbox (badness 3128) in paragraph at lines 349--349
+\OT1/cmr/m/n/8 `fore-ground'/`background' di-
  []
 
-<figures/delP.jpg, id=104, 929.4725pt x 450.68375pt>
-File: figures/delP.jpg Graphic file (type jpg)
- <use figures/delP.jpg>
-Package pdftex.def Info: figures/delP.jpg used on input line 624.
-(pdftex.def)             Requested size: 341.43306pt x 165.55379pt.
+
+Underfull \hbox (badness 4686) in paragraph at lines 349--349
+\OT1/cmr/m/n/8 re-gion where the po-lar-ized
+ []
+
+<figures/FaradayScreenModel.png, id=64, 571.13374pt x 599.23875pt>
+File: figures/FaradayScreenModel.png Graphic file (type png)
+
+<use figures/FaradayScreenModel.png>
+Package pdftex.def Info: figures/FaradayScreenModel.png used on input line 349.
+
+(pdftex.def)             Requested size: 227.62204pt x 238.8226pt.
+
+Underfull \hbox (badness 3128) in paragraph at lines 349--349
+\OT1/cmr/m/n/8 `fore-ground'/`background' di-
+ []
+
+
+Underfull \hbox (badness 4686) in paragraph at lines 349--349
+\OT1/cmr/m/n/8 re-gion where the po-lar-ized
+ []
+
+File: figures/FaradayScreenModel.png Graphic file (type png)
+<use figures/FaradayScreenModel.png>
+Package pdftex.def Info: figures/FaradayScreenModel.png used on input line 349.
+
+(pdftex.def)             Requested size: 227.62204pt x 238.8226pt.
+
+Underfull \hbox (badness 3128) in paragraph at lines 349--349
+\OT1/cmr/m/n/8 `fore-ground'/`background' di-
+ []
+
+
+Underfull \hbox (badness 4686) in paragraph at lines 349--349
+\OT1/cmr/m/n/8 re-gion where the po-lar-ized
+ []
+
+File: figures/FaradayScreenModel.png Graphic file (type png)
+<use figures/FaradayScreenModel.png>
+Package pdftex.def Info: figures/FaradayScreenModel.png used on input line 349.
+
+(pdftex.def)             Requested size: 227.62204pt x 238.8226pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14] <figures/delP_mach.png, id=115, 932.48375pt x 366.36874pt>
+[7] [8 <./figures/FaradayScreenModel.png>] [9] [10]
+<figures/ISMphases.png, id=89, 690.58pt x 198.7425pt>
+File: figures/ISMphases.png Graphic file (type png)
+
+<use figures/ISMphases.png>
+Package pdftex.def Info: figures/ISMphases.png used on input line 435.
+(pdftex.def)             Requested size: 426.79134pt x 122.82787pt.
+ [11 <./figures/ISMphases.png>] [12] [13] [14]
+Overfull \hbox (31.80858pt too wide) in paragraph at lines 629--629
+[] 
+ []
+
+<figures/delP.jpg, id=113, 929.4725pt x 450.68375pt>
+File: figures/delP.jpg Graphic file (type jpg)
+ <use figures/delP.jpg>
+Package pdftex.def Info: figures/delP.jpg used on input line 635.
+(pdftex.def)             Requested size: 341.43306pt x 165.55379pt.
+
+<figures/delP_mach.png, id=117, 932.48375pt x 366.36874pt>
 File: figures/delP_mach.png Graphic file (type png)
 
 <use figures/delP_mach.png>
-Package pdftex.def Info: figures/delP_mach.png used on input line 634.
+Package pdftex.def Info: figures/delP_mach.png used on input line 645.
 (pdftex.def)             Requested size: 341.43306pt x 134.14554pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 643.
+ [15 <./figures/delP.jpg>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 654.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 643.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 654.
 
-<figures/PolGradProfiles.png, id=117, 543.02875pt x 508.90125pt>
+<figures/PolGradProfiles.png, id=127, 543.02875pt x 508.90125pt>
 File: figures/PolGradProfiles.png Graphic file (type png)
 
 <use figures/PolGradProfiles.png>
-Package pdftex.def Info: figures/PolGradProfiles.png used on input line 650.
+Package pdftex.def Info: figures/PolGradProfiles.png used on input line 661.
 (pdftex.def)             Requested size: 284.52756pt x 266.65689pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[15 <./figures/delP.jpg> <./figures/delP_mach.png>] [16 <./figures/PolGradProfi
-les.png>]
-Underfull \hbox (badness 1014) in paragraph at lines 734--734
+[16 <./figures/delP_mach.png>] [17 <./figures/PolGradProfiles.png>]
+Underfull \hbox (badness 1014) in paragraph at lines 745--745
 \OT1/cmr/m/n/8 the top into the clear fluid
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 734--734
+Underfull \hbox (badness 2334) in paragraph at lines 745--745
 \OT1/cmr/m/n/8 on the bot-tom. The flu-
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 734--734
+Underfull \hbox (badness 1173) in paragraph at lines 745--745
 \OT1/cmr/m/n/8 Me-chan-ics Film se-ries (Tay-
  []
 
-<figures/ReynoldsNumber.png, id=131, 603.25375pt x 410.53375pt>
+<figures/ReynoldsNumber.png, id=139, 603.25375pt x 410.53375pt>
 File: figures/ReynoldsNumber.png Graphic file (type png)
 
 <use figures/ReynoldsNumber.png>
-Package pdftex.def Info: figures/ReynoldsNumber.png used on input line 734.
+Package pdftex.def Info: figures/ReynoldsNumber.png used on input line 745.
 (pdftex.def)             Requested size: 284.52756pt x 193.62743pt.
 
-Underfull \hbox (badness 1014) in paragraph at lines 734--734
+Underfull \hbox (badness 1014) in paragraph at lines 745--745
 \OT1/cmr/m/n/8 the top into the clear fluid
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 734--734
+Underfull \hbox (badness 2334) in paragraph at lines 745--745
 \OT1/cmr/m/n/8 on the bot-tom. The flu-
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 734--734
+Underfull \hbox (badness 1173) in paragraph at lines 745--745
 \OT1/cmr/m/n/8 Me-chan-ics Film se-ries (Tay-
  []
 
 File: figures/ReynoldsNumber.png Graphic file (type png)
 <use figures/ReynoldsNumber.png>
-Package pdftex.def Info: figures/ReynoldsNumber.png used on input line 734.
+Package pdftex.def Info: figures/ReynoldsNumber.png used on input line 745.
 (pdftex.def)             Requested size: 284.52756pt x 193.62743pt.
 
-Underfull \hbox (badness 1014) in paragraph at lines 734--734
+Underfull \hbox (badness 1014) in paragraph at lines 745--745
 \OT1/cmr/m/n/8 the top into the clear fluid
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 734--734
+Underfull \hbox (badness 2334) in paragraph at lines 745--745
 \OT1/cmr/m/n/8 on the bot-tom. The flu-
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 734--734
+Underfull \hbox (badness 1173) in paragraph at lines 745--745
 \OT1/cmr/m/n/8 Me-chan-ics Film se-ries (Tay-
  []
 
 File: figures/ReynoldsNumber.png Graphic file (type png)
 <use figures/ReynoldsNumber.png>
-Package pdftex.def Info: figures/ReynoldsNumber.png used on input line 734.
+Package pdftex.def Info: figures/ReynoldsNumber.png used on input line 745.
 (pdftex.def)             Requested size: 284.52756pt x 193.62743pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17] [18 <./figures/ReynoldsNumber.png>] [19] [20]
-<figures/RMsynthesis.png, id=152, 470.50781pt x 298.86656pt>
+[18] [19 <./figures/ReynoldsNumber.png>] [20] [21]
+<figures/RMsynthesis.png, id=160, 470.50781pt x 298.86656pt>
 File: figures/RMsynthesis.png Graphic file (type png)
 
 <use figures/RMsynthesis.png>
-Package pdftex.def Info: figures/RMsynthesis.png used on input line 860.
+Package pdftex.def Info: figures/RMsynthesis.png used on input line 871.
 (pdftex.def)             Requested size: 341.43306pt x 216.88019pt.
- [21 <./figures/RMsynthesis.png>] [22] [23]
-<figures/408MHz.png, id=169, 672.5125pt x 415.5525pt>
+ [22 <./figures/RMsynthesis.png>] [23] [24]
+<figures/408MHz.png, id=178, 672.5125pt x 415.5525pt>
 File: figures/408MHz.png Graphic file (type png)
  <use figures/408MHz.png>
-Package pdftex.def Info: figures/408MHz.png used on input line 999.
+Package pdftex.def Info: figures/408MHz.png used on input line 1014.
 (pdftex.def)             Requested size: 426.79134pt x 263.72072pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[24] [25 <./figures/408MHz.png>]
-<figures/pressure-density.png, id=183, 899.36pt x 694.595pt>
+[25] [26 <./figures/408MHz.png>]
+<figures/pressure-density.png, id=191, 899.36pt x 694.595pt>
 File: figures/pressure-density.png Graphic file (type png)
 
 <use figures/pressure-density.png>
-Package pdftex.def Info: figures/pressure-density.png used on input line 1040.
+Package pdftex.def Info: figures/pressure-density.png used on input line 1055.
 (pdftex.def)             Requested size: 284.52756pt x 219.74187pt.
 File: figures/pressure-density.png Graphic file (type png)
  <use figures/pressure-density.png>
-Package pdftex.def Info: figures/pressure-density.png used on input line 1040.
+Package pdftex.def Info: figures/pressure-density.png used on input line 1055.
 (pdftex.def)             Requested size: 284.52756pt x 219.74187pt.
 File: figures/pressure-density.png Graphic file (type png)
 
 <use figures/pressure-density.png>
-Package pdftex.def Info: figures/pressure-density.png used on input line 1040.
+Package pdftex.def Info: figures/pressure-density.png used on input line 1055.
 (pdftex.def)             Requested size: 284.52756pt x 219.74187pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[26] [27 <./figures/pressure-density.png>] [28] [29] [30] [31] [32] [33]
-Overfull \hbox (60.7819pt too wide) in paragraph at lines 1653--1653
+[27] [28 <./figures/pressure-density.png>] [29] [30] [31] [32] [33] [34]
+Overfull \hbox (60.7819pt too wide) in paragraph at lines 1668--1668
 [] 
  []
 
-[34]
-Overfull \hbox (31.80858pt too wide) in paragraph at lines 1673--1673
-[] 
- []
-
-
-Overfull \hbox (6.71234pt too wide) in paragraph at lines 1679--1679
+[35]
+Overfull \hbox (31.80858pt too wide) in paragraph at lines 1688--1688
 [] 
  []
 
 
-Overfull \hbox (16.15677pt too wide) in paragraph at lines 1691--1691
+Overfull \hbox (6.71234pt too wide) in paragraph at lines 1694--1694
 [] 
  []
 
-[35] [36] 
+
+Overfull \hbox (16.15677pt too wide) in paragraph at lines 1706--1706
+[] 
+ []
+
+[36] [37] 
 AED: lastpage setting LastPage
-[37]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1864.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1864.
+[38]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1879.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1879.
  (./MagnetismGuide.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1864.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1864.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1879.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1879.
 
 Package rerunfilecheck Info: File `MagnetismGuide.out' has not changed.
 (rerunfilecheck)             Checksum: 3C950FBA7335212F2D6448959C4F2BDC;176.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1864.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1879.
  ) 
 Here is how much of TeX's memory you used:
- 9559 strings out of 492995
- 144084 string characters out of 6132704
- 264580 words of memory out of 5000000
- 12902 multiletter control sequences out of 15000+600000
+ 9567 strings out of 492995
+ 144293 string characters out of 6132704
+ 265122 words of memory out of 5000000
+ 12907 multiletter control sequences out of 15000+600000
  16011 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,25n,51p,4216b,578s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -833,10 +882,10 @@ t/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/local/texlive/2017/texmf-di
 st/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MagnetismGuide.pdf (37 pages, 4671878 bytes).
+Output written on MagnetismGuide.pdf (38 pages, 4782510 bytes).
 PDF statistics:
- 335 PDF objects out of 1000 (max. 8388607)
- 253 compressed objects within 3 object streams
- 51 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 343 PDF objects out of 1000 (max. 8388607)
+ 258 compressed objects within 3 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
