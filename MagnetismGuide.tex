@@ -282,11 +282,19 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
     \sigma_e(\nu) \mu m_{\rm H}\kappa_\nu ~ [{\rm cm^2}].
 \end{align*}
 
-{\noindent}\textbf{Emission measure (EM):} The square of the number density of free electrons integrated over the volume of plasma.
+{\noindent}\textbf{Emission measure (EM):} The square of the number density of free electrons integrated over the volume of plasma:
 
 \begin{align*}
-    {\rm EM} = -\int\limits_\mathrm{source}^\mathrm{observer} n_e^2\vec{{\rm d}\ell} ~ [{\rm pc\,cm^{-6}}]
+    {\rm EM} = -\int\limits_\mathrm{source}^\mathrm{observer} n_e^2\vec{{\rm d}\ell} ~ [{\rm pc\,cm^{-6}}].
 \end{align*}
+
+{\noindent}The EM along a path is related to $I_{\rm H\alpha}$ in the following way:
+
+\begin{align*}
+    {\rm EM} = 2.75 \left(\frac{T_e}{10^4\,{\rm K}}\right)^{0.9} \left(\frac{I_{\rm H\alpha}}{R}\right) e^\tau ~ [{\rm cm^{-6}\,pc}],
+\end{align*}
+
+{\noindent}where $T_e$ is the electron temperature, $I_{\rm H\alpha}$ is in rayleighs where $1\,{\rm R} = 10^6/4\pi\,{\rm photons\,s^{-1}\,cm^{-2}\,sr^{-1}}$, and $e^\tau$ is a correction term for dust extinction where the optical depth is $\tau=2.44\times E_{\rm B-V}$.
 
 {\noindent}\textbf{Emissivity index ($\beta$)}: A spectral index related to the \textit{mass absorption coefficient} via:
 
@@ -1207,6 +1215,8 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 
 {\noindent}\textbf{Electron charge}: $e~[{\rm C}]$
 
+{\noindent}\textbf{Electron density}: $n_e~[{\rm cm^{-3}}]$
+
 {\noindent}\textbf{Electron mass}: $e_m~[{\rm kg}]$
 
 {\noindent}\textbf{Electron plasma pressure}: $P_e~[{\rm Pa}]$
@@ -1261,6 +1271,12 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 
 {\noindent}\textbf{Magnetic field}: $\vec{B}~[{\rm \mu G]}$
 
+{\noindent}\textbf{Magnetic field strength (parallel component)}: $\lvert\vec{B}_\parallel\rvert~[{\rm \mu G]}$
+
+{\noindent}\textbf{Magnetic field strength (tangential component)}: $\lvert\vec{B}_\perp\rvert~[{\rm \mu G]}$
+
+{\noindent}\textbf{Magnetic field strength (total)}: $\lvert\vec{B}_{\rm tot}\rvert~[{\rm \mu G]}$
+
 {\noindent}\textbf{Mass absorption coefficient:} $\kappa_\nu ~ [{\rm cm^2\,g^{-1}}]$
 
 {\noindent}\textbf{Mean}: $\mu_x$
@@ -1314,6 +1330,8 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 {\noindent}\textbf{Quantum number of Zeeman splitting}: $m_F$
 
 {\noindent}\textbf{Radial component of polarization gradient}: $\dfrac{\partial\mathbf{P}}{\partial s}_\mathrm{rad} ~ [{\rm Jy\,pc^{-1}}]$
+
+{\noindent}\textbf{Rayleigh}: ${\rm R} ~ [{\rm unit}]$
 
 {\noindent}\textbf{Resistivity}: $\eta~[{\rm \Omega\,m}]$
 
@@ -1504,6 +1522,12 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
     {\rm DM} = -\int\limits_\mathrm{source}^\mathrm{observer} n_e\vec{{\rm d}\ell} ~ [{\rm pc\,cm^{-3}}]
 \end{align*}
 
+{\noindent}\textbf{Electron density}:
+\begin{align*}
+    n_e = \sqrt{\frac{{\rm EM}}{fL}} ~ [{\rm cm^{-3}}]
+\end{align*}
+(Harvey-Smith et al., 2011)
+
 {\noindent}\textbf{Electron plasma pressure}:
 \begin{align*}
     P_e = T_e \eta ~ [{\rm Pa}]
@@ -1524,8 +1548,10 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 
 {\noindent}\textbf{Emission measure:}
 \begin{align*}
-    {\rm EM} = -\int\limits_\mathrm{source}^\mathrm{observer} n_e^2\vec{{\rm d}\ell} ~ [{\rm pc\,cm^{-6}}]
+    {\rm EM} &= -\int\limits_\mathrm{source}^\mathrm{observer} n_e^2\vec{{\rm d}\ell} ~ [{\rm pc\,cm^{-6}}] \\
+    {\rm EM}(I_{\rm H\alpha}) &= 2.75 \left(\frac{T_e}{10^4\,{\rm K}}\right)^{0.9} \left(\frac{I_{\rm H\alpha}}{R}\right) e^\tau ~ [{\rm pc\,cm^{-6}}]
 \end{align*}
+(Reynolds 1988)
 
 {\noindent}\textbf{Expectation value of $\theta$ on any domain (RHT):}
 \begin{align*}
@@ -1603,6 +1629,16 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
 {\noindent}\textbf{Luminosity per H atom:}
 \begin{align*}
     L = \int 4\pi\kappa_0(\nu/\nu_0)^\beta \mu m_{\rm H}B_\nu(T) \,{\rm d}\nu ~ [{\rm W\,H^{-1}}]
+\end{align*}
+
+{\noindent}\textbf{Magnetic field strength (parallel component)}:
+\begin{align*}
+    \lvert\vec{B}_\parallel\rvert = \frac{\rm RM}{0.81\sqrt{\rm EM}\sqrt{fL}} ~[{\rm \mu G]}
+\end{align*}
+
+{\noindent}\textbf{Magnetic field strength (total)}:
+\begin{align*}
+    \lvert\vec{B}_{\rm tot}\rvert = \sqrt{3}\lvert\vec{B}_\parallel\rvert ~[{\rm \mu G]}
 \end{align*}
 
 {\noindent}\textbf{Magnetohydrodynamic (MHD) equations:}
@@ -1757,9 +1793,14 @@ P(\lambda^2) &= \lvert\lvert p(\lambda^2) \rvert\rvert I\mathrm{e}^{2i\chi} = p(
     P(k) = \hat{f}(k){\hat{f}(k)}^*
 \end{align*}
 
+{\noindent}\textbf{Rayleigh:}
+\begin{align*}
+    1\,{\rm R} = \left(\frac{10^6}{4\pi}\right) ~ {\rm photons\,s^{-1}\,cm^{-2}\,sr^{-1}}
+\end{align*}
+
 {\noindent}\textbf{Reynolds number:}
 \begin{align*}
-    {\rm Re} = \frac{\rho vL}{\mu} ~ [{\rm dimensionless}],
+    {\rm Re} = \frac{\rho vL}{\mu} ~ [{\rm dimensionless}]
 \end{align*}
 
 {\noindent}\textbf{Reynolds number for ambipolar diffusion:}
@@ -1817,6 +1858,11 @@ R(\phi) \equiv \dfrac{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{e}^{-2i\p
 \begin{align*}
     E_\nu(T) = \left(\frac{8\pi h\nu^3}{c^2}\right) \frac{1}{e^{h\nu/k_BT}-1} ~ [{\rm W\,m^{-2}\,Hz^{-1}}] \\
     E_\lambda(T) = \left(\frac{8\pi hc^2}{\lambda^5}\right) \frac{1}{e^{hc/\lambda k_BT}-1} ~ [{\rm W\,m^{-2}\,m^{-1}}]
+\end{align*}
+
+{\noindent}\textbf{Spectral index:}
+\begin{align*}
+    \alpha \equiv \frac{\log(I_1/I_2)}{\log(\nu_1/\nu_2)} ~ [{\rm dimensionless}]
 \end{align*}
 
 {\noindent}\textbf{Stokes Q (RHT):}
