@@ -588,7 +588,23 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
     B_\lambda(T) = \left(\frac{2hc^2}{\lambda^5}\right) \frac{1}{e^{hc/\lambda k_BT}-1} ~ [{\rm W\,m^{-2}\,m^{-1}\,sr^{-1}}].
 \end{align*}
 
-{\noindent}\textbf{Plasma beta ($\beta$):} The ratio of the gas to magnetic pressure. For either high or low $\beta$, it was predicted that \textit{Alfv\'en waves} should should damp at the \textit{ambipolar diffusion scale} $L_\mathrm{AD}$ and thus the magnetohydrodynamic (MHD) cascade should damp past the ambipolar diffusion scale.
+{\noindent}\textbf{Plasma beta ($\beta_{\rm th}$):} The ratio of the gas to magnetic pressure:
+
+\begin{align*}
+    \beta_{\rm th} &= \frac{P_{\rm th}}{P_{\rm mag}} ~ [{\rm dimensionless}].
+\end{align*}
+
+{\noindent}For a mixture of \textit{warm neutral medium} (WNM) and \textit{warm ionized medium} (WIM), this becomes
+
+\begin{align*}
+\beta_{\rm th} &= \frac{ \langle P_{\rm th,i}\rangle + \langle P_{\rm th,n}\rangle }{(B_{\rm tot}^2/8\pi)} ~ [{\rm dimensionless}] \\
+                      &= \frac{2\langle n_e\rangle k_BT_i + \langle n_{\rm H}\rangle k_BT_n}{(B_{\rm tot}^2/8\pi)}  ~ [{\rm dimensionless}] \\
+                      &= \frac{2f_en_e+ \langle n_{\rm H}\rangle k_BT_n}{(B_{\rm tot}^2/8\pi)}  ~ [{\rm dimensionless}],
+\end{align*}
+
+{\noindent}where $\langle P_{\rm th,i}\rangle$ and $\langle P_{\rm th,n}\rangle$ are the ionized and neutral thermal pressures, respectively.
+
+{\noindent}For either high or low $\beta$, it was predicted that \textit{Alfv\'en waves} should should damp at the \textit{ambipolar diffusion scale} $L_\mathrm{AD}$ and thus the magnetohydrodynamic (MHD) cascade should damp past the ambipolar diffusion scale.
 
 {\noindent}\textbf{Poincar\'e sphere:}
 
@@ -1281,6 +1297,8 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 
 {\noindent}\textbf{Magnetic field strength (total)}: $\lvert\vec{B}_{\rm tot}\rvert~[{\rm \mu G]}$
 
+{\noindent}\textbf{Magnetic pressure}: $P_{\rm mag} ~ [{\rm Pa]}$
+
 {\noindent}\textbf{Mass absorption coefficient:} $\kappa_\nu ~ [{\rm cm^2\,g^{-1}}]$
 
 {\noindent}\textbf{Mean}: $\mu_x$
@@ -1302,6 +1320,8 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 {\noindent}\textbf{Planck constant (reduced)}: $\hbar~[{\rm J\,s}]$
 
 {\noindent}\textbf{Planck function}: $B_\nu(T)~[{\rm W\,m^{-2}\,Hz^{-1}\,sr^{-1}}]~{\rm or}~B_\lambda(T)~[{\rm W\,m^{-2}\,m^{-1}\,sr^{-1}}]$
+
+{\noindent}\textbf{Plasma beta}: $\beta_{\rm th} ~ [{\rm dimensionless}]$
 
 {\noindent}\textbf{Polarization angle}: $\chi~[{\rm rad}]$
 
@@ -1400,6 +1420,12 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 {\noindent}\textbf{Thermal electron density}: $n_e~[{\rm cm^{-3}}]$
 
 {\noindent}\textbf{Thermal electron fraction}: $x_e ~ [{\rm dimensionless}]$
+
+{\noindent}\textbf{Thermal pressure}: $P_{\rm th} ~ [{\rm Pa}]$
+
+{\noindent}\textbf{Thermal pressure (ionized)}: $P_{\rm th,i} ~ [{\rm Pa}]$
+
+{\noindent}\textbf{Thermal pressure (neutral)}: $P_{\rm th,n} ~ [{\rm Pa}]$
 
 {\noindent}\textbf{Variance}: $\nu_x~{\rm or}~\sigma^2$
 
@@ -1643,6 +1669,11 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
     \lvert\vec{B}_{\rm tot}\rvert = \sqrt{3}\lvert\vec{B}_\parallel\rvert ~[{\rm \mu G]}
 \end{align*}
 
+{\noindent}\textbf{Magnetic pressure}:
+\begin{align*}
+    P_{\rm mag} = \frac{\lvert\vec{B_{\rm tot}}\rvert^2}{8\pi}~ [{\rm Pa]}
+\end{align*}
+
 {\noindent}\textbf{Magnetohydrodynamic (MHD) equations:}
 
 \begin{align*}
@@ -1678,6 +1709,14 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
 \begin{align*}
     B_\nu(T) = \left(\frac{2h\nu^3}{c^2}\right) \frac{1}{e^{h\nu/k_BT}-1} ~ [{\rm W\,m^{-2}\,Hz^{-1}\,sr^{-1}}] \\
     B_\lambda(T) = \left(\frac{2hc^2}{\lambda^5}\right) \frac{1}{e^{hc/\lambda k_BT}-1} ~ [{\rm W\,m^{-2}\,m^{-1}\,sr^{-1}}]
+\end{align*}
+
+{\noindent}\textbf{Plasma beta:} 
+\begin{align*}
+\beta_{\rm th} &= \frac{P_{\rm th}}{P_{\rm mag}} ~ [{\rm dimensionless}]\\
+                      &= \frac{ \langle P_{\rm th,i}\rangle + \langle P_{\rm th,n}\rangle }{(B_{\rm tot}^2/8\pi)} ~ [{\rm dimensionless}] \\
+                      &= \frac{2\langle n_e\rangle k_BT_i + \langle n_{\rm H}\rangle k_BT_n}{(B_{\rm tot}^2/8\pi)}  ~ [{\rm dimensionless}] \\
+                      &= \frac{2f_en_e+ \langle n_{\rm H}\rangle k_BT_n}{(B_{\rm tot}^2/8\pi)}  ~ [{\rm dimensionless}]
 \end{align*}
 
 {\noindent}\textbf{Polarization angle:}
@@ -1927,6 +1966,22 @@ P = \frac{2}{3}\dfrac{q^4}{m^2c^5}(\gamma\nu)^2(B\sin\theta)^2 ~ [{\rm Jy}]
 {\noindent}\textbf{Thermal electron fraction}:
 \begin{align*}
     x_e = \frac{\langle n_e\rangle}{\langle n_e\rangle + \langle n_{\rm HI}\rangle} \sim \frac{\langle n_e\rangle}{\langle n_{\rm HI}\rangle} ~ [{\rm dimensionless}]
+\end{align*}
+
+{\noindent}\textbf{Thermal pressure}:
+\begin{align*}
+    P_{\rm th} &= \langle P_{\rm th,i} \rangle + \langle P_{\rm th,n} \rangle ~ [{\rm Pa}] \\
+                     &= 2\langle n_e\rangle k_BT_i + \langle n_{\rm H}\rangle k_BT_n ~ [{\rm Pa}]
+\end{align*}
+
+{\noindent}\textbf{Thermal pressure (ionized)}:
+\begin{align*}
+    P_{\rm th,i} = 2\langle n_e\rangle k_BT_i ~ [{\rm Pa}]
+\end{align*}
+
+{\noindent}\textbf{Thermal pressure (neutral)}:
+\begin{align*}
+    P_{\rm th,n} = \langle n_{\rm H}\rangle k_BT_n ~ [{\rm Pa}]
 \end{align*}
 
 {\noindent}\textbf{Variance:}
