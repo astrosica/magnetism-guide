@@ -985,7 +985,9 @@ A superbubble behaves qualitatively like an individual supernova remnant, except
 
 {\noindent}\textbf{Supershell:} See \textit{superbubble}.
 
-{\noindent}\textbf{Synchrotron radiation:} The radio emission produced by relativistic \textit{cosmic rays} when accelerated radially (e.g., by magnetic fields) which is one of the most commonly used tracers of the Galactic magnetic field. Synchrotron emission has a steep spectral index of $\alpha\sim-2.75$, which results in much brighter emission at lower frequencies (this applies to both linear polarization and total intensity). For a single electron, the critical frequency of synchrotron radiation can be expressed as
+{\noindent}\textbf{Synchrotron radiation:} The radio emission produced by relativistic \textit{cosmic rays} when accelerated radially (e.g., by magnetic fields) which is one of the most commonly used tracers of the Galactic magnetic field. Synchrotron radio emission is a tool to measure the total strength of magnetic field on the assumption that the magnetic energy-density (pressure) is in equipartition with the thermal and cosmic ray energy densities. This method requires information about the depth of emitting region in order to calculate the synchrotron emissivity per volume, as the intensity is an integration of the emissivity along the line-of-sight.
+
+{\noindent}Synchrotron emission has a steep spectral index of $\alpha\sim-2.75$, which results in much brighter emission at lower frequencies (this applies to both linear polarization and total intensity). For a single electron, the critical frequency of synchrotron radiation can be expressed as
 
 \begin{align*}
     \nu_c = \dfrac{3}{4\pi}\dfrac{q}{mc}\gamma^2(B\sin\theta)~[{\rm Hz}],
@@ -1215,8 +1217,6 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 
 {\noindent}\textbf{Electron charge}: $e~[{\rm C}]$
 
-{\noindent}\textbf{Electron density}: $n_e~[{\rm cm^{-3}}]$
-
 {\noindent}\textbf{Electron mass}: $e_m~[{\rm kg}]$
 
 {\noindent}\textbf{Electron plasma pressure}: $P_e~[{\rm Pa}]$
@@ -1250,6 +1250,10 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 {\noindent}\textbf{Fourier transform (FT)}: $\hat{f}(x)$
 
 {\noindent}\textbf{Hydrogen column density}: $N_{\rm H} ~ [{\rm cm^{-2}}]$
+
+{\noindent}\textbf{HI column density}: $N_{\rm HI} ~ [{\rm cm^{-2}}]$
+
+{\noindent}\textbf{HI density}: $n_{\rm HI}~[{\rm cm^{-3}}]$
 
 {\noindent}\textbf{Incremental position}: $\delta r~[{\rm m}]$
 
@@ -1393,6 +1397,10 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 
 {\noindent}\textbf{Thermal diffusivity}: $\alpha ~ [{\rm m^2\,s^{-1}}]$
 
+{\noindent}\textbf{Thermal electron density}: $n_e~[{\rm cm^{-3}}]$
+
+{\noindent}\textbf{Thermal electron fraction}: $x_e ~ [{\rm dimensionless}]$
+
 {\noindent}\textbf{Variance}: $\nu_x~{\rm or}~\sigma^2$
 
 {\noindent}\textbf{Velocity}: $\vec{v} ~ [{\rm m\,s^{-1}}]$
@@ -1521,12 +1529,6 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 \begin{align*}
     {\rm DM} = -\int\limits_\mathrm{source}^\mathrm{observer} n_e\vec{{\rm d}\ell} ~ [{\rm pc\,cm^{-3}}]
 \end{align*}
-
-{\noindent}\textbf{Electron density}:
-\begin{align*}
-    n_e = \sqrt{\frac{{\rm EM}}{fL}} ~ [{\rm cm^{-3}}]
-\end{align*}
-(Harvey-Smith et al., 2011)
 
 {\noindent}\textbf{Electron plasma pressure}:
 \begin{align*}
@@ -1665,6 +1667,12 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
 \begin{align*}
     n_\theta = \left[\pi\frac{\sqrt{2}}{2}(D_W-1)\right] ~ [{\rm dimensionless}]
 \end{align*}
+
+{\noindent}\textbf{Optical depth}:
+\begin{align*}
+    \tau_\nu = 3.28\times10^{-7} \left(\frac{T_e}{10^4\,{\rm K}}\right)^{-1.35} \left(\frac{\nu}{\rm GHz}\right)^{-2.1} \left(\frac{\rm EM}{\rm pc\,cm^{-6}}\right)
+\end{align*}
+(Oster 1961)
 
 {\noindent}\textbf{Planck function:}
 \begin{align*}
@@ -1904,6 +1912,21 @@ p = \frac{3\gamma + 3}{3\gamma+7} ~ [{\rm dimensionless}]
 {\noindent}\textbf{Synchrotron radiation power}:
 \begin{align*}
 P = \frac{2}{3}\dfrac{q^4}{m^2c^5}(\gamma\nu)^2(B\sin\theta)^2 ~ [{\rm Jy}]
+\end{align*}
+
+{\noindent}\textbf{Thermal electron density}:
+\begin{align*}
+    n_e = \sqrt{\frac{{\rm EM}}{fL}} ~ [{\rm cm^{-3}}]
+\end{align*}
+(Harvey-Smith et al., 2011)
+
+\begin{align*}
+    n_e = x_en_{\rm HI} ~ [{\rm cm^{-3}}]
+\end{align*}
+
+{\noindent}\textbf{Thermal electron fraction}:
+\begin{align*}
+    x_e = \frac{\langle n_e\rangle}{\langle n_e\rangle + \langle n_{\rm HI}\rangle} \sim \frac{\langle n_e\rangle}{\langle n_{\rm HI}\rangle} ~ [{\rm dimensionless}]
 \end{align*}
 
 {\noindent}\textbf{Variance:}
