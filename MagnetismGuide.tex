@@ -616,7 +616,24 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
     P\equiv\sqrt{Q^2+U^2} ~ [{\rm Jy}],
 \end{align*}
 
-{\noindent}where $Q$ is the \textit{Stokes Q} polarization and $U$ the \textit{Stokes U} polarization. The images of $P$ (as well as $Q$ and $U$) are often filled with complex structures that bear little resemblance to the \textit{Stokes I} image of total intensity. The intensity variations seen in $P$ (as well as $Q$ and $U$) are the result of small-scale angular structure in the \textit{Faraday rotation} induced by ionized gas, and are thus an indirect representation of turbulent fluctuations in the free-electron density and magnetic field throughout the \textit{interstellar medium}. while $Q$ and $U$ exhibit Gaussian noise properties, this is not true for $P$. The noise in $Q$ and $U$ is squared when calculating $P$, having a Ricean distribution, and this causes the observed polarization intensity to be biased toward larger values
+{\noindent}where $Q$ is the \textit{Stokes Q} polarization and $U$ the \textit{Stokes U} polarization. The images of $P$ (as well as $Q$ and $U$) are often filled with complex structures that bear little resemblance to the \textit{Stokes I} image of total intensity. The intensity variations seen in $P$ (as well as $Q$ and $U$) are the result of small-scale angular structure in the \textit{Faraday rotation} induced by ionized gas, and are thus an indirect representation of turbulent fluctuations in the free-electron density and magnetic field throughout the \textit{interstellar medium}. while $Q$ and $U$ exhibit Gaussian noise properties, this is not true for $P$. The noise in $Q$ and $U$ is squared when calculating $P$, having a Ricean distribution, which causes the observed polarization intensity to be biased toward larger values.
+
+{\noindent}In addition to the true polarized signal of a source $P_T$, root mean squared (rms) noise obtained from the receiving system is also detected. If we use the standard formula to calculate $\hat{P}$ from the measured data $\hat{U}$ and $\hat{Q}$ , $\hat{P}$ can be expressed by the polarized components of the source $U_T$ and $Q_T$ and their noise contributions $\sigma_U$ and $\sigma_Q$:
+
+\begin{align*}
+    \hat{P} &= \sqrt{\hat{Q}^2 + \hat{U}^2} ~ [{\rm Jy}] \\
+                &= \sqrt{(Q_T+\sigma_Q)^2 + (U_T+\sigma_U)^2} ~ [{\rm Jy}].
+\end{align*}
+
+{\noindent}The noise always delivers a positive bias to the true polarized intensity $P_T$ that cannot be separated out for small signal-to-noise (S/N) ratios. The distribution of $\hat{P}$ is Ricean for small S/N and becomes Gaussian for large S/N. Several methods have been developed to correct for this noise bias. The most widely used method is that of Wardle \& Kronberg (1974) who proposed the following bias correction for $\hat{P}$ maps:
+
+\begin{align*}
+    P_T = \sqrt{\hat{P}^2 - \sigma^2} ~ [{\rm Jy}],
+\end{align*}
+
+{\noindent}where $\sigma$ is the rms standard deviation of the noise distributions in $\hat{U}$ and $\hat{Q}$.
+
+{\noindent}A new method to suppress the bias in polarized intensity was proposed by M\"{u}ller et al. (2017).
 
 {\noindent}\textbf{Polarization angle $(\chi)$:} Given by
 
@@ -971,9 +988,21 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}\textbf{Stokes I ($I$):} A measure of the total intensity of radio emission.
 
-{\noindent}\textbf{Stokes Q ($Q$):} A measure of the linear polarization of radio emission. The images of Stokes Q (and \textit{Stokes U}) as well as the \textit{linear polarized intensity} $P\equiv\sqrt{(Q^2+U^2)}$ are often filled with complex structures that bear little resemblance to the \textit{Stokes I} image of total intensity. The intensity variations seen in $Q$ (as well as $U$ and $P$) are the result of small-scale angular structure in the \textit{Faraday rotation} induced by ionized gas, and are thus an indirect representation of turbulent fluctuations in the free-electron density and magnetic field throughout the \textit{interstellar medium}.
+{\noindent}\textbf{Stokes Q ($Q$):} A measure of the linear polarization of radio emission defined as
 
-{\noindent}\textbf{Stokes U ($U$):} A measure of the linear polarization of radio emission. The images of Stokes U (and \textit{Stokes Q}) as well as the \textit{linear polarized intensity} $P\equiv\sqrt{(Q^2+U^2)}$ are often filled with complex structures that bear little resemblance to the \textit{Stokes I} image of total intensity. The intensity variations seen in $U$ (as well as $Q$ and $P$) are the result of small-scale angular structure in the \textit{Faraday rotation} induced by ionized gas, and are thus an indirect representation of turbulent fluctuations in the free-electron density and magnetic field throughout the \textit{interstellar medium}.
+\begin{align*}
+    Q = P\cos(2\chi) ~ [{\rm Jy}],
+\end{align*}
+
+{\noindent}where $P$ is the \textit{polarized intensity} and $\chi$ is the polarization angle. The images of Stokes Q (and \textit{Stokes U}) as well as the \textit{linear polarized intensity} $P\equiv\sqrt{(Q^2+U^2)}$ are often filled with complex structures that bear little resemblance to the \textit{Stokes I} image of total intensity. The intensity variations seen in $Q$ (as well as $U$ and $P$) are the result of small-scale angular structure in the \textit{Faraday rotation} induced by ionized gas, and are thus an indirect representation of turbulent fluctuations in the free-electron density and magnetic field throughout the \textit{interstellar medium}.
+
+{\noindent}\textbf{Stokes U ($U$):} A measure of the linear polarization of radio emission defined as
+
+\begin{align*}
+    U = P\sin(2\chi) ~ [{\rm Jy}],
+\end{align*}
+
+{\noindent}where $P$ is the \textit{polarized intensity} and $\chi$ is the polarization angle. The images of Stokes U (and \textit{Stokes Q}) as well as the \textit{linear polarized intensity} $P\equiv\sqrt{(Q^2+U^2)}$ are often filled with complex structures that bear little resemblance to the \textit{Stokes I} image of total intensity. The intensity variations seen in $U$ (as well as $Q$ and $P$) are the result of small-scale angular structure in the \textit{Faraday rotation} induced by ionized gas, and are thus an indirect representation of turbulent fluctuations in the free-electron density and magnetic field throughout the \textit{interstellar medium}.
 
 {\noindent}\textbf{Stokes V ($V$):} A measure of circular polarization of radio emission. If $V>0$, then the electromagnetic wave is right-handed circularly polarized (RCP), while if $V<0$, then the electromagnetic wave is left-handed circularly polarized (LCP). Stokes V is related to the line-of-sight magnetic field in the following manner:
 
@@ -1345,6 +1374,12 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 
 {\noindent}\textbf{Polarized intensity}: $P ~ [\rm Jy]$
 
+{\noindent}\textbf{Polarized intensity error}: $\sigma_P ~ [\rm Jy]$
+
+{\noindent}\textbf{Polarized intensity (observed)}: $\hat{P} ~ [\rm Jy]$
+
+{\noindent}\textbf{Polarized intensity (true)}: $P_T ~ [\rm Jy]$
+
 {\noindent}\textbf{Polarized surface brightness}: $P(\lambda^2) ~ [\rm Jy]$
 
 {\noindent}\textbf{Polarized surface brightness (observed)}: $\tilde{P}(\lambda^2) ~ [\rm Jy]$
@@ -1399,11 +1434,25 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 
 {\noindent}\textbf{Stokes I}: $I ~ [\rm Jy]$
 
+{\noindent}\textbf{Stokes I error}: $\sigma_I ~ [\rm Jy]$
+
 {\noindent}\textbf{Stokes Q}: $Q ~ [\rm Jy]$
+
+{\noindent}\textbf{Stokes Q error}: $\sigma_Q ~ [\rm Jy]$
+
+{\noindent}\textbf{Stokes Q (true)}: $Q_T ~ [\rm Jy]$
+
+{\noindent}\textbf{Stokes Q (observed)}: $\hat{Q} ~ [\rm Jy]$
 
 {\noindent}\textbf{Stokes Q (RHT)}: $Q_\mathrm{RHT} ~ [\rm Jy]$
 
 {\noindent}\textbf{Stokes U}: $U ~ [\rm Jy]$
+
+{\noindent}\textbf{Stokes U error}: $\sigma_U ~ [\rm Jy]$
+
+{\noindent}\textbf{Stokes U (true)}: $U_T ~ [\rm Jy]$
+
+{\noindent}\textbf{Stokes U (observed)}: $\hat{U} ~ [\rm Jy]$
 
 {\noindent}\textbf{Stokes U (RHT)}: $U_\mathrm{RHT} ~ [\rm Jy]$
 
@@ -1813,6 +1862,12 @@ p(\lambda^2) = \dfrac{P(\lambda^2)}{I(\lambda^2)} ~ [{\rm dimensionless}]
     P\equiv\sqrt{Q^2+U^2} ~ [\rm Jy]
 \end{align*}
 
+{\noindent}\textbf{Polarized intensity (observed)}:
+\begin{align*}
+    \hat{P} &= \sqrt{\hat{Q}^2+\hat{U}^2} ~ [\rm Jy] \\
+                &= \sqrt{(Q_T+\sigma_Q)^2+(U_T+\sigma_U)^2} ~ [\rm Jy]
+\end{align*}
+
 {\noindent}\textbf{Polarized intensity standard error:}
 \begin{align*}
 \sigma_P &= \sqrt{ \left(\dfrac{\partial\lvert\lvert P \rvert\rvert}{\partial Q}\right)^2\sigma_Q^2 + \left(\dfrac{\partial\lvert\lvert P \rvert\rvert}{\partial U}\right)^2\sigma_U^2 } \\
@@ -1914,12 +1969,32 @@ R(\phi) \equiv \dfrac{\int\limits_{-\infty}^\infty W(\lambda^2)\mathrm{e}^{-2i\p
     \alpha \equiv \frac{\log(I_1/I_2)}{\log(\nu_1/\nu_2)} ~ [{\rm dimensionless}]
 \end{align*}
 
+{\noindent}\textbf{Stokes Q:}
+\begin{align*}
+    Q = P\cos(2\chi) ~ [{\rm Jy}]
+\end{align*}
+
+{\noindent}\textbf{Stokes Q (observed)}:
+\begin{align*}
+    \hat{Q} = U_T + \sigma_U ~ [{\rm Jy}]
+\end{align*}
+
 {\noindent}\textbf{Stokes Q (RHT):}
 \begin{align*}
     Q_\mathrm{RHT} = \int\cos(2\theta)R(\theta)\mathrm{d}\theta ~ [{\rm Jy}]
 \end{align*}
 
-{\noindent}\textbf{Stokes Q (RHT):}
+{\noindent}\textbf{Stokes U:}
+\begin{align*}
+    U = P\sin(2\chi) ~ [{\rm Jy}]
+\end{align*}
+
+{\noindent}\textbf{Stokes U (observed)}:
+\begin{align*}
+    \hat{U} = U_T + \sigma_U ~ [{\rm Jy}]
+\end{align*}
+
+{\noindent}\textbf{Stokes U (RHT):}
 \begin{align*}
     U_\mathrm{RHT} = \int\sin(2\theta)R(\theta)\mathrm{d}\theta ~ [{\rm Jy}]
 \end{align*}
