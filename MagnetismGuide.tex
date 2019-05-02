@@ -555,6 +555,14 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}\textbf{Milky Way Galaxy (MWG):} We see the Milky Way as a narrow band encircling us because the Galaxy has the shape of a flattened disk within which we are deeply embedded. Our Galaxy comprises a thin disk with radius $\sim25-30\,{\rm kpc}$ and effective thickness $\sim400-600\,{\rm pc}$, plus a spherical system itself composed of a bulge with radius $\sim2-3\,{\rm kpc}$ and a halo extending out to more than $30\,{\rm kpc}$ from the center. The Sun resides in the Galactic disk, approximately $15\,{\rm pc}$ from the midplane and $8.5\,{\rm kpc}$ away from the center. The stars belonging to the disk rotate around the Galactic center in nearly circular orbits. Their angular rotation rate is a decreasing function of their radial distance. At the Sun's orbital distance, the Galactic rotation velocity is $\simeq220\,{\rm km\,s^{-1}}$, corresponding to a rotational period of $\simeq240\times10^6\,{\rm years}$. Disk stars also have a velocity dispersion of $\sim10-40\,{\rm km\,s^{-1}}$ which causes them to experience small oscillations about a perfectly circular orbit both in the Galactic plane (epicycles) and the vertical direction. In contrast, stars in the bulge and the halo rotate slowly and often have very eccentric orbits. Radio observations of interstellar neutral hydrogen indicate that the Milky Way possesses a spiral structure similar to those seen in optical wavelengths of external galaxies. The exact spiral structure of our own Galaxy is difficult to determine from within; the best radio data to date points to a structure characterized by a bulge of intermediate size and a moderate winding of the spiral arms. Infrared (IR) images of the Galactic center clearly display the distinctive signature of a bar. Our position in the spiral pattern can be derived from local optical measurements which give quite an accurate outline of the three closest arms; they locate the Sun between the inner Sagittarius arm and the outer Perseus arm, near the inner edge of the local Orion-Cygnus arm.
 
+{\noindent}\textbf{Modified blackbody ($I_\nu$):} The dust emission process is thermal, with dust grains emitting a modified blackbody spectrum following:
+
+\begin{align*}
+    I_\nu = \tau B_\nu(T) \left(\frac{\nu}{\nu_0}\right)^\beta ~ [{\rm W\,m^{-2}\,Hz^{-1}\,sr^{-1}}],
+\end{align*}
+
+{\noindent}where $B_\nu(T)$ is the \textit{Planck function}, and $\tau$ is the dust \textit{optical depth}. Grains of interstellar dust, distributed throughout the ISM of a galaxy, are heated to temperatures between about 20 and 200 K, depending on the spectrum and intensity of the interstellar radiation field (ISRF), and the size and optical properties of the grains. Higher dust temperatures can be produced close to a powerful source of radiation, with dust subliming at temperatures of order 2000 K. Very small grains can be heated far above their equilibrium temperatures by absorbing hard-UV photons (see Draine and Li, 2001). Lower dust temperatures, always exceeding the CMB temperature, are possible in opaque regions of the ISM that are shielded from intense heating, in the intergalactic medium or in regions with an intrinsically weak ISRF. Unless dust is heated by the ISRF in addition to the CMB the galaxy will not be detectable. We now consider the properties of the dust emission that are relevant to observations of high-redshift galaxies.
+
 {\noindent}\textbf{Molecular medium (MM):} Molecular gas is explored primarily with the $2.6\,{\rm mm}$ and other radio emission lines of the second most abundant molecule, CO, and secondarily with radio emission and absorption lines of less abundant molecules, such as OH, H$_2$O, and NH$_3$. Historically, molecular lines were seen mainly in emission towards the standard dense molecular clouds, and CO was emphasized to the extent that its presence \textit{defined} molecular gas. While Spatially, the molecular gas is confined to discrete clouds, which are roundish, gravitationally bound, and organized hierarchically from large complexes (size $\sim20-80\,{\rm pc}$ and mass $\sim10^5-10^6\,{\rm M_\odot}$) down to small clumps (size $\lesssim0.5\,{\rm pc}$, mass $\lesssim10^3\,{\rm M_\odot}$). Along the vertical direction, the molecular gas is the most strongly confined to the Galactic plane, with a HWHM thickness near the Sun $\sim70-80\,{\rm pc}$. Horizontally, all the gas components tend to concentrate along the spiral arms, this tendency being probably most pronounced for the molecular gas. Upon averaging along Galactic circles, through spiral arms and interarm regions, it is found that most of the molecular gas resides in a ring extending radially between $3.5-7\,{\rm kpc}$ from the Galactic center. It seems almost certain that the DMM is a transition state between the CNM and classical MM. Moreover, we expect the details of the DMM transition region to depend not only on physical conditions but also cloud morphology as it determines whether UV photons can penetrate to destroy molecules via photodissociation or photoionization. It seems very unlikely that one can understand the transition between atomic and molecular gas without understanding the effect of UV photons, and thus cloud morphology. In addition, there are hints that cloud morphology is affected by the magnetic field; after all, magnetic forces are one of the important forces on the ISM (the others being turbulent pressure, cosmic ray pressure (coupled to the gas by the magnetic field), thermal pressure, and gravity).
 
 {\noindent}\textbf{$\mathbf{n\pi}$ ambiguity:} The inability to distinguish between polarization angles modulo $\pi$ radians, rendering traditional linear RM fits often arbitrary. One way to deal with this ambiguity is to rely on resolving smooth spatial gradients in the polarization angle at each wavelength. With this assumption, the appropriate value of $n$ can be resolved for each spatial pixel, yielding the correct polarization angle at each wavelength and thus the true value of RM. This is the basis of the PACERMAN routine developed by Dolag et al., (2005). However, routines like PACERMAN cannot deal with the second and third problems listed above since it is ultimately based on fitting a single value of RM along each line of sight. 
@@ -1336,6 +1344,8 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 
 {\noindent}\textbf{Mean molecular weight:} $\mu ~ [{\rm dimensionless}]$
 
+{\noindent}\textbf{Modified blackbody:} $I_\nu ~ [{\rm W\,m^{-2}\,Hz^{-1}\,sr^{-1}}]$
+
 {\noindent}\textbf{Momentum diffusivity}: $\nu ~ [{\rm m^2\,s^{-1}}]$
 
 {\noindent}\textbf{Number density}: $n ~ [{\rm m^{-3}}]$
@@ -1743,6 +1753,11 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
 {\noindent}\textbf{Mean:} 
 \begin{align*}
     \mu_x = \frac{1}{N} \sum_{i=1}^N x_i
+\end{align*}
+
+{\noindent}\textbf{Modified blackbody:}
+\begin{align*}
+    I_\nu = \tau B_\nu(T) \left(\frac{\nu}{\nu_0}\right)^\beta ~ [{\rm W\,m^{-2}\,Hz^{-1}\,sr^{-1}}]
 \end{align*}
 
 {\noindent}\textbf{Number of $\theta$ bins (RHT):}
