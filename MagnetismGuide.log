@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  8 MAY 2019 22:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  9 MAY 2019 20:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -787,68 +787,79 @@ Package pdftex.def Info: figures/ReynoldsNumber.png used on input line 838.
 File: figures/RMsynthesis.png Graphic file (type png)
 
 <use figures/RMsynthesis.png>
-Package pdftex.def Info: figures/RMsynthesis.png used on input line 964.
+Package pdftex.def Info: figures/RMsynthesis.png used on input line 978.
 (pdftex.def)             Requested size: 341.43306pt x 216.88019pt.
- [25 <./figures/RMsynthesis.png>] [26] [27]
-[28] <figures/408MHz.png, id=195, 672.5125pt x 415.5525pt>
-File: figures/408MHz.png Graphic file (type png)
 
-<use figures/408MHz.png>
-Package pdftex.def Info: figures/408MHz.png used on input line 1129.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[25] [26 <./figures/RMsynthesis.png>] [27] [28]
+<figures/408MHz.png, id=195, 672.5125pt x 415.5525pt>
+File: figures/408MHz.png Graphic file (type png)
+ <use figures/408MHz.png>
+Package pdftex.def Info: figures/408MHz.png used on input line 1143.
 (pdftex.def)             Requested size: 426.79134pt x 263.72072pt.
- [29 <./figures/408MHz.png>] [30]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[29] [30 <./figures/408MHz.png>]
 <figures/pressure-density.png, id=207, 899.36pt x 694.595pt>
 File: figures/pressure-density.png Graphic file (type png)
 
 <use figures/pressure-density.png>
-Package pdftex.def Info: figures/pressure-density.png used on input line 1170.
+Package pdftex.def Info: figures/pressure-density.png used on input line 1184.
 (pdftex.def)             Requested size: 284.52756pt x 219.74187pt.
 File: figures/pressure-density.png Graphic file (type png)
  <use figures/pressure-density.png>
-Package pdftex.def Info: figures/pressure-density.png used on input line 1170.
+Package pdftex.def Info: figures/pressure-density.png used on input line 1184.
 (pdftex.def)             Requested size: 284.52756pt x 219.74187pt.
 File: figures/pressure-density.png Graphic file (type png)
 
 <use figures/pressure-density.png>
-Package pdftex.def Info: figures/pressure-density.png used on input line 1170.
+Package pdftex.def Info: figures/pressure-density.png used on input line 1184.
 (pdftex.def)             Requested size: 284.52756pt x 219.74187pt.
- [31 <./figures/pressure-density.png>]
-[32] [33] [34] [35] [36] [37] [38]
-Overfull \hbox (60.7819pt too wide) in paragraph at lines 1868--1868
-[] 
- []
 
 
-Overfull \hbox (31.80858pt too wide) in paragraph at lines 1888--1888
-[] 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
+[31] [32 <./figures/pressure-density.png>] [33] [34] [35] [36] [37] [38]
 [39]
-Overfull \hbox (6.71234pt too wide) in paragraph at lines 1894--1894
+Overfull \hbox (60.7819pt too wide) in paragraph at lines 1884--1884
 [] 
  []
 
 
-Overfull \hbox (16.15677pt too wide) in paragraph at lines 1906--1906
+Overfull \hbox (31.80858pt too wide) in paragraph at lines 1904--1904
 [] 
  []
 
-[40] [41] 
+[40]
+Overfull \hbox (6.71234pt too wide) in paragraph at lines 1910--1910
+[] 
+ []
+
+
+Overfull \hbox (16.15677pt too wide) in paragraph at lines 1922--1922
+[] 
+ []
+
+[41] [42] 
 AED: lastpage setting LastPage
-[42]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2146.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2146.
+[43]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2164.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2164.
  (./MagnetismGuide.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2146.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2146.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2164.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2164.
 
 Package rerunfilecheck Info: File `MagnetismGuide.out' has not changed.
 (rerunfilecheck)             Checksum: 3C950FBA7335212F2D6448959C4F2BDC;176.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2146.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2164.
  ) 
 Here is how much of TeX's memory you used:
- 9572 strings out of 492995
- 144329 string characters out of 6132704
+ 9573 strings out of 492995
+ 144336 string characters out of 6132704
  264122 words of memory out of 5000000
  12908 multiletter control sequences out of 15000+600000
  16011 words of font info for 59 fonts, out of 8000000 for 9000
@@ -879,10 +890,10 @@ t/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/local/texlive/2017/texmf-di
 st/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MagnetismGuide.pdf (42 pages, 4809114 bytes).
+Output written on MagnetismGuide.pdf (43 pages, 4811594 bytes).
 PDF statistics:
- 360 PDF objects out of 1000 (max. 8388607)
- 271 compressed objects within 3 object streams
- 57 named destinations out of 1000 (max. 500000)
+ 365 PDF objects out of 1000 (max. 8388607)
+ 275 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
  78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

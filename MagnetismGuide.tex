@@ -912,7 +912,21 @@ a polarization angle $\chi$ and polarized intensity $P$ or by the Stokes paramet
 	\mathrm{RM} = -0.81 \int\limits_\mathrm{source}^\mathrm{observer} n_e \vec{B}\cdot\vec{{\rm d}l} ~ [{\rm rad\,m^{-2}}],
 \end{align*}
 
-{\noindent}where $\vec{B}$ has units of $\mu{\rm G}$, $n_e$ has ${\rm cm^{-3}}$, and $\vec{{\rm d}l}$ has ${\rm pc}$. The RM can be measured towards distant extragalactic radio sources and pulsars. The RM of an extragalactic radio source consists of an RM contribution intrinsic to the source, the RM from the intergalactic space from the source to the Galaxy, and the RM within the Galaxy. The first term (i.e., the extragalactic radio source) should be random and hence reasonably small on average, because a source can be randomly oriented in space with any possible field configuration; thus we observe a random quantity. The second term (i.e., the intergalactic source) is negligible on average. Intergalactic magnetic fields are too weak to be detected with current technology. Even if there is a weak field in intergalactic space, an integration over the path-length of the intergalactic magnetic field with random directions with extremely thin gas should give quite a small contribution. Therefore, the common contribution of RMs of extragalactic radio sources is from our own Galaxy. 
+{\noindent}where $\vec{B}$ has units of $\mu{\rm G}$, $n_e$ has ${\rm cm^{-3}}$, and $\vec{{\rm d}l}$ has ${\rm pc}$. This can also be applied to cosmological scales via
+
+\begin{align*}
+	\mathrm{RM} = -0.81 \int\limits_{z_\mathrm{source}}^\mathrm{observer} \frac{n_e(z) \vec{B(z)}}{(1+z)^2} \cdot \frac{\vec{{\rm d}l}}{{\rm d}z} {\rm d}z ~ [{\rm rad\,m^{-2}}],
+\end{align*}
+
+{\noindent}where $z_\mathrm{source}$ is the redshift of the source. When observing a distant polarized source, the rotation of its linear polarization angle is due to the contribution of different magneto-ionic regions along the line of sight. The measured RM is a sum of contributions from multiple sources, or regions, such that
+
+\begin{align*}
+    {\rm RM} = {\rm RM}_{\rm source} + {\rm RM}_{\rm IGM} + {\rm RM}_{\rm Gal} + {\rm RM}_{\rm noise} ~ [{\rm dimensionless}],
+\end{align*}
+
+{\noindent}where ${\rm RM}_{\rm source}$ is the source contribution, ${\rm RM}_{\rm IGM}$ is the contribution from the \textit{intergalactic medium} (IGM), ${\rm RM}_{\rm Gal}$ is the contribution from our Galaxy, and ${\rm RM}_{\rm noise}$ is the measurement uncertainty.
+
+{\noindent}The RM can be measured towards distant extragalactic radio sources and pulsars. The RM of an extragalactic radio source consists of an RM contribution intrinsic to the source, the RM from the intergalactic space from the source to the Galaxy, and the RM within the Galaxy. The first term (i.e., the extragalactic radio source) should be random and hence reasonably small on average, because a source can be randomly oriented in space with any possible field configuration; thus we observe a random quantity. The second term (i.e., the intergalactic source) is negligible on average. Intergalactic magnetic fields are too weak to be detected with current technology. Even if there is a weak field in intergalactic space, an integration over the path-length of the intergalactic magnetic field with random directions with extremely thin gas should give quite a small contribution. Therefore, the common contribution of RMs of extragalactic radio sources is from our own Galaxy. 
 
 {\noindent}The RM does not increase monotonically with distance along the line of sight. Traditionally, the RM is obtained by performing a least-squares fit to the data to determine the slope. There are however three potential problems to this method: (1) the observed polarization angle is only known modulo $\pi$ radians; thus with measurements in only a few wavelength bands, the RM is often ambiguous (known as the \textit{$n\pi$ ambiguity}), (2) polarized emission with different RM values can be present along a single line of sight; the signal from these regions mix, making a single linear fit inappropriate, and (3) faint sources with high RM will be undetectable in individual channels due to low signal to noise and will remain undetectable even after integrating all channels due to \textit{bandwidth depolarization}; thus, no $\chi(\lambda^2)$ data will be available for the traditional linear fit.
 
@@ -1447,6 +1461,8 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 {\noindent}\textbf{Radial component of polarization gradient}: $\dfrac{\partial\mathbf{P}}{\partial s}_\mathrm{rad} ~ [{\rm Jy\,pc^{-1}}]$
 
 {\noindent}\textbf{Rayleigh}: ${\rm R} ~ [{\rm unit}]$
+
+{\noindent}\textbf{Redshift}: $z ~ [{\rm dimensionless}]$
 
 {\noindent}\textbf{Resistivity}: $\eta~[{\rm \Omega\,m}]$
 
@@ -1990,7 +2006,9 @@ P(\lambda^2) &= \lvert\lvert p(\lambda^2) \rvert\rvert I\mathrm{e}^{2i\chi} = p(
 {\noindent}\textbf{Rotation measure:}
 \begin{align*}
 {\rm RM} &= \dfrac{\mathrm{d}\chi(\lambda^2)}{\mathrm{d}\lambda^2} ~ [{\rm rad\,m^{-2}}] \\
-\mathrm{RM}& = -0.81 \int\limits_\mathrm{source}^\mathrm{observer} n_e \vec{B}\cdot\vec{{\rm d}l} ~ [{\rm rad\,m^{-2}}]
+               & = -0.81 \int\limits_\mathrm{source}^\mathrm{observer} n_e \vec{B}\cdot\vec{{\rm d}l} ~ [{\rm rad\,m^{-2}}] \\
+               &= -0.81 \int\limits_{z_\mathrm{source}}^\mathrm{observer} \frac{n_e(z) \vec{B(z)}}{(1+z)^2} \cdot \frac{\vec{{\rm d}l}}{{\rm d}z} {\rm d}z ~ [{\rm rad\,m^{-2}}] \\
+               &= {\rm RM}_{\rm source} + {\rm RM}_{\rm IGM} + {\rm RM}_{\rm Gal} + {\rm RM}_{\rm noise} ~ [{\rm dimensionless}]
 \end{align*}
 
 {\noindent}\textbf{Rotation measure transfer function (RMTF):}
