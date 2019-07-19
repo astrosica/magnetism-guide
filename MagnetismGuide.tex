@@ -145,13 +145,15 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
     R_\mathrm{AD} = \frac{LV}{\nu_\mathrm{AD}} ~ [{\rm dimensionless}],
 \end{align*}
 
-{\noindent}where $V$ is a characteristic velocity (e.g., for trans-Alfv\'enic turbulence it is the \textit{Alfv\'en speed}, $v_A = \dfrac{B}{4\pi\rho_n}$) and $L=L_\mathrm{AD}$ when $R_\mathrm{AD}=1$. This gives the form of the ambipolar diffusion scale as often found in the literature:
+{\noindent}where $V$ is a characteristic velocity (e.g., for trans-Alfv\'enic turbulence it is the \textit{Alfv\'en speed}, $v_A = \left(\dfrac{B}{4\pi\rho_n}\right)$ and $L=L_\mathrm{AD}$ when $R_\mathrm{AD}=1$. This gives the form of the ambipolar diffusion scale as often found in the literature:
 
 \begin{align*}
     L_\mathrm{AD} = \frac{V_A}{\alpha\rho_i} ~ [{\rm m}].
 \end{align*}
 
 {\noindent}It has been shown that the plane-of-sky magnetic field can be estimated using the ambipolar diffusion length scale. 
+
+{\noindent}\textbf{Angular power spectrum:} Power spectra are expressed as $D_\ell = \ell(\ell+1)C_\ell/2\pi$.
 
 {\noindent}\textbf{Artificial neural network (ANN):} Computing systems vaguely inspired by the biological neural networks that constitute animal brains. The neural network itself is not an algorithm, but rather a framework for many different machine learning algorithms to work together and process complex data inputs. Such systems ``learn'' to perform tasks by considering examples, generally without being programmed with any task-specific rules. For example, in image recognition, they might learn to identify images that contain cats by analyzing example images that have been manually labeled as ``cat'' or ``no cat'' and using the results to identify cats in other images. They do this without any prior knowledge about cats, for example, that they have fur, tails, whiskers and cat-like faces. Instead, they automatically generate identifying characteristics from the learning material that they process. An ANN is based on a collection of connected units or nodes called artificial neurons, which loosely model the neurons in a biological brain. Each connection, like the synapses in a biological brain, can transmit a signal from one artificial neuron to another. An artificial neuron that receives a signal can process it and then signal additional artificial neurons connected to it. In common ANN implementations, the signal at a connection between artificial neurons is a real number, and the output of each artificial neuron is computed by some non-linear function of the sum of its inputs. The connections between artificial neurons are called ``edges''. Artificial neurons and edges typically have a weight that adjusts as learning proceeds. The weight increases or decreases the strength of the signal at a connection. Artificial neurons may have a threshold such that the signal is only sent if the aggregate signal crosses that threshold. Typically, artificial neurons are aggregated into layers. Different layers may perform different kinds of transformations on their inputs. Signals travel from the first layer (the input layer), to the last layer (the output layer), possibly after traversing the layers multiple times. The original goal of the ANN approach was to solve problems in the same way that a human brain would. However, over time, attention moved to performing specific tasks, leading to deviations from biology. Artificial neural networks have been used on a variety of tasks, including computer vision, speech recognition, machine translation, social network filtering, playing board and video games and medical diagnosis.
 
@@ -460,7 +462,7 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 \end{center}
 \end{table}
 
-{\noindent}\textbf{Inverse Compton scattering:} The upscattering of radio photons to become optical or X-ray photons by means of the inelastic scattering of a charged particle (usually an electron).
+{\noindent}\textbf{Inverse Compton scattering:} The up-scattering of radio photons to become optical or X-ray photons by means of the inelastic scattering of a charged particle (usually an electron).
 
 {\noindent}\textbf{Inverse Fourier transform (IFT):} The reconstruction of a function from its decomposition into the frequencies that make it up. The inverse Fourier transform (IFT) is given by
 
@@ -1050,7 +1052,7 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}\textbf{Stochastic system:}
 
-{\noindent}\textbf{Stokes parameters:}
+{\noindent}\textbf{Stokes parameters:} Polarization is usually observed and characterized in terms of the Stokes parameters: $I, Q, U,$ and $V$. Of primary interest are usually the linear polarization parameters $Q$ and $U$. While Stokes $Q$ and $U$ are observationally convenient, they are coordinate system dependent so they do not couple naturally to the underlying physics. For this, the E-mode and B- mode representation of orthogonal polarization components are sometimes ideal.
 
 {\noindent}\textbf{Stokes I ($I$):} A measure of the total intensity of radio emission.
 
@@ -1148,11 +1150,13 @@ A superbubble behaves qualitatively like an individual supernova remnant, except
 
 {\noindent}\textbf{Taylor scale:}
 
+{\noindent}\textbf{Temperature B-mode (TB) correlation:} A positive signal in the Temperature B-mode ($TB$) cross spectrum roughly consistent with a power law as a function of multipole moment $\ell$ for $\ell\lesssim600$. This non-zero $TB$ measurement was originally made using angular power spectra computed from $353\,{\rm GHz}$ intensity and polarization maps of Planck HFI data, where the dominant polarized foreground is that from thermal dust emission (Planck Collaboration XI 2018; Planck Collaboration Int. LIV 2018; Planck Collaboration Int. XXX 2016). Physical arguments predict the $TB$ and $EB$ signals from the CMB to be statistically consistent with zero (e.g., Zaldarriaga \& Seljak 1997). Thus the two most likely sources for the non-zero $TB$ signal are residual systematics in the data, and/or a non-zero $TB$ contribution from Galactic thermal dust emission. An analysis that computed $TB$ and $EB$ power spectra and investigated how dust total intensity, polarization fraction, and polarization angle contribute to the $TB$ signal showed that that polarization angle was the key component in producing the observed Planck $353\,{\rm GHz}$ non-zero $TB$ spectrum (Weiland et al., 2019). This supported the conclusion that the Planck $353\,{\rm GHz}$ non-zero $TB$ spectrum is a physical property of Galactic foreground dust polarization.
+
 {\noindent}\textbf{Third moment:} See \textit{skewness}.
 
 {\noindent}\textbf{Toroidal magnetic field:} Often the GMF is expressed in cylindrical coordinates ($\theta, r, z$). The \textit{toroidal magnetic field} refers to the structures (without $\vec{B}_z$ components) confined to a plane parallel to the Galactic plane. The toroidal fields possibly extend to the inner Galaxy, even towards the central molecular zone (CMZ).
 
-{\noindent}\textbf{Tsallis distribution:} A function that can be fit to incremental probability distribution functions (PDFs) of turbulent density, magnetic field, and velocity. The Tsallis distribution was originally derived by Tsallis (1988) as a means to extend traditional Boltzmann-Gibbs mechanics to fractal and multifractal systems. The complex dynamics of multifractal systems apply to many natural environments, such as ISM turbulence. The Tsallis function of an arbitrary incremental PDF $\Delta f$ has the form
+{\noindent}\textbf{Tsallis distribution:} A function that can be fit to incremental probability distribution functions (PDFs) of turbulent density, magnetic field, and velocity. The Tsallis distribution was originally derived by Tsallis (1988) as a means to extend traditional Boltzmann-Gibbs mechanics to fractal and multifractal systems. The complex dynamics of multi-fractal systems apply to many natural environments, such as ISM turbulence. The Tsallis function of an arbitrary incremental PDF $\Delta f$ has the form
 
 \begin{align*}
     R_q = a \left[ 1+(q-1) \dfrac{\Delta f(r)^2}{w^2} \right]^{-1/(q-1)}.
