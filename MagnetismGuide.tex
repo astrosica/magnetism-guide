@@ -167,6 +167,8 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 
 {\noindent}\textbf{Azimuthal magnetic field ($\vec{B}_\theta$):} Often the Galactic magnetic field is expressed in cylindrical coordinates ($\theta, r, z$). The azimuthal component ($\vec{B}_\theta$) dominates the Galactic disk where the radial ($\vec{B}_r$) and vertical ($\vec{B}_z$) components are generally weak.
 
+{\noindent}\textbf{B-mode polarization:} 
+
 {\noindent}\textbf{Balbus-Hawley instability:} See \textit{magnetorotational instability}.
 
 {\noindent}\textbf{Bandwidth depolarization:} A type of \textit{external depolarization} where the polarization vector is substantially rotated within the observing bandwidth if the Faraday depth is large enough.
@@ -289,6 +291,49 @@ The interstellar medium (ISM) is a complex environment of gas and dust with vary
 {\noindent}\textbf{Dust polarization:} The polarization angle of dust emission is conventionally taken to be $90^\circ$ from the orientation of the local Galactic magnetic field.
 
 {\noindent}\textbf{Dynamo theory:} The mechanism by which a magnetic field is produced in which a rotating, convecting, and electrically conducting fluid can generate and maintain a magnetic field over astronomical timescales. The dynamo that creates the large-scale magnetic field acts by violation of the reflection symmetry of the turbulence in rotating galaxies; this violation is associated, in turn, with dominance of, for example, right-handed helical motions in the turbulent flow.
+
+{\noindent}\textbf{Electric (E-) and Magnetic (B-) Modes}: Any polarization pattern on the sky can be separated into ``electric'' ($E$-mode) and ``magnetic'' ($B$-mode) components. This decomposition is useful both observationally and theoretically. There are two equivalent ways of viewing the modes that reflect their global and local properties respectively. The nomenclature reflects the global property. Like multipole radiation, the harmonics of an $E$-mode have $(-1)^\ell$ parity on the sphere, whereas those of a $B$-mode have $(-1)^{\ell+1}$ parity. Under $\bm{\hat{n}}\rightarrow\bm{\hat{n}}$, the $E$-mode thus remains unchanged for even $\ell$, whereas the $B$-mode changes sign as illustrated for the simplest case $\ell=2,m=0$ in Figure \ref{fig:ebmodes} (recall that a rotation by $90^\circ$ represents a change in sign). Note that the $E$ and $B$ multipole patterns are $45^\circ$ rotations of each other, (i.e. $Q\rightarrow U$ and $U\rightarrow-Q$). Since this parity property is obviously rotationally invariant, it will survive integration over $\bm{\hat{k}}$.
+
+\begin{figure}[h]
+\includegraphics[width=16cm]{figures/EBmodes.png}
+\centering
+\caption{\footnotesize{The electric ($E$) and magnetic ($B$) modes are distinguished by their behaviour under a parity transformation $\bm{\hat{n}}\rightarrow\bm{\hat{n}}$. $E$-modes have $(-1)^\ell$ and $B$-modes have $(-1)^{\ell+1}$ parity; here ($\ell=2,m=0$), even and odd respectively. The local distinction between the two is that the polarization axis is aligned with the principle axes of the polarization amplitude for $E$ and crossed with them for $B$. Dotted lines represent a sign reversal in the polarization. Image taken from Hu \& White (1997).}}
+\label{fig:ebmodes}
+\end{figure}
+
+{\noindent}The local view of $E$- and $B$-modes involves the second derivatives of the polarization amplitude (second derivatives because polarization is a tensor or spin-$2$ object). In much the same way that the distinction between electric and magnetic fields in electromagnetism involves vanishing of gradients or curls (i.e., first derivatives) for the polarization there are conditions on the second (covariant) derivatives of $Q$ and $U$. For an $E$-mode, the difference in second (covariant) derivatives of $U$ along $\bm{\hat{e}}_\theta$ and $\bm{\hat{e}}_\phi$ vanishes as does that for $Q$ along $\bm{\hat{e}}_\theta+\bm{\hat{e}}_\phi$ and $\bm{\hat{e}}_\theta-\bm{\hat{e}}_\phi$. For a $B$-mode, $Q$ and $U$ are interchanged. Recalling that a $Q$-field points in the $\bm{\hat{e}}_\theta$ or $\bm{\hat{e}}_\phi$ direction and a $U$-field in the crossed direction, we see that the Hessian or curvature matrix of the polarization amplitude has principle axes in the same sense as the polarization for $E$ and $45^\circ$ crossed with it for $B$ (see Figure \ref{fig:ebmodes}). Stated another way, near a maximum of the polarization (where the first derivative vanishes) the direction of greatest change in the polarization is parallel/perpendicular and at $45^\circ$ degrees to the polarization in the two cases.
+
+{\noindent}The distinction is best illustrated with examples. Take the simplest case of $\ell=2,m=0$ where the $E$-mode is a $Q=\sin^2\theta$ field and the $B$-mode is a $U=\sin^2\theta$ field (see the bottom of Figure \ref{fig:scalar}). In both cases, the major axis of the curvature lies in the $\bm{\hat{e}}_\theta$ direction. For the $E$-mode, this is in the same sense; for the $B$-mode it is crossed with the polarization direction. The same holds true for the $m=1,2$ modes as can be seen by inspection of the bottom of Figure \ref{fig:vector} and the bottom of Figure \ref{fig:tensor}.
+
+\begin{figure}[t!]
+\centering
+\includegraphics[width=10cm]{figures/CMBquad.png}
+\caption{\footnotesize{Modulation of the local pattern in the bottom of Figure \ref{fig:scalar} by plane wave fluctuations on the last scattering surface. Yellow points represent polarization out of the plane with magnitude proportional to sign. The plane wave modulation changes the amplitude and sign of the polarization but does not mix $Q$ and $U$. Modulation can mix $E$ and $B$ however if $U$ is also present. Image taken from Hu \& White (1997).}}
+\label{fig:cmbquad}
+\end{figure}
+
+{\noindent}Thomson scattering can only produce an $E$-mode locally since the spherical harmonics that describe the temperature anisotropy have $(-1)^\ell$ electric parity. In the tops of Figures \ref{fig:scalar}, \ref{fig:vector}, and \ref{fig:tensor}, the $\ell=2,m=0,1,2$ $E$-mode patterns are shown in yellow. The $B$-mode represents these patterns rotated by $45^\circ$ and are shown in purple and cannot be generated by scattering. In this way, the scalars, vectors, and tensors are similar in that scattering produces a local $\ell=2$ $E$-mode only.
+
+{\noindent}However, the pattern of polarization on the sky is not simply this local signature from scattering but is modulated over the last scattering surface by the plane wave spatial dependence of the perturbation (compare the bottom of Figure \ref{fig:scalar} and \ref{fig:cmbquad}). The modulation changes the amplitude, sign, and angular structure of the polarization but not its nature (e.g. a $Q$-polarization remains Q). Nonetheless, this modulation generates a $B$-mode from the local $E$-mode pattern.
+
+{\noindent}The reason why this occurs is best seen from the local distinction between $E$- and $B$-modes. Recall that $\mathbf{E}$\textbf{-modes} have polarization amplitudes that change parallel or perpendicular to, and $\mathbf{B}$\textbf{-modes} in directions $45^\circ$ away from, the polarization direction. On the other hand, plane wave modulation always changes the polarization amplitude in the direction $\bm{\hat{k}}$ or N-S on the sphere. Whether the resultant pattern possesses $E$ or $B$-contributions depends on whether the local polarization has $Q$ or $U$-contributions.
+
+{\noindent}For scalars, the modulation is of a pure $Q$-field and thus its $E$-mode nature is preserved (Kamionkowski et al. 1997; Zaldarriaga \& Seljak 1997). For the vectors, the $U$-mode dominates the pattern and the modulation is crossed with the polarization direction. Thus vectors generate mainly $B$-modes for short wavelength fluctuations (Hu \& White 1997). For the tensors, the comparable $Q$ and $U$ components of the local pattern imply a more comparable distribution of $E$ and $B$ modes at short wavelengths (see Figure \ref{fig:polpatterns}a).
+
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=16cm]{figures/PolPatterns.png}
+    \caption{\footnotesize{The $E$ and $B$ components of a plane wave perturbation. (a) Modulation of the local $E$-quadrupole pattern (yellow) from scattering by a plane wave. Modulation in the direction of (or orthogonal to) the polarization generates an $E$-mode with higher $\ell$; modulation in the crossed ($45^\circ$) direction generates a $B$-mode with higher $\ell$. Scalars generate only $E$-modes, vectors mainly $B$-modes, and tensors comparable amounts of both. (b) Distribution of power in a single plane wave with $kr=100$ in multipole $\ell$ from the addition of spin and orbital angular momentum. Features in the power spectrum can be read directly off the pattern in (a). Image taken from Hu \& White (1997).}}
+    \label{fig:polpatterns}
+\end{figure}
+
+{\noindent}These qualitative considerations can be quantified by noting that plane wave modulation simply represent the addition of angular momentum from the plane wave ($Y_\ell^0$) with the local spin angular dependence. The result is that plane wave modulation takes the $\ell=2$ local angular dependence to higher $\ell$ (smaller angles) and splits the signal into $E$ and $B$ components with ratios which are related to Clebsch-Gordan coefficients. At short wavelengths, these ratios are $B/E=0$, $6$, $8/13$ in power for scalars, vectors, and tensors (see Figure \ref{fig:polpatterns}b and Hu \& White 1997).
+
+{\noindent}The distribution of power in multipole $\ell$-space is also important. Due to projection, a single plane wave contributes to a range of angular scales  $\ell\lesssim kr$ where $r$ is the comoving distance to the last scattering surface. From Figure \ref{fig:cmbquad}, we see that the smallest angular, largest $\ell\approx kr$ variations occur on lines of sight $\bm{\hat{n}}\cdot\bm{\hat{k}}=0$ or $\theta=\pi/2$ though a small amount of power projects to $\ell\ll kr$ as $\theta\rightarrow0$. The distribution of power in multipole space of Figure \ref{fig:polpatterns}b can be read directly off the local polarization pattern. In particular, the region near $\theta=\pi/2$ shown in Figure \ref{fig:polpatterns}a determines the behavior of the main contribution to the polarization power spectrum.
+
+{\noindent}The full power spectrum is of course obtained by summing these plane wave contributions with weights dependent on the source of the perturbations and the dynamics of their evolution up to last scattering. Sharp features in the $k$-power spectrum will be preserved in the multipole power spectrum to the extent that the projectors in Figure \ref{fig:polpatterns}b approximate delta functions. For scalar $E$-modes, the sharpness of the projection is enhanced due to strong $Q$-contributions near $\theta=\pi/2$ $(\ell\sim kr)$ that then diminish as $\theta\rightarrow0$ $(\ell\ll kr)$. The same enhancement occurs to a lesser extent for vector $B$-modes due to $U$ near $\pi/2$ and tensor $E$-modes due to $Q$ there. On the other hand, a suppression occurs for vector $E$ and tensor $B$-modes due to the absence of $Q$ and $U$ at $\pi/2$ respectively. These considerations have consequences for the sharpness of features in the polarization power spectrum, and the generation of asymptotic ``tails'' to the polarization spectrum at low-$\ell$ (see Hu \& White 1997) .
+
+{\noindent}\textbf{E-mode polarization:} 
 
 {\noindent}\textbf{Eddies:}
 
@@ -996,6 +1041,43 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
 
 {\noindent}\textbf{Saliency map:} In computer vision, a saliency map is an image that shows each pixel's unique quality. The goal of a saliency map is to simplify and/or change the representation of an image into something that is more meaningful and easier to analyze. For example, if a pixel has a high grey level or other unique colour quality in a colour image, that pixel's quality will show in the saliency map and in an obvious way..
 
+{\noindent}\textbf{Scalar (compressible) perturbations}: The most commonly considered and familiar types of perturbations are scalar modes. These modes represent perturbations in the (energy) density of the cosmological fluid(s) at last scattering and are the only fluctuations which can form structure though gravitational instability. Consider a single large-scale Fourier component of the fluctuation (i.e., for the photons, a single plane wave in the temperature perturbation). Over time, the temperature and gravitational potential gradients cause a bulk flow, or dipole anisotropy, of the photons. Both effects can be described by using an effective temperature
+\begin{align*}
+    \left(\frac{\Delta T}{T}\right)_\mathrm{eff} = \left(\frac{\Delta T}{T}\right) + \psi,
+\end{align*}
+
+{\noindent}where $\psi$ is the gravitational potential. Gradients in the effective temperature always create flows from hot to cold effective temperature. Formally, both pressure and gravity act as sources of the momentum density of the fluid in a combination that is exactly the effective temperature for a relativistic fluid.
+
+{\noindent}To avoid confusion, let us explicitly consider the case of adiabatic fluctuations, where initial perturbations to the density imply potential fluctuations that dominate at large scales. Here gravity overwhelms pressure in overdense regions causing matter to flow towards density peaks initially. Nonetheless, overdense regions are effectively cold initially because photons must climb out of the potential wells they create and hence lose energy in the process. Though flows are established from cold to hot temperature regions on large scales, they still go from hot to cold effective temperature regions. This property is true more generally of our adiabatic assumption: we hereafter refer only to effective temperatures to keep the argument general.
+
+\begin{figure}[t!]
+\centering
+\vspace{-1cm}
+\includegraphics[width=8cm]{figures/ScalarQuadrupole.png}\\
+\includegraphics[width=15cm]{figures/QuadrupolarAnisotropies.png}\\
+\includegraphics[width=15cm]{figures/ScalarPattern.png}
+\caption{\footnotesize{\textbf{(Top)} The scalar quadrupole moment ($\ell=2,m=0$). Flows from hot (blue) regions into cold (red), $\bm{v}\parallel\bm{k}$, produce the azimuthally symmetric pattern $Y_2^0$ depicted here. \textbf{(Middle)} The transformation of quadrupole anisotropies into linear polarization. (a) The orientation of the quadrupole moment with respect to the scattering direction $\bm{\hat{n}}$ determines the sense and magnitude of the polarization. It is aligned with the cold (red, long) lobe in the $\bm{\hat{e}}_\theta\times\bm{\hat{e}}_\phi$ tangent plane. (b) In spherical coordinates where $\bm{\hat{n}}\cdot\bm{\hat{k}}=\cos\theta$, the polarization points north-south ($Q$) with magnitude varying as $\sin^2$ for scalar fluctuations. \textbf{(Bottom)} Polarization pattern for $\ell=2,m=0$, note the azimuthal symmetry. The scattering of a scalar $m=0$ quadrupole perturbation generates the electric $E$ (yellow, thick lines) pattern on the sphere. Its rotation by $45^\circ$ represents the orthogonal magnetic $B$ (purple, thin lines) pattern. Animation (available at \href{http://www.sns.ias.edu/whu/polar/scalaran.html}{http://www.sns.ias.edu/whu/polar/scalaran.html}): as the line of sight $\bm{\hat{n}}$ changes, the lobes of the quadrupole rotate in and out of the tangent plane. The polarization follows the orientation of the colder (red) lobe in the tangent plane. Images taken from Hu \& White (1997).}}
+\label{fig:scalar}
+\end{figure}
+
+{\noindent}Let us consider the quadrupole component of the temperature pattern seen by an observer located in a trough of a plane wave. The azimuthal symmetry in the problem requires that $\bm{v}\parallel\bm{k}$ and hence the flow is irrotational $\nabla\times\bm{v}=0$. Because hotter photons from the crests flow into the trough from the $\pm k$ directions while cold photons surround the observer in the plane, the quadrupole pattern seen in a trough has an $m = 0$,
+
+\begin{align*}
+    Y_2^0 \propto 3\cos^2\theta-1,
+\end{align*}
+
+{\noindent}structure with angle $\bm{\hat{n}\cdot\hat{k}}=\cos\theta$ (see top of Figure \ref{fig:scalar}). The opposite effect occurs at the crests, reversing the sign of the quadrupole but preserving the $m=0$ nature in its local angular dependence. The full effect is thus described by a local quadrupole modulated by a plane wave in space, $-Y_2^0(\bm{\hat{n}})\exp(i\bm{k}\cdot\bm{x})$, where the sign denotes the fact that photons flowing into cold regions are hot. This infall picture must be modified slightly on scales smaller than the sound horizon where pressure plays a role, however the essential property that the flows are parallel to $\bm{\hat{k}}$ and thus generate an $m=0$ quadrupole remains true.
+
+{\noindent}The sense of the quadrupole moment determines the polarization pattern through Thomson scattering. Recall that polarized scattering peaks when the temperature varies in the direction orthogonal to $\bm{\hat{n}}$. Consider then the tangent plane $\bm{\hat{e}}_\theta\times\bm{\hat{e}}_\phi$ with normal $\bm{\hat{n}}$. This may be visualized in an angular ``lobe'' diagram such as the top of Figure \ref{fig:scalar} as a plane which passes through the ``origin'' of the quadrupole pattern perpendicular to the line of sight. The polarization is maximal when the hot and cold lobes of the quadrupole are in this tangent plane, and is aligned with the component of the colder lobe which lies in the plane. As $\theta$ varies from $0$ to $\pi/2$ (pole to equator) the temperature differences in this plane increase from zero (see middle of Figure \ref{fig:scalar} a). The local polarization at the crest of the temperature perturbation is thus purely in the N-S direction tapering off in amplitude toward the poles (see middle of Figure \ref{fig:scalar} b). This pattern represents a pure $Q$-field on the sky whose amplitude varies in angle as an $\ell=2,m=0$ tensor or spin-$2$ spherical harmonic (Newman \& Penrose, 1966)
+
+\begin{align*}
+    Q=\sin^2\theta,~~~~~U=0.
+\end{align*}
+
+{\noindent}In different regions of space, the plane wave modulation of the quadrupole can change the sign of the polarization, but not its sense.
+
+{\noindent}This pattern (bottom of Figure \ref{fig:scalar}, thick lines) is of course not the only logical possibility for an $\ell=2,m=0$ polarization pattern. Its rotation by $45^\circ$ is also a valid configuration (thin lines). This represents a pure NW-SE (and by sign reversal NE-SW), or $U$-polarization pattern (a distinction between the two patterns being electric and magnetic modes).
+
 {\noindent}\textbf{Scintillation:}
 
 {\noindent}\textbf{Second moment:} See \textit{variance}.
@@ -1145,6 +1227,32 @@ A superbubble behaves qualitatively like an individual supernova remnant, except
 
 {\noindent}\textbf{Temperature B-mode (TB) correlation:} A positive signal in the Temperature B-mode ($TB$) cross spectrum roughly consistent with a power law as a function of multipole moment $\ell$ for $\ell\lesssim600$. This non-zero $TB$ measurement was originally made using angular power spectra computed from $353\,{\rm GHz}$ intensity and polarization maps of Planck HFI data, where the dominant polarized foreground is that from thermal dust emission (Planck Collaboration XI 2018; Planck Collaboration Int. LIV 2018; Planck Collaboration Int. XXX 2016). Physical arguments predict the $TB$ and $EB$ signals from the CMB to be statistically consistent with zero (e.g., Zaldarriaga \& Seljak 1997). Thus the two most likely sources for the non-zero $TB$ signal are residual systematics in the data, and/or a non-zero $TB$ contribution from Galactic thermal dust emission. An analysis that computed $TB$ and $EB$ power spectra and investigated how dust total intensity, polarization fraction, and polarization angle contribute to the $TB$ signal showed that that polarization angle was the key component in producing the observed Planck $353\,{\rm GHz}$ non-zero $TB$ spectrum (Weiland et al., 2019). This supported the conclusion that the Planck $353\,{\rm GHz}$ non-zero $TB$ spectrum is a physical property of Galactic foreground dust polarization.
 
+{\noindent}\textbf{Tensor (gravitational wave) perturbations}:
+
+{\noindent}Tensor fluctuations are transverse-traceless perturbations to the metric, which can be viewed as gravitational waves. A plane gravitational wave perturbation represents a quadrupolar ``stretching'' of space in the plane of the perturbation (see Figure \ref{fig:tensor}). As the wave passes or its amplitude changes, a circle of test particles in the plane is distorted into an ellipse whose semi-major axis $\rightarrow$ semi-minor axis as the spatial phase changes from crest $\rightarrow$ trough (see the top of Figure \ref{fig:tensor}, yellow ellipses). Heuristically, the accompanying stretching of the wavelength of photons produces a quadrupolar temperature variation with an $m=\pm2$ pattern
+
+\begin{align*}
+    Y_2^{\pm2}\propto\sin^2\theta\mathrm{e}^{\pm2i\phi}
+\end{align*}
+
+{\noindent}in the coordinates defined by $\bm{\hat{k}}$.
+
+\begin{figure}[t!]
+\centering
+\includegraphics[width=8cm]{figures/TensorQuadrupole.png}
+\includegraphics[width=15cm]{figures/TensorPattern.png}
+\caption{\footnotesize{\textbf{(Top)} The tensor quadrupole moment $(m=2)$. Since gravity waves distort space in the plane of the perturbation, changing a circle of test particles into an ellipse, the radiation acquires an $m=2$ quadrupole moment. \textbf{(Bottom)} Polarization pattern for $\ell=2,m=2$. Scattering of a tensor $m=2$ perturbation generates the $E$ (yellow, thick lines) pattern as opposed to the $B$ (purple, thin lines) pattern. Animation (available at \href{http://www.sns.ias.edu/whu/polar/vectoran.html}{http://www.sns.ias.edu/whu/polar/vectoran.html}): same as for scalars. Images taken from Hu \& White (1997).}}
+\label{fig:tensor}
+\end{figure}
+
+{\noindent}Thomson scattering again produces a polarization pattern from the quadrupole anisotropy. At the equator, the quadrupole pattern intersects the tangent ($\bm{\hat{e}}_\theta\times\bm{\hat{e}}_\phi$) plane with hot and cold lobes rotating in and out of the $\bm{\hat{e}}_\phi$ direction with the azimuthal angle $\phi$. The polarization pattern is therefore purely $Q$ with a $\cos(2\phi)$ dependence. At the pole, the quadrupole lobes lie completely in the polarization plane and produces the maximal polarization unlike the scalar and vector cases. The full pattern,
+
+\begin{align*}
+    Q=(1+\cos^2\theta)\mathrm{e}^{2i\phi}~[{\rm Jy}], ~~~~~U=-2i\cos\theta\mathrm{e}^{2i\phi}~[{\rm Jy}],
+\end{align*}
+
+{\noindent}is shown in the bottom of Figure \ref{fig:tensor} (real part). Note that $Q$ and $U$ are present in nearly equal amounts for the tensors.
+
 {\noindent}\textbf{Third moment:} See \textit{skewness}.
 
 {\noindent}\textbf{Toroidal magnetic field:} Often the GMF is expressed in cylindrical coordinates ($\theta, r, z$). The \textit{toroidal magnetic field} refers to the structures (without $\vec{B}_z$ components) confined to a plane parallel to the Galactic plane. The toroidal fields possibly extend to the inner Galaxy, even towards the central molecular zone (CMZ).
@@ -1190,6 +1298,33 @@ on this subject by Field, Goldsmith \& Habing (1969). These include separate bra
 \end{align*}
 
 {\noindent}and, like the \textit{mean}, has the same dimensions as $x_i$.
+
+{\noindent}\textbf{Vector (vortical) perturbations}: Vector perturbations represent vortical motions of the matter, where the velocity field $\bm{v}$ obeys $\nabla\cdot\bm{v}=0$ and $\nabla\times\bm{v}\neq0$, similar to ``eddies'' in water. There is no associated density perturbation, and the vorticity is damped by the expansion of the Universe as are all motions that are not enhanced by gravity. However, the associated temperature fluctuations, once generated, do not decay as both $\Delta T$ and $T$ scale similarly with the expansion. For a plane wave perturbation, the velocity field $\bm{v}\perp\bm{k}$ with direction reversing in crests and troughs (see top of Figure \ref{fig:vector}). The radiation field at these extrema possesses a dipole pattern due to the Doppler shift from the bulk motion. Quadrupole variations vanish here but peak between velocity extrema. To see this, imagine sitting between crests and troughs. Looking up toward the trough, one sees the dipole pattern projected as a hot and cold spot across the zenith; looking down toward the crest, one sees the projected dipole reversed. The net effect is a quadrupole pattern in temperature with $m\pm1$
+
+\begin{align*}
+    Y_2^{\pm1}\propto\sin\theta\cos\theta\mathrm{e}{\pm i\phi}.
+\end{align*}
+
+\begin{figure}[t!]
+\centering
+\includegraphics[width=8cm]{figures/VectorQuadrupole.png}
+\includegraphics[width=15cm]{figures/VectorPattern.png}
+\caption{\footnotesize{\textbf{(Top)} The vector quadrupole moment ($l=2,m=1$). Since $\bm{v}\perp\bm{k}$, the Doppler effect generates a quadrupole pattern with lobes $45^\circ$ from $\bm{v}$ and $\bm{k}$ that is spatially out of phase (interplane peaks) with $v$. \textbf{(Bottom)} Polarization pattern for $\ell=2,m=1$. The scattering of a vector ($m=1$) quadrupole perturbation generates the $E$ pattern (yellow, thick lines) as opposed to the $B$, (purple, thin lines) pattern. Animation (available at \href{http://www.sns.ias.edu/whu/polar/vectoran.html}{http://www.sns.ias.edu/whu/polar/vectoran.html}): same as for scalars. Images taken from Hu \& White (1997).}}
+    \label{fig:vector}
+\end{figure}
+
+{\noindent}The lobes are oriented at $45^\circ$ from $k$ and $v$ since the line
+of sight velocity vanishes along $k$ and at $90$ degrees to $k$ here. The latter follows since midway between the crests and troughs $v$ itself is zero. The full quadrupole distribution is therefore described by $-iY_2^{\pm1}(\bm{\hat{n}})\exp(i\bm{k}\cdot\bm{x})$, where $i$ represents the spatial phase shift of the quadrupole with respect to the velocity.
+
+{\noindent}Thomson scattering transforms the quadrupole temperature anisotropy into a local polarization field as before. Again, the pattern may be visualized from the intersection of the tangent plane to $\bm{\hat{n}}$ with the lobe pattern of the top of Figure \ref{fig:vector}. At the equator ($\theta=\pi/2$), the lobes are oriented $45^\circ$ from the line of sight $\bm{\hat{n}}$ and rotate into and out of the tangent plane with $\phi$. The polarization pattern here is a pure $U$-field which varies in magnitude as $\sin\phi$. At the pole $\theta=0$, there are no temperature variations in the tangent plane so the polarization vanishes. Other angles can equally well be visualized by viewing the quadrupole pattern at different orientations given by $\bm{\hat{n}}$.
+
+{\noindent}The full $\ell=2,m=1$ pattern,
+
+\begin{align*}
+    Q=-\sin\theta\cos\theta\mathrm{e}^{i\phi},~~~~~U=-i\sin\theta\mathrm{e}^{i\phi}
+\end{align*}
+
+{\noindent}is displayed explicitly in the bottom of Figure \ref{fig:vector}. Note that the pattern is dominated by $U$-contributions especially near the equator.
 
 {\noindent}\textbf{Volume filling factor ($f$):} A correction factor such that a fraction $f$ of the line of sight intersects clouds of uniform density $N$. There are three effects of the interstellar magnetic field that conspire to lower the filling factor of hot cavities: (1) the background magnetic pressure acting on the surrounding shells directly opposes their expansion, (2) the magnetic tension in the swept-up field lines gives rise to an inward restoring force, while the associated magnetic pressure prevents the shells from fully collapsing and, therefore, keeps them relatively thick, and (3) the enhanced external ``signal speed'' causes the shells to merge earlier than they would in an unmagnetized medium.
 
