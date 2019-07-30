@@ -1,4 +1,5 @@
 \contentsline {section}{\numberline {1}Preface}{1}{section.1}% 
 \contentsline {section}{\numberline {2}Terminology}{2}{section.2}% 
-\contentsline {section}{\numberline {3}Phases of the ISM}{39}{section.3}% 
-\contentsline {section}{\numberline {4}Equations}{41}{section.4}% 
+\contentsline {section}{\numberline {3}Phases of the ISM}{41}{section.3}% 
+\contentsline {section}{\numberline {4}Equations}{43}{section.4}% 
+\contentsline {section}{\numberline {5}Useful Facts}{50}{section.5}% 
