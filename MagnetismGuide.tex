@@ -288,11 +288,19 @@ D_\ell^{XY} = \frac{\ell(\ell+1)C_\ell^{XY}}{2\pi}.
 
 {\noindent}\textbf{Depth depolarization:}
 
-{\noindent}\textbf{Dispersion measure (DM):}
+{\noindent}\textbf{Dispersion measure (DM):} When a neutron star forms in the course of a supernova collapse the preserved angular momentum causes the neutron star to rotate rapidly. Along the neutron star?s magnetic axis, a highly focused beam of radiation is emitted, and the rotational and magnetic axes are not necessarily the same. Since the beam is highly focused, from an observer?s point of view this may result in a blinking pattern, which is why those stars are called pulsars. The group and phase velocity of the emitted radiation are not the same in the interstellar medium because of its ionized components, mainly free electrons. Because of this, higher frequencies arrive earlier than lower ones. This extra time delay added at a frequency $\nu$ is given by
 
 \begin{align*}
-    {\rm DM} = -\int\limits_\mathrm{source}^\mathrm{observer} n_e\vec{{\rm d}\ell} ~ [{\rm pc\,cm^{-3}}]
+	t(\nu) = \frac{e^2}{2\pi m_ec} \frac{\rm DM}{\nu^2} ~ [{\rm s}],
 \end{align*}
+
+{\noindent}where DM is the \textit{dispersion measure}. The DM itself is given by the line-of-sight integral
+
+\begin{align*}
+    {\rm DM} = -\int\limits_\mathrm{source}^\mathrm{observer} n_e\vec{{\rm d}\ell} ~ [{\rm pc\,cm^{-3}}].
+\end{align*}
+
+{\noindent}If one has information on the thermal electron density, the DM solely depends on the distance l0 between the source and the observer. The dispersion measure, although it does not give any information on magnetic field properties, is still a very important observable. With DM, the thermal electron density can be inferred, which in turn is needed for the inference of Faraday rotation. Used in conjunction with \textit{rotation measure} measurements, the RM divided by the DM of a source provides a measure of $B_\parallel$ averaged along the line-of-sight.
 
 {\noindent}\textbf{Dust-to-gas mass ratio ($r$)}: 
 
@@ -315,7 +323,7 @@ D_\ell^{XY} = \frac{\ell(\ell+1)C_\ell^{XY}}{2\pi}.
 
 {\noindent}The are clear relationships between the physical properties of dusty filaments and the temperature and polarization power spectra that they produce. The slopes of the power spectra are determined primarily by the size distribution of filaments, with other effects responsible for the smaller differences between the components. The ratio of $BB/EE$ power is determined mostly by the aspect ratio of the filaments and somewhat by the misalignment of the filament directions to the background magnetic field. These same factors also determine the cross correlation $r_\ell^{TE}$ , but here misalignment is much more important. They also affect the $TE/EE$ power ratio, but this quantity is more directly affected by the overall polarization fraction. Dust spectra have a non-zero $TB$ correlation, with $r_{TB}\approx0.05$ and, like the $TE$ correlation, has little scale dependence (up to multipoles of several hundred). Since non-zero $TE$ and $TB$ are parity-violating correlations, to get a positive $TB$ correlation we would need to favour polarization angles in the range $\psi_{\rm pol}\in[90^\circ,180^\circ]$ relative to the filament direction. Equivalently, this corresponds to projected field angles in the range $\psi\in [0^\circ,90^\circ]$. Such an effect may be due to some large scale feature in the Galaxy's magnetic field or differential gas flows.
 
-{\noindent}\textbf{Dynamo theory:} The mechanism by which a magnetic field is produced in which a rotating, convecting, and electrically conducting fluid can generate and maintain a magnetic field over astronomical timescales. The dynamo that creates the large-scale magnetic field acts by violation of the reflection symmetry of the turbulence in rotating galaxies; this violation is associated, in turn, with dominance of, for example, right-handed helical motions in the turbulent flow.
+{\noindent}\textbf{Dynamo theory:} The mechanism by which a magnetic field is produced in which a rotating, convecting, and electrically conducting fluid can generate and maintain a magnetic field over astronomical timescales. The dynamo that creates the large-scale magnetic field acts by violation of the reflection symmetry of the turbulence in rotating galaxies; this violation is associated, in turn, with dominance of, for example, right-handed helical motions in the turbulent flow. The idea that a magnetic dynamo has amplified and maintains the Galactic magnetic field is well-established. How that magnetic dynamo works in detail, and what drives it (e.g., turbulence or cosmic-ray buoyancy), are as yet open questions. Large-scale mean-field dynamo models can be described analytically as a combination of modes, some of which are more likely to be excited than others, in disk galaxies. The small-scale magnetic field structure is often modelled as Gaussian turbulence, which is too simplified as magnetic turbulence is highly anisotropic and intermittent. 
 
 {\noindent}\textbf{Eddies:}
 
@@ -400,6 +408,8 @@ D_\ell^{XY} = \frac{\ell(\ell+1)C_\ell^{XY}}{2\pi}.
 
 {\noindent}\textbf{External depolarization:} Depolarization induced by the limitations of the instrumental capabilities. For example, \textit{beamwidth depolarization} is due to fluctuations in the foreground screen within the observing beam: unresolved density or magnetic field inhomogeneities of the media through which the radiation propagates induces unresolved spatial variations in the Faraday rotation measure. Another form of external depolarization is \textit{bandwidth depolarization} which can occur when a signification rotation of the \textit{polarization angle} is produced across the observing bandwidth.
 
+{\noindent}\textbf{Faraday conversion:} The conversion between linear and circular polarization modes through \textit{Faraday rotation} effects.
+
 {\noindent}\textbf{Faraday depth $(\phi)$:} The Faraday depth of a source is defined as
 
 \begin{align*}
@@ -436,7 +446,21 @@ D_\ell^{XY} = \frac{\ell(\ell+1)C_\ell^{XY}}{2\pi}.
 
 {\noindent}\textbf{Faraday spectrum:} See \textit{Faraday dispersion function}.
 
-{\noindent}\textbf{Faraday screen:} Faraday screens are simple Faraday rotating regions that affect the synchrotron emission that is produced from behind them (along the line-of-sight). Faraday screens by definition do not produce polarized (or any, for that matter) emission themselves. Instead they rotate the background \textit{polarization angle}, and/or reduce the \textit{polarized intensity} through \textit{depolarization} effects. In this case, \textit{rotation measure} (RM) and Faraday depth are identical, otherwise Rotation Measure Synthesis would be needed. 
+{\noindent}\textbf{Faraday screen:} Faraday screens are simple Faraday rotating regions that affect the synchrotron emission that is produced from behind them (along the line-of-sight). Faraday screens by definition do not produce polarized (or any, for that matter) emission themselves. Instead, they rotate the background \textit{polarization angle}, and/or reduce the \textit{polarized intensity} through \textit{depolarization} effects. In this case, \textit{rotation measure} (RM) and Faraday depth are identical, otherwise Rotation Measure Synthesis would be needed. Propagation of an electromagnetic wave through a Faraday screen changes all three \textit{Stokes parameters}, $Q$, $U$, and $V$.
+
+{\noindent}The plasma and Lamor frequencies in the Faraday screen are
+
+\begin{align*}
+	\omega_p^2 = \frac{4\pi ne^2}{m} ~ [{\rm s^{-1}}],
+\end{align*}
+
+{\noindent}and
+
+\begin{align*}
+	\omega_B^2 = \frac{eB}{mc} ~ [{\rm s^{-1}}],
+\end{align*}
+
+{\noindent}respectively.
 
 {\noindent}Sun et al. (2007) provide a model for determining the Faraday rotation that occurs due to the presence of a Faraday screen. This Faraday screen model is visualized in Figure \ref{fig:faradayscreenmodel}. In this scenario, an observer can measure polarization either `on' or `off' the screen. The terms `on?'and `off' refer to whether the polarized emission has been affected by the Faraday screen or not, respectively. In either case the model assumes that the observer will measure the superposition of the polarized emission from the `background' and `foreground', relative to the screen. When observing `on' the screen the background polarized emission will be perturbed. Specifically, the polarized intensity will be multiplied by the depolarization factor ($<1$), and the polarization angle will be rotated by an amount defined by the Faraday rotation.
 
@@ -478,6 +502,18 @@ D_\ell^{XY} = \frac{\ell(\ell+1)C_\ell^{XY}}{2\pi}.
 {\noindent}The RM sky is dominated by the GMF, with negligible contributions from the intergalactic medium and the RM intrinsic to the radio source (whether it be extragalactic radio sources or pulsars). A prominent feature of the RM sky is the antisymmetry in the inner Galactic quadrants ($|\ell|<90^\circ$). The positive RMs in the regions of ($0^\circ<\ell<90^\circ, b>0^\circ$) and ($270^\circ<\ell<360^\circ, b<0^\circ$) indicate that the magnetic fields point away from us. Such a high symmetry to the Galactic plane as the Galactic meridian through the Galactic center cannot simply be caused by localized features as previously thought. The antisymmetric pattern is very consistent with the magnetic field configuration of an $A0$ dynamo, which provides such toroidal fields with reversed directions above and below the Galactic plane. The toroidal fields possibly extend to the inner Galaxy, even towards the \textit{central molecular zone} (CMZ). This magnetic field model is also supported by the non-thermal radio filaments observed in the Galactic center region for a long time, which have been thought to be indications for the poloidal field in dipole form. The antisymmetric RM sky is also shown by pulsar RMs at high Galactic latitudes ($|b|>8^\circ$). This implies that the magnetic field responsible for the antisymmetry pattern could be nearer than the pulsars. 
 
 {\noindent}\textbf{Generalized Faraday rotation:} In a medium whose natural modes are linearly or elliptically polarized, the counterpart of Faraday rotation, referred to as ``generalized Faraday rotation'', can lead to a partial conversion of linear into circular polarization.
+
+{\noindent}\textbf{Global Magneto-ionic Medium Survey (GMIMS):} An ambitious international collaboration to use large, single-dish radio telescopes with broadband spectro-polarimeters to determine the structure of the Galactic \textit{magneto-ionic medium} (MIM.. GMIMS uses the variation of the strength of the Stokes $Q$ and $U$ components with $\lambda^2$ through the Fourier transform to determine the distribution of the polarized emission as a continuous function of $\phi$. Two of the GMIMS surveys have been completed, and the data are fully reduced and calibrated: the Dominion Radio Astrophysical Observatory (DRAO) survey of the northern sky ($87^\circ>\delta>-30^\circ$) at frequencies $1270-1750\,{\rm MHz}$ and the Parkes survey of the southern sky ($20^\circ>\delta>-90^\circ$) at frequencies $300-480\,{\rm MHz}$. The aim of the GMIMS surveys is to make $\delta\phi$ less than $\phi_{\rm max}$ for the first time at frequencies above $250\,{\rm MHz}$ in the Milky Way. The corresponding wavelength and RM coverage are summarized in Table \ref{table:gmims}. The numbers in Table \ref{table:gmims} are computed using the full bandwidth used to construct the Faraday cube.
+
+\begin{table}[h]
+\begin{center}
+\includegraphics[width=16cm]{figures/GMIMStable.png}
+\caption{\footnotesize{The wavelength and RM coverage of the GMIMS survey. Table from Dickey et al. (2019).}}
+\label{table:gmims}
+\end{center}
+\end{table}
+
+{\noindent}The Parkes and DRAO surveys are very complementary in several ways. The DRAO telescopes in British Columbia can observe the entire northern sky, and in the south down to $\delta\simeq-30^\circ$, and the Parkes telescope in New South Wales can observe the entire southern sky, and in the north as high as $\delta\simeq20^\circ$; thus, there is an overlap band of width about $50^\circ$. Since the ranges of $\lambda^2$ are so different, the RMSFs of the two surveys are very different also. The Parkes spectra have much higher resolution in $\phi$ than the DRAO spectra, but the two are not consistent with each other even after accounting for the different resolutions. This is because of the very different wavelength ranges; the path lengths sampled by the two spectra are therefore very different, with the shorter wavelengths sensitive to much greater distances owing to depolarization.
 
 {\noindent}\textbf{Great circle:} A circle on the surface of a sphere that lies in a plane passing through the sphere's center which represents the shortest distance between any two points on the surface of a sphere.
 
@@ -718,6 +754,15 @@ D_\ell^{XY} = \frac{\ell(\ell+1)C_\ell^{XY}}{2\pi}.
 {\noindent}For either high or low $\beta$, it was predicted that \textit{Alfv\'en waves} should should damp at the \textit{ambipolar diffusion scale} $L_\mathrm{AD}$ and thus the magnetohydrodynamic (MHD) cascade should damp past the ambipolar diffusion scale.
 
 {\noindent}\textbf{Poincar\'e sphere:}
+
+{\noindent}\textbf{Polarization angle dispersion function ($\mathcal{S}$):} One measure of the degree of order in the plane-of-sky magnetic field orientation is the polarization angle dispersion function. Following the notation used by the Planck collaboration,
+
+\begin{align*}
+	\mathcal{S} = \sqrt{ \frac{1}{N} \sum_{i=1}^N [\phi(\vec{r} + \vec{\delta}_i) - \phi(\vec{r})]^2 } ~ [\rm deg],
+\end{align*}
+
+{\noindent}where $\phi(\vec{r} + \vec{\delta}_i) - \phi(\vec{r})$ is the angle difference between $\phi(\vec{r})$, the polarization angle at a given sky position $\vec{r}$ (the central pixel), and $\phi(\vec{r} + \vec{\delta}_i)$the polarization angle at a sky position
+displaced from the centre by the displacement vector $\vec{\delta}_i$. The sum is over pixels located within an annulus of radius $\delta=|\vec{\delta}|$ (the ``lag'') and width $\Delta\delta$ and containing $N$ pixels. The inner radius is $\delta/2$ and outer radius is $3\delta/2$.  Note that the angle dispersion function as defined is a two-point function, but depends both on position and lag. In that sense, it is distinct from structure functions often used to describe polarization direction which do not depend on position. In practice, $\mathcal{S}$ is computed in terms of the Stokes parameters $Q$ and $U$.
 
 {\noindent}\textbf{Polarized intensity ($P$):} A measure of the total linear polarization in radio emission given as
 
@@ -985,7 +1030,9 @@ a polarization angle $\chi$ and polarized intensity $P$ or by the Stokes paramet
 	\mathrm{RM} = -0.81 \int\limits_{z_\mathrm{source}}^\mathrm{observer} \frac{n_e(z) \vec{B(z)}}{(1+z)^2} \cdot \frac{\vec{{\rm d}l}}{{\rm d}z} {\rm d}z ~ [{\rm rad\,m^{-2}}],
 \end{align*}
 
-{\noindent}where $z_\mathrm{source}$ is the redshift of the source. When observing a distant polarized source, the rotation of its linear polarization angle is due to the contribution of different magneto-ionic regions along the line of sight. The measured RM is a sum of contributions from multiple sources, or regions, such that
+{\noindent}where $z_\mathrm{source}$ is the redshift of the source. RM surveys are particularly valuable because the RM divided by the \textit{dispersion measure} (DM) of a source provides a measure of $B_\parallel$ averaged along the line-of-sight.
+
+{\noindent}When observing a distant polarized source, the rotation of its linear polarization angle is due to the contribution of different magneto-ionic regions along the line of sight. The measured RM is a sum of contributions from multiple sources, or regions, such that
 
 \begin{align*}
     {\rm RM} = {\rm RM}_{\rm source} + {\rm RM}_{\rm IGM} + {\rm RM}_{\rm Gal} + {\rm RM}_{\rm noise} ~ [{\rm dimensionless}],
@@ -1148,7 +1195,9 @@ lambda^2)$. $R(\phi)$ is the \textit{rotation measure transfer function} (RMTF) 
     E_\lambda(T) = \left(\frac{8\pi hc^2}{\lambda^5}\right) \frac{1}{e^{hc/\lambda k_BT}-1} ~ [{\rm W\,m^{-2}\,m^{-1}}].
 \end{align*}
 
-{\noindent}\textbf{Starlight polarization:} The polarization of initially unpolarized starlight which becomes polarized as it passes through dust grains aligned by an external magnetic field. Paramagnetic materials have unpaired electrons which, when in the presence of an external magnetic field such as the interstellar magnetic field, align in the same direction causing grain alignment. In the case of elongated dust grains, if the shortest axis is aligned with the direction of the magnetic field, then the grains will absorb light polarized along the long axis of the grain which is perpendicular to the field. This results in transmitted radiation having a polarization direction parallel to the magnetic field. Optical polarization of starlight was first imaged by Hall \& Mikesell (1949) and Hiltner (1949). They found that polarized light from nearby stars had similar orientation, indicating that the polarizing mechanism was a source other than the individual stars. Shortly thereafter, Davis \& Greenstein (1951) published a theory on the origin of polarized starlight. They proposed that an elongated dust grain spinning about its shortest axis would have a preferred orientation when located in a magnetic field. Starlight polarization is most useful for detecting magnetic fields in the Solar neighbourhood out to about $1-3\,{\rm kpc}$. The same large-scale alignment of spinning, aspherical dust grains that causes starlight polarization also causes \textit{infrared polarization}.
+{\noindent}\textbf{Starlight polarization:} The polarization of initially unpolarized starlight which becomes polarized as it passes through dust grains aligned by an external magnetic field. Paramagnetic materials have unpaired electrons which, when in the presence of an external magnetic field such as the interstellar magnetic field, align in the same direction causing grain alignment. In the case of elongated dust grains, if the shortest axis is aligned with the direction of the magnetic field, then the grains will absorb light polarized along the long axis of the grain which is perpendicular to the field. This results in transmitted radiation having a polarization direction parallel to the magnetic field. Optical polarization of starlight was first imaged by Hall \& Mikesell (1949) and Hiltner (1949). They found that polarized light from nearby stars had similar orientation, indicating that the polarizing mechanism was a source other than the individual stars. Shortly thereafter, Davis \& Greenstein (1951) published a theory on the origin of polarized starlight. They proposed that an elongated dust grain spinning about its shortest axis would have a preferred orientation when located in a magnetic field. Starlight polarization is most useful for detecting magnetic fields in the Solar neighbourhood out to about $1-3\,{\rm kpc}$.
+
+{\noindent}The approach above works well for low-density dust clouds. In high-density dust clouds, the probability that a light-ray gets completely absorbed along the way is fairly high. However, dust heats up if it absorbs a lot of radiation, which in return will be re-emitted in the infrared. This emitted infrared light is also polarized according to the dust grain?s geometry, viz. polarized thermal dust emission. Since the dust grains are aligned in the magnetic field, the polarized dust emission provides complementary information about the direction of $B_\perp$. Thus, the same large-scale alignment of spinning, aspherical dust grains that causes starlight polarization also causes \textit{infrared polarization}.
 
 {\noindent}\textbf{Stellar wind bubble (SWB):} A cavity light years across filled with hot gas blown into the interstellar medium by high-velocity (several thousand ${\rm km\,s^{-1}}$) stellar wind from a single massive O or B star. The heliosphere blown by the Solar wind, within which all of the major planets of the Solar System are embedded, is a small example of a stellar wind bubble.
 
@@ -1202,9 +1251,9 @@ A superbubble behaves qualitatively like an individual supernova remnant, except
 
 {\noindent}\textbf{Supershell:} See \textit{superbubble}.
 
-{\noindent}\textbf{Synchrotron radiation:} The radio emission produced by relativistic \textit{cosmic rays} when accelerated radially (e.g., by magnetic fields) which is one of the most commonly used tracers of the Galactic magnetic field. Synchrotron radio emission is a tool to measure the total strength of magnetic field on the assumption that the magnetic energy-density (pressure) is in equipartition with the thermal and cosmic ray energy densities. This method requires information about the depth of emitting region in order to calculate the synchrotron emissivity per volume, as the intensity is an integration of the emissivity along the line-of-sight.
+{\noindent}\textbf{Synchrotron radiation:} The radio emission produced by relativistic \textit{cosmic rays} when accelerated radially (e.g., by magnetic fields) which is one of the most commonly used tracers of the Galactic magnetic field. Synchrotron radio emission is a tool to measure the total strength of magnetic field on the assumption that the magnetic energy-density (pressure) is in equipartition with the thermal and cosmic ray energy densities. This method requires information about the depth of emitting region in order to calculate the synchrotron emissivity per volume, as the intensity is an integration of the emissivity along the line-of-sight. Even though the intensity of synchrotron radiation is degenerate with other emission components, like free-free and spinning dust in the microwave band, Stokes $Q$ and $U$ still provide information regarding the magnetic field since the other components are assumed to be unpolarized.
 
-{\noindent}Synchrotron emission has a steep spectral index of $\alpha\sim-2.75$, which results in much brighter emission at lower frequencies (this applies to both linear polarization and total intensity). For a single electron, the critical frequency of synchrotron radiation can be expressed as
+{\noindent}Synchrotron emission generally has a power law with polarized brightness temperature $T(\nu)\propto\nu^{-\alpha}$ with a steep spectral index of $\alpha\sim-2.75$, which results in much brighter emission at lower frequencies (this applies to both linear polarization and total intensity). For a single electron, the critical frequency of synchrotron radiation can be expressed as
 
 \begin{align*}
     \nu_c = \dfrac{3}{4\pi}\dfrac{q}{mc}\gamma^2(B\sin\theta)~[{\rm Hz}],
@@ -1307,6 +1356,8 @@ A superbubble behaves qualitatively like an individual supernova remnant, except
 {\noindent}\textbf{Type-I Supernova:} Arises from old, degenerate low-mass stars which supposedly are accreting from a companion and undergoes a thermonuclear instability upon accumulation of a critical mass. Like Type-II supernovae, releases an amount of energy of $\simeq10^{51}\,{\rm ergs}$.
 
 {\noindent}\textbf{Type-II Supernova:} Arises from young stars with initial masses $\gtrsim8\,{\rm M}_\odot$ whose core gravitationally collapses once it has exhausted all of its fuel. Like Type-I supernovae, releases an amount of energy of $\simeq10^{51}\,{\rm ergs}$.
+
+{\noindent}\textbf{Ultra-high energy cosmic rays (UHECRs):} UHECRs are extragalactic cosmic rays with energies exceeding $E\sim10^{18}\,{\rm eV}$. Various cosmic sources could possibly accelerate charged particles to these extreme energies, such as compact transients connected to star forming activity in galaxies, AGN, radio galaxies, or galaxy clusters, but the relative contribution of these sources is still unknown. UHECRs propagating from their sources through the magnetized intergalactic and interstellar medium to detectors at Earth are deflected by the intergalactic and (in many directions dominant) galactic magnetic fields. The deflections in these magnetic fields currently preclude us from following these particles back to their sources.
 
 {\noindent}\textbf{Unstable neutral medium (UNM):} A thermally-unstable phase of the atomic ISM. Figure \ref{fig:pressure-density} shows the thermal pressure function $p(n)$. This curve has several familiar features, described in the classic paper
 on this subject by Field, Goldsmith \& Habing (1969). These include separate branches for warm intercloud (red) and cold cloud (green) components, a maximum intercloud thermal pressure ($4400\,{\rm cm^{-3}\,K}$ for the curve shown), a minimum cloud thermal pressure ($1700\,{\rm cm^{-3}\,K}$ for this example), and a range of density ($0.8-7\,{\rm cm^{-3}}$), or more fundamentally temperature (roughly $270-5500\,{\rm K}$), between these two (blue) that is regarded as forbidden in equilibrium because at constant thermal pressure it is thermally unstable. In the unstable region, gas slightly above the curve is too hot for its density and cools. But at constant thermal pressure, cooling moves it to the right, to higher density, taking it further from the curve and making it cool faster, until it reaches the stable cloud branch. Similarly, gas slightly below the curve has excess heating and at constant thermal pressure moves horizontally to the left until it joins the stable intercloud component. For the standard curve, the mean midplane interstellar density in the Solar Neighbourhood (slightly over $1\,{\rm cm^{-3}}$) is in the unstable regime. This appears to guarantee that both the cloud and intercloud branches will be populated.
@@ -1682,6 +1733,12 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
     \beta_x = \frac{1}{N} \sum_{i=1}^N \left(\frac{x_i-\mu_x}{\sigma}\right)^3 ~ [{\rm dimensionless}]
 \end{align*}
 
+{\noindent}\textbf{Lamor frequency:}
+\begin{align*}
+	\omega_B^2 = \frac{eB}{mc} ~ [{\rm s^{-1}}]
+\end{align*}
+(Gruzinov \& Levin, 2019)
+
 {\noindent}\textbf{Lorentz factor:}
 \begin{align*}
     \gamma = \sqrt{\frac{1 - (v/c)^2}{c^2}} ~ [{\rm dimensionless}]
@@ -1758,6 +1815,12 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
                       &= \frac{2M_A^2}{M_S^2} ~ [{\rm dimensionless}]
 \end{align*}
 
+{\noindent}\textbf{Plasma frequency:}
+\begin{align*}
+	\omega_p^2 = \frac{4\pi ne^2}{m} ~ [{\rm s^{-1}}]
+\end{align*}
+(Gruzinov \& Levin, 2019)
+
 {\noindent}\textbf{Polarization angle:}
 \begin{align*}
 \chi &= \dfrac{1}{2}\arctan\left(\dfrac{U}{Q}\right) ~ [{\rm rad}] \\
@@ -1789,6 +1852,11 @@ F(\phi) = \int\limits_{\infty}^\infty P(\lambda^2)\mathrm{e}^{-2i\phi\lambda^2}\
 \sigma_{\chi_0} = \left[ \dfrac{\sigma_Q^2\approx\sigma_U^2\approx\sigma^2}{4(N-2)\lvert\lvert P \rvert\rvert^2} \left( \dfrac{N-1}{N} + \dfrac{\lambda_0^4}{\sigma_{\lambda^2}^2} \right) \right]^{-1} ~ [{\rm rad}]
 \end{align*}
 (Brentjens \& de Bruyn, 2005)
+
+{\noindent}\textbf{Polarization angle dispersion function:}
+\begin{align*}
+	\mathcal{S} = \sqrt{ \frac{1}{N} \sum_{i=1}^N [\phi(\vec{r} + \vec{\delta}_i) - \phi(\vec{r})]^2 } ~ [\rm deg]
+\end{align*}
 
 {\noindent}\textbf{Polarization gradient}:
 \begin{align*}
@@ -2112,6 +2180,7 @@ P = \frac{2}{3}\dfrac{q^4}{m^2c^5}(\gamma\nu)^2(B\sin\theta)^2 ~ [{\rm Jy}]
 
 \begin{itemize} \itemsep0em
 	\item The non-thermal electrons produce synchrotron radiation while the thermal electrons cause Faraday rotation (non-thermal electrons cannot cause Faraday rotation and thermal electrons cannot produce synchrotron radiation).
+	\item Synchrotron emission generally has a power law with polarized brightness temperature $T(\nu)\propto\nu^{-\alpha}$ with a steep spectral index of $\alpha\sim-2.75$.
 	\item The spin axis of a non-spherical dust grain is perpendicular to its long axis and statistically aligned with the ambient GMF, making dust emission (as well as optical starlight) polarized in the direction perpendicular to the plane-of-sky GMF.
 	\item Dust emission is the dominant polarized foreground for frequencies larger than $\sim70\,{\rm GHz}$.
 	\item Planck observed the sky in seven frequency bands from $30$ to $353\,{\rm GHz}$ for polarization, and in two additional bands at $545$ and $857\,{\rm GHz}$ for intensity, with an angular resolution from $5'$ to $31'$.
